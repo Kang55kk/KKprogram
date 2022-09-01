@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="text">
+      Lorem ipsum dolor sit amet consdddectetur adipisicincxxxxxxxxxxxg elit. Exercitationem, itaque velit repudiandae
+      aliquam aut ea perferendis iure reiciendis maxime vel molestiae ratione mollitia ab et saepe cupiditate eos porro.
+      Id.
+    </div>
+    <style>
+      .text {
+        width: 400px;
+        background-color: lightblue;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        /* box-shadow: 0 0 10px 0 blue; */
+        text-shadow: 0 0 3px blue;
+
+        color: red;
+        /* direction: rtl; */
+        /* letter-spacing: 10px; */
+        /* word-spacing: 100px; */
+
+        /* line-height: 2em; */
+
+        /* text-align: center; */
+        /* text-align: justify; */
+
+        /* text-decoration: line-through; */
+        /* text-decoration: line-through; */
+        /* text-decoration: blink; */
+
+        /* text-indent: 2em;
+        text-transform: capitalize; */
+
+        /* white-space: pre; */
+        white-space: nowrap;
+        /* text-align-last: center; */
+        /* text-align-last: justify; */
+      }
+      .text::first-letter {
+        font-size: 2em;
+      }
+    </style>
+    <table border="1" style="table-layout: fixed">
+      <caption>
+        花名册
+      </caption>
+      <tfoot>
+        <tr>
+          <td>000</td>
+          <td></td>
+          <td>000</td>
+        </tr>
+      </tfoot>
+      <thead>
+        <tr>
+          <th style="width: 25%">姓名</th>
+          <th style="width: 50%">
+            性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别性别
+          </th>
+          <th style="width: 25%">年龄</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>111</td>
+          <td>111</td>
+          <td>111</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>111</td>
+          <td>111</td>
+        </tr>
+      </tbody>
+    </table>
+    <style>
+      table {
+        /* border: 1px solid red; */
+        /* border-collapse: collapse; */
+        /* border-spacing: 20px;
+        caption-side: bottom;
+        empty-cells: hide; */
+      }
+    </style>
+
+    <table border="1" width="100%" style="table-layout: auto">
+      <tr>
+        <td width="10%">1111111111111111111111111111111111111111111111111</td>
+        <td width="90%">111</td>
+      </tr>
+    </table>
+
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <style>
+      .box1 {
+        display: none;
+      }
+      .box2 {
+        visibility: hidden;
+      }
+      .box3 {
+        opacity: 0;
+      }
+      .box3:hover {
+        opacity: 0.8;
+      }
+      .box2:hover {
+        visibility: visible;
+      }
+    </style>
+
+    <div class="box">box</div>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+
+        padding: 20px;
+        border: 10px dashed red;
+
+        outline: 10px dotted blue;
+        margin: 50px;
+
+        border-top-left-radius: 50px 100px;
+      }
+    </style>
+
+    <input type="text" />
+    <style>
+      input {
+        border: 10px solid red;
+        outline: none;
+      }
+      input:focus {
+        border-color: blue;
+      }
+    </style>
+
+    <div class="big">
+      <div class="small">small</div>
+    </div>
+    <style>
+      .big {
+        width: 100px;
+        height: 300px;
+        background-color: lightblue;
+        /* overflow-x: auto; */
+        /* overflow-x: scroll; */
+        /* overflow-x: hidden; */
+      }
+      .small {
+        width: 300px;
+        height: 100px;
+        background-color: lightcoral;
+      }
+    </style>
+
+    <p>满盲了劝杀瞠到思但天属无三在穿，到一，诗战求丰才活上别了什关弄正绛。heLLO woRLD</p>
+    <style>
+      @font-face {
+        font-family: myFirstFont;
+        /* src: url("./Sansation_Light.ttf"); */
+        src: url("./xjlsxt.ttf");
+      }
+
+      p {
+        width: 50%;
+        min-width: 600px;
+        max-width: 800px;
+
+        background-color: lightblue;
+
+        min-height: 100px;
+        max-height: 200px;
+
+        overflow: auto;
+
+        /*  */
+
+        font-family: myFirstFont;
+        font-size: 18px;
+        font-style: italic;
+        /* font-style: normal; */
+        font-weight: bold;
+        /* font-variant: small-caps; */
+        /* font-variant: normal; */
+
+        text-transform: lowercase;
+        text-transform: uppercase;
+        text-transform: capitalize;
+
+        /* cursor: pointer; */
+        cursor: url("./sprite.png"), wait;
+      }
+    </style>
+
+    <div class="parent">
+      parent
+      <div class="child">child</div>
+    </div>
+    <style>
+      .parent {
+        background-color: lightblue;
+        height: 100px;
+      }
+      .child {
+        background-color: lightcoral;
+        width: 50%;
+        height: 100%;
+      }
+    </style>
+
+    <p><a href="http://www.runoob.com">菜鸟教程</a> - 免费的编程学习网站。</p>
+    <style>
+      a::after {
+        content: attr(href);
+      }
+    </style>
+
+    <div class="count">
+      <span>xxx</span>
+      <span>xxx</span>
+      <span>xxx</span>
+      <span>xxx</span>
+      <span>xxx</span>
+    </div>
+    <style>
+      .count span {
+        counter-increment: xxx;
+      }
+      .count span::before {
+        content: counter(xxx);
+      }
+    </style>
+
+    <ul style="list-style-position: inside">
+      <li>11</li>
+      <li>222</li>
+      <li>333</li>
+    </ul>
+
+    <!-- <img src="./sprite.png" alt="" /> -->
+    <style>
+      img {
+        position: absolute;
+        background-color: lightblue;
+        clip: rect(0, 16px, 320px, 10px);
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </body>
+</html>

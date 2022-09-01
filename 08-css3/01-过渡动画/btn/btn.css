@@ -1,0 +1,97 @@
+body {
+  display: flex;
+  justify-self: space-around;
+  align-items: center;
+}
+.btn {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 25px;
+}
+@keyframes Wobble {
+  0% {
+    margin-left: 20px;
+  }
+  25% {
+    margin-left: 10px;
+  }
+  50% {
+    margin-left: 20px;
+  }
+  75% {
+    margin-left: 30px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+@keyframes pause {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+@keyframes BUZZ {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes bob {
+  from {
+    margin-top: 20px;
+  }
+  to {
+    margin-top: -10px;
+  }
+}
+.btn6 {
+  display: block;
+}
+.btn6 .btn7 {
+  position: absolute;
+}
+.btn5:hover {
+  transform-origin: center 100px;
+  animation: BUZZ 0.3s linear infinite;
+}
+.btn4:hover {
+  animation: Wobble 0.3s linear 2;
+}
+.btn3:hover {
+  animation: bob 0.3s infinite alternate;
+}
+.btn1:hover {
+  animation: grow 0.3s;
+}
+.btn2:hover {
+  animation: pause 0.3s infinite alternate;
+}
+/*# sourceMappingURL=./btn.css.map */

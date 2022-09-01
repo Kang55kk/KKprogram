@@ -1,0 +1,81 @@
+.services {
+  background-image: url('../img/meirong.png');
+  /* margin: ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin: 200px 0; */
+  padding: 1px 0;
+}
+.services button {
+  float: right;
+}
+.services .wrapper {
+  background-color: transparent;
+  width: 1090px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  /* padding: 1px; */
+}
+.services .title p {
+  background-color: transparent;
+}
+.services .card {
+  width: 500px;
+  background-color: white;
+  float: left;
+  /* margin: 40px 20px 20px 20px; */
+  margin: 20px;
+  border-radius: 20px;
+  padding: 1px;
+}
+.services .card:hover {
+  background-color: #2dbdba;
+}
+.services .card .photo {
+  float: left;
+  width: 60px;
+  margin: 30px;
+}
+.services .right-box {
+  margin: 20px 0;
+  width: 380px;
+  float: right;
+}
+.services .right-box p {
+  margin: 10px 0;
+}
+.services .sub {
+  font-size: 15px;
+  color: #13a2b7;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /* margin-top: 30px; */
+  margin: 30px 0 0px 30px;
+}
+.services .title h1 {
+  color: white;
+  font-weight: 700;
+  margin: 8px 0 0px 30px;
+  font-size: 50px;
+}
+.services .list {
+  margin: 0 auto;
+  /* padding-left: 50px; */
+  margin-top: 20px;
+}
+.services .header {
+  width: 1090px;
+}
+.services .btn {
+  /* width: 200px; */
+  font-size: 20px;
+  margin: 20px 30px 0 0 ;
+  background-color: transparent;
+  color: white;
+  border-color: rgba(0, 217, 255, 0.507);
+  padding: 15px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=./services.css.map */

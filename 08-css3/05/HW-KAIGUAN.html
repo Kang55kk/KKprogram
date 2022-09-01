@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="button1">
+        <input type="checkbox">
+        <div class="circle"></div>
+        <div class="bgc"></div>
+    </div>
+    <style>
+        .button1 {
+            position: relative;
+            width: 200px;
+            height: 70px;
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 70px;
+            overflow: hidden;
+            margin-top: 20px;
+            box-shadow: 1px -2px 5px 0px rgb(0 0 0 / 50%);
+
+        }
+
+        .button1 input {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            z-index: 11;
+
+        }
+
+        .button1 .circle {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            position: absolute;
+            border-radius: 50%;
+            transition: all 1s;
+            left: 10px;
+            top: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.508);
+        }
+
+        .button1 input:checked~.circle {
+            background-color: white;
+            left: 135px;
+        }
+
+        .button1 .bgc {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            background-color: #fff;
+            transition: all .5s;
+        }
+
+        .button1 input:checked~.bgc {
+            background-color: #4caf50;
+        }
+        .button1 input:checked body {
+            background-color: #4caf50;
+        }
+
+    </style>
+
+
+    <div class="button3">
+        <input type="checkbox">
+        <div class="circle">
+            <i class="fa fa-check"></i>
+            <i class="fa fa-times"></i>
+        </div>
+    </div>
+
+    <style>
+        .button3 {
+            position: relative;
+            margin-top: 20px;
+            width: 200px;
+            height: 70px;
+            /* background-color: gray; */
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 70px;
+            overflow: hidden;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.508);
+
+        }
+
+        .button3 .circle {
+            width: 50px;
+            height: 50px;
+            background-color: #4caf50;
+            position: relative;
+            border-radius: 50%;
+            transition: all 1s;
+            left: 10px;
+            top: 5px;
+
+            /* line-height: 60px; */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* top: 5px; */
+            transform: rotate(0);
+        }
+
+        .button3 .circle .fa-check {
+            position: absolute;
+            color: white;
+            display: block;
+            font-size: 36px;
+            transition: all .5s;
+            opacity: 1;
+        }
+
+        .button3 .circle .fa-times {
+            position: absolute;
+            color: white;
+            display: block;
+            transition: all .5s;
+            font-size: 36px;
+            opacity: 0;
+        }
+
+        .button3 input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 11;
+        }
+
+        .button3 input:checked~.circle {
+            background-color: red;
+            left: 130px;
+            transform: rotate(360deg);
+        }
+
+        .button3 input:checked~.circle .fa-times {
+            opacity: 1;
+
+        }
+
+        .button3 input:checked~.circle .fa-check {
+            opacity: 0;
+        }
+
+        .button3 input:checked .button3 {
+            background-color: #4caf50;
+        }
+    </style>
+
+</body>
+
+</html>

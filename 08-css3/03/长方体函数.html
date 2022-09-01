@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            perspective: 800px;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.74);
+            transform-style: preserve-3d;
+            transform: rotateX(60deg);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            /* transform: rotateX(60deg) rotateZ(15deg) rotateY(0deg); */
+        }
+
+        .bottom {
+            transform-origin: center center 100px;
+            transform: translateZ(100px);
+            transform: all .3s;
+            transform-origin: 100px 100px 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    
+    <script>
+        
+        box = $(".box");
+        var bottom = $("<div></div>");
+        bottom.addClass("bottom");
+        bottom.css({
+            "width": "200px",
+            "height": "200px",
+            "transform-style": "preserve-3d",
+            "position": "relative",
+        })
+        box.append(bottom);
+        bottom.append($("<div></div>").addClass("up"));
+        bottom.append($("<div></div>").addClass("left"));
+        bottom.append($("<div></div>").addClass("right"));
+        bottom.append($("<div></div>").addClass("back"));
+        bottom.append($("<div></div>").addClass("front"));
+        $(".box .bottom .left").css({
+            "height": "inherit",
+            "width": 200,
+            "background-color": "red",
+            "transform-origin": "0 center",
+            "transform": "rotateY(-90deg)",
+        })
+        $(".bottom .right,.bottom .left,.bottom .up,.bottom .back,.bottom .front").css({
+            "position": "absolute",
+        })
+
+        $(".box .bottom").css({
+            "height": 200,
+            "width": 200,
+            "background-color": "black",
+        })
+        $(".box .bottom .right").css({
+            "height": "inherit",
+            "width": 200,
+            "background-color": "red",
+            "transform-origin": "200px center",
+            "transform": "rotateY(90deg)",
+        })
+        $(".box .bottom .back").css({
+            "width": "inherit",
+            "height": 200,
+            "background-color": "blue",
+            "transform-origin": "center 0px",
+            "transform": "rotateX(90deg)",
+        })
+        $(".box .bottom .up").css({
+            "width": "inherit",
+            "height": "inherit",
+            "background-color": "skyblue",
+            "transform": "translateZ(200px)",
+        })
+
+        $(".box .bottom .front").css({
+            "width": "inherit",
+            "height": 200,
+            "background-color": "rgba(173, 216, 230, 0.595)",
+            "transform-origin": "center 200px",
+            "transform": "rotateX(-90deg)",
+        })
+
+
+        // var bottom = document.createElement("div")
+        // bottom.className = "xbottom"
+        // box.appendChild(bottom)
+        // var up = document.createElement("div")
+        // up.className = "up"
+        // bottom.appendChild(up)
+        // var left = document.createElement("div")
+        // left.className = "left"
+        // bottom.appendChild(left)
+        // var right = document.createElement("div")
+        // right.className = "right"
+        // bottom.appendChild(right)
+        // var front = document.createElement("div")
+        // front.className = "front"
+        // bottom.appendChild(front)
+        // var back = document.createElement("div")
+        // back.className = "back"
+        // bottom.appendChild(back)
+
+        box = $(".bottom")[0];
+        var savex = 0;
+        var savey = 0; 
+        document.body.onmousedown = function (event, e) {
+            var inipagex = event.pageX;
+            var inipagey = event.pageY; 
+            document.body.onmousemove = function (e) {
+                var movex = e.pageX - inipagex;
+                var movey = e.pageY - inipagey; 
+                box.style.transform = "rotateX(" + (savey - movey) / 100 + "deg)" + "rotatey(" + (savex +
+                    movex) / 100 + "deg)" 
+                savex = (savex + movex);
+                savey = (savey - movey); 
+                movex = 0;
+                movey = 0;
+            }
+        }
+        
+        document.body.onmouseup = function () {
+            console.log("up");
+            document.body.onmousemove = null;
+        }
+    </script>
+</body>
+
+</html>

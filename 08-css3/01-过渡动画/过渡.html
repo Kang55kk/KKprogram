@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="big">
+      <div class="box boxa"></div>
+      <!-- <div class="box boxb"></div>
+      <div class="box boxc"></div> -->
+    </div>
+    <!-- <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+        /* transition: all 3s; */
+
+        transition-property: margin;
+
+        transition-duration: 3s;
+        /* transition-delay: 3s; */
+      }
+      .boxa {
+        /* transition-timing-function: ease; */
+        /* transition-timing-function: cubic-bezier(0.03, 0.74, 0.88, 0.18); */
+        /* transition-timing-function: cubic-bezier(.22,.97,.89,1.23); */
+        transition-timing-function: cubic-bezier(0.22, 1.23, 0.97, 0.89);
+      }
+      /* .boxb {
+        transition-timing-function: ease; //
+      }
+      .boxc {
+        transition-timing-function: ease-in-out;
+      } */
+      .big:hover .box {
+        background-color: red;
+        margin-left: 500px;
+      }
+    </style> -->
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+      }
+
+      .big:hover .box {
+        background-color: red;
+        margin-left: 500px;
+        transition: all 3s;
+      }
+    </style>
+  </body>
+</html>

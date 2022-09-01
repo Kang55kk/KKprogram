@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="big">
+      <div class="box"></div>
+    </div>
+    <style>
+      .big {
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+      }
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: red;
+        background-image: url("../css3-3d-column-chart/600x600.jpg");
+        background-size: cover;
+
+        /* transform: scale(1.2); */
+        /* filter: blur(30px); */
+
+        /* filter: brightness(.5); */
+        /* filter: contrast(5); */
+        /* filter: grayscale(1); */
+        /* filter: hue-rotate(180deg); */
+        /* filter: invert(1); */
+        filter: drop-shadow(16px 16px 20px red);
+
+        /* translateZ(0) 面试题 */
+      }
+    </style>
+  </body>
+</html>

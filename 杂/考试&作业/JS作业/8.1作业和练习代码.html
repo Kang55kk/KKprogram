@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p class="box">111</p>
+    <p class="box1">111</p>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var box = document.querySelector(".box")
+        var box1 = document.querySelector(".box1")
+        // console.log((box.innerText).isEqualNode(box1.innerText));
+        console.log(box.isSameNode(box1));
+        var ul = document.querySelector("ul")
+        var li1 = document.querySelector("ul li:nth-child(1)")
+        var li2 = document.querySelector("ul li:nth-child(2)")
+        console.log(li1.isEqualNode(li2)); //??检测两个不同列表的列表项是否相等   
+        console.log(li1.isSameNode(li2)); //??检查两个节点是否是相同节点：内容是否相等
+        console.log(box.nextSibling); //返回某个元素之后紧跟的节点,有换行的话是text
+        console.log(box.nextElementSibling); //返回紧跟的元素
+        console.log(ul.childNodes); //返回子节点
+        console.log(ul.childNodes[2]);
+        console.log(ul.childNodes[3].nodeValue); //??
+        // 如果节点是一个元素节点，nodeType 属性返回 1。
+        // 如果节点是属性节点, nodeType 属性返回 2。
+        // 如果节点是一个文本节点，nodeType 属性返回 3。
+        // 如果节点是一个注释节点，nodeType 属性返回 8。
+        console.log(document.querySelector("ul").ownerDocument); //根元素:
+        console.log(document.querySelector("ul").previousSibling); //前一个节点
+        console.log(document.querySelector("ul").previousElementSibling);
+    </script>
+
+
+
+    <script>
+        // var arr1 = [1,2,3,5]
+        // var arr2 = [1,2,3,5]
+        // function compare(x,y) {
+        //     if (x.length !== y.length) {
+        //         console.log("你这两个数组根本不相等!长度都不等!");
+        //     }else{
+        //         var num = 0;
+        //         for (let i = 0; i < x.length; i++) {
+        //             if (x[i] === y[i]) {
+        //                 num++;
+        //                 console.log(num,x[i],y[i]);
+        //             }
+        //         }
+        //         if (num == x.length) {
+        //             console.log("对嘛  你这个数组就相等啦");
+        //         }else{
+        //             console.log("不得行,你这个数组还是不相等");
+        //         }
+        //     }
+        // }
+        // compare(arr1,arr2)
+    </script>
+
+    <div class="big">
+        <div class="small">666666666
+            66666666
+            666666666666666666666666666666
+            6666666666666666666666666666666666666666666666
+            6666666666666666666
+            6666666666666666666
+            666666666666666666666
+            6666666666666666666666
+            6666666666666666666666666666666666666666666666666
+            6666666666666666666
+            66666666666666666666666666666666
+            666666666666666666666666666666</div>
+    </div>
+    <style>
+        .big {
+            width: 100px;
+            height: 120px;
+            background-color: lightblue;
+            overflow: auto;
+            /* border: 10px; */
+        }
+
+        .small {
+            /* width: 50px; */
+            height: 60px;
+            background-color: antiquewhite;
+
+        }
+    </style>
+    <script>
+        var big = document.querySelector(".big")
+        var small = document.querySelector(".small")
+
+        console.log(big.scrollHeight);
+        console.log(small.scrollHeight); //获取 div 元素的高度和宽度，包含内边距,（padding）还包括隐藏的滚动条的高度
+        console.log(big.scrollWidth);
+        big.scrollLeft = "60"
+        console.log(big.scrollLeft);
+
+        var arr = [11, 22, 33];
+        var obj = {
+            name: "nick",
+            age: 17,
+        };
+        console.log("=============");
+        console.log(123);
+        console.info(123);//向Web控制台输出一条信息消息。
+        console.warn(123);
+        console.table(arr);
+        console.log(arr);
+
+        console.table(obj);
+    </script>
+
+
+</body>
+
+</html>

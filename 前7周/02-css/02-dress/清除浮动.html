@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="fl">fl</div>
+      <div class="fr">fr</div>
+      <!-- <div class="xxx"></div> -->
+    </div>
+
+    <style>
+      .box {
+        background-color: lightblue;
+        /* overflow: hidden; */
+      }
+      .fl {
+        /* float: left; */
+        width: 100px;
+        height: 50px;
+        background-color: aquamarine;
+        margin: 50px;
+      }
+      .fr {
+        /* float: right; */
+        width: 100px;
+        height: 100px;
+        background-color: rgb(13, 172, 119);
+        margin: 50px;
+        /* display: none; */
+      }
+
+      .xxx {
+        /* clear: left; */
+        /* 清除浮动 当前元素的左边或者右边 不允许有浮动元素出现 */
+        /* clear: right; */
+
+        clear: both;
+      }
+
+      .box::after {
+        content: "";
+        clear: both;
+        /* display: block; */
+        /* 解决清除浮动 */
+        display: table;
+        /* 外边距外溢 */
+      }
+    </style>
+
+    <span class="test">123</span>
+    <style>
+      .test {
+        color: red;
+      }
+      /* 伪元素 */
+      .test::before {
+        content: "000";
+      }
+      .test::after {
+        content: "888";
+      }
+    </style>
+  </body>
+</html>

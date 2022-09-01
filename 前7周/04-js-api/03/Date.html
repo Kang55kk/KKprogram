@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var now = new Date();
+    // 获取当前事件对象
+
+    var d = new Date(0);
+    //    Unix 时间戳（Unix Time Stamp）
+    //  1970 年 1 月 1 日 00:00:00 UTC（the Unix epoch）以来的毫秒数
+
+    var d = new Date(2022, 06, 28);
+
+    //   判断两个时间大小 或 时间之差
+    console.log(d < now);
+    console.log(d.getTime() < now.getTime());
+    console.log(now.getTime() - d.getTime());
+
+    //   获取时间对象的 年月日等
+    console.log(now.getFullYear());
+    console.log(now.getMonth());
+    console.log(now.getDate());
+    console.log(now.getHours());
+    console.log(now.getMinutes());
+    console.log(now.getSeconds());
+    console.log(now.getMilliseconds());
+    console.log(now.getTime());
+    console.log(now.getTimezoneOffset());
+    console.log(now.getUTCHours());
+
+    var d = new Date();
+    //   d.setDate(18);
+    //   d.setHours(0);
+
+    // 取一天之后的现在
+    //   d.setDate(29);
+    //   根据当前时间设置日期之类
+    d.setDate(28 + 5);
+
+    //   时间对象转化为字符串
+    console.log(d.toDateString());
+    console.log(d.toLocaleDateString());
+    console.log(d.toTimeString());
+    console.log(d.toLocaleTimeString());
+    console.log(d.toString());
+
+    //   var d = Date.UTC(2022, 06, 28);
+
+    var n = Date.now();
+    //   获取当前时间戳
+  </script>
+
+  <div class="test"><i>test</i></div>
+  <script>
+    var testDOM = document.querySelector(".test");
+    console.log(testDOM.innerText);
+    console.log(testDOM.innerHTML);
+
+    //   testDOM.innerText = "hello world";
+    //   testDOM.innerText = "<mark>黄色标记</mark>";
+    testDOM.innerHTML = "<mark>黄色标记</mark>";
+  </script>
+</body>
+
+</html>

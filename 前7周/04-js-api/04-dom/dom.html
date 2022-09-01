@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document123</title>
+  <base href="http://www.xxx.com" />
+  <meta name="referrer" content="never" />
+  <!-- 不发送来源 -->
+</head>
+
+<body>
+  <div id="test">
+    test
+    <!-- 注释 -->
+  </div>
+
+  <!-- <iframe src="//www.runoob.com/html/html-tutorial.html" frameborder="0"></iframe> -->
+  <iframe src="http://127.0.0.1:5500/04-js-api/04-dom/test.html" frameborder="0"></iframe>
+  <!-- http://  https:// file://   //   -->
+
+  <button onclick="myFunction()">btn</button>
+
+  <a name="html">HTML 教程</a><br />
+  <a name="css">CSS 教程</a><br />
+  <a name="xml">XML 教程</a><br />
+  <a href="/js/">JavaScript 教程</a>
+
+  <form action=""></form> //??
+
+  <!-- <img src="./1.jpg" alt="" /> -->
+  <!-- <img src="./1.jpg" alt="" /> -->
+
+  <script>
+    // addEventListener() 事件 冒泡 捕获
+    //   document.cookie cookie
+
+    // 所有的HTML元素都是元素节点。
+    // 所有 HTML 属性都是属性节点。
+    // 文本插入到 HTML 元素是文本节点。are text nodes。   ??InnerHTML
+    // 注释是注释节点。
+
+    //   console.log(document.activeElement);
+
+    //   cross-origin  跨域
+    // http://127.0.0.1:5500/  协议 域名 端口
+
+    function myFunction() {
+      var frame = document.getElementsByTagName("IFRAME")[0];
+      var h = frame.contentWindow.document.getElementsByTagName("H1")[0];
+      // var x = document.adoptNode(h);
+      document.body.appendChild(x);
+    }
+  </script>
+
+  <script>
+    console.log(document.documentElement);
+    console.log(document.body);
+    console.log(document.anchors);
+    console.log(document.forms);
+    console.log(document.images);
+    console.log(document.scripts);
+
+    console.log(document.documentURI);
+    console.log(document.domain); //返回下载当前文档的服务器域名：
+    console.log(document.referrer);
+    console.log(document.title);
+    console.log(document.URL);
+  </script>
+
+  <script>
+    console.log(document.baseURI);
+  </script>
+  <input type="button" value="新文档" onclick="createDoc()" />
+  <script>
+    function createDoc() {
+      var doc = document.open("text/html");
+      var txt = "<h1>学习 HTML DOM 很有趣!</h1>";
+      doc.write(txt);
+      doc.close();
+    }
+  </script>
+
+  <script>
+    // document.createAttribute()	创建一个属性节点
+    // document.createComment()	createComment() 方法可创建注释节点。
+    // document.createDocumentFragment()	创建空的 DocumentFragment 对象，并返回此对象。
+    // document.createElement()	创建元素节点。
+    // document.createTextNode()
+
+    var h1 = document.createElement("h1");
+
+    //   设置文本节点
+    var textNode2 = document.createTextNode("Hello World");
+    var textNode = document.createTextNode("Hello World");
+    h1.appendChild(textNode);
+    h1.appendChild(textNode2);
+    //   element.appendChild  末尾 追加元素节点 追加文本节点 追加注释节点
+    // 如果元素是创建出来的 那么就是追加 如果是页面已经存在的元素移动
+    //   console.log(textNode);
+    //   h1.innerText = "hello";
+
+    //   设置注释节点
+    var comNode = document.createComment("My personal comments");
+    h1.appendChild(comNode);
+    //   h1.innerHTML = "<i>hello <!-- 注释 --></i>";
+
+    //   设置属性节点
+    var attrNode = document.createAttribute("title");
+    //   attrNode.nodeValue = "123";
+    //   attrNode.value = "123";
+    //   h1.setAttributeNode(attrNode);
+
+    h1.setAttribute("title", "456");
+
+    //   h1.title = "xxx";
+
+    console.log(h1);
+
+    //   追加到某个元素内部
+    document.body.appendChild(h1);
+
+    console.log("========");
+    var btn = document.querySelector("button");
+    var xxx = document.createDocumentFragment(); //让这个button消失
+    xxx.appendChild(btn);
+  </script>
+
+  <!-- <script>
+      document.write("Hello World!");
+      document.write("Hello World!");
+      document.writeln("Hello World!", "xxx");
+      document.writeln("Hello World!", "xxx");
+    </script> -->
+
+  <!-- 
+        querySelectorAll返回的是静态结果,不会随文档变化而变化。
+        getElementsByClassName返回的是动态结果,会及时更新文档的变化。
+
+
+        
+      -->
+
+  <script>
+    //   setInterval(function () {
+    //     console.log(document.readyState);
+    //   }, 3);
+
+    window.onload = function () {
+      //  window.onload 等到页面资源都加载完成或者确定失败
+      // uninitialized - 还未开始载入
+      // loading - 载入中
+      // interactive - 已加载，文档与用户可以开始交互
+      // complete - 载入完成
+
+      console.log(document.readyState);
+      console.log("完成");
+    };
+  </script>
+
+  <img src="https://i0.hdslb.com/bfs/manga-static/d0d1da7197c833c50d9f61c762a483bf48425c2e.jpg@760w_380h.jpg" alt="" />
+</body>
+
+</html>

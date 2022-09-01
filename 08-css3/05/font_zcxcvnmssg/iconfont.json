@@ -1,0 +1,51 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1318338",
+      "name": "宇宙星球-06",
+      "font_class": "yuzhouxingqiu-06",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "1318341",
+      "name": "宇宙星球-03",
+      "font_class": "yuzhouxingqiu-03",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1318344",
+      "name": "宇宙星球-10",
+      "font_class": "yuzhouxingqiu-10",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "1318349",
+      "name": "宇宙星球-16",
+      "font_class": "yuzhouxingqiu-16",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "3755869",
+      "name": "星球",
+      "font_class": "xingqiu",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "12115569",
+      "name": "外星球",
+      "font_class": "waixingqiu",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    }
+  ]
+}

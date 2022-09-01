@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="xxx" class="abc test">xxx</div>
+    <script>
+      //  作业 实现一个方法(函数) addClass(element, string) removeClass(element, string)
+      // 作业 实现一个按钮点击 切换toggle 一个盒子的显隐 不能用 classList.toggle
+
+      //   function addClass(ele, str) {
+      //     ele.classList.add(str);
+      //   }
+
+      function addClass(ele, str) {
+        var lists = ele.className.split(" ");
+        // console.log(lists);
+        if (lists.includes(str)) {
+          //   console.log("已经存在");
+        } else {
+          //   console.log("不存在");
+          lists.push(str);
+          ele.className = lists.join(" ");
+        }
+      }
+
+      var xxxDom = document.getElementById("xxx");
+
+      addClass(xxxDom, "abc123");
+
+      //   sdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
+
+      function removeClass(ele, str) {
+        var lists = ele.className.split(" ");
+        var newLists = lists.filter(function (e) {
+          return e !== str;
+        });
+        ele.className = newLists.join(" ");
+      }
+
+      removeClass(xxxDom, "acb");
+
+      //   sdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
+
+      function toggleClass(ele, str) {
+        var lists = ele.className.split(" ");
+        if (lists.includes(str)) {
+          //   console.log("已经存在");
+          var newLists = lists.filter(function (e) {
+            return e !== str;
+          });
+          ele.className = newLists.join(" ");
+        } else {
+          //   console.log("不存在");
+          lists.push(str);
+          ele.className = lists.join(" ");
+        }
+      }
+
+    //   toggleClass(xxxDom, "acb");
+    </script>
+  </body>
+</html>

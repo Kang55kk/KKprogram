@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div{
+        flex
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+    <script>
+      function f(a, b) {
+        console.log(this, a, b);
+      }
+      //   f();
+
+      var obj = {
+        name: "nick",
+        age: 17,
+      };
+
+      var obj2 = {
+        a: "b",
+      };
+
+      var f = f.bind(obj2);
+      //   这个函数固定 this指向 为obj2 不在乎运行时所挂载的对象
+
+      obj.f = f;
+      //   obj.f();
+
+      //   f.call(obj, 10, 20);
+      //   f函数 临时借用到 obj 上
+      //   f.apply(obj, [10, 20]);
+      f.apply(obj, [55, 100]);
+      //   f函数 临时借用到 obj 上
+
+      //   var lis = document.querySelectorAll("ul li");
+
+      //   var lisArr = Array.prototype.slice.call(lis, 0, 1);
+
+      //
+      var arr = [11, 22, 1, 55, 88, 45, 64];
+
+      //   console.log(Math.max(11, 22, 1, 55, 88, 45, 64));
+
+      Math.max.apply(null, arr);
+
+      //   obj.xxx = function () {
+      //     // console.log("wai", this);
+      //     // var _this = this;
+      //     // arr.forEach(function () {
+      //     //   console.log("foreach nei", this, _this);
+      //     // });
+      //     // arr.forEach(function () {
+      //     //   console.log("foreach nei", this);
+      //     // }, this);
+      //   };
+
+      //   obj.xxx = f.bind(obj2);
+
+      //   var g = obj.xxx;
+    </script>
+  </body>
+</html>

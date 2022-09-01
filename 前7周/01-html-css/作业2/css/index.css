@@ -1,0 +1,142 @@
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.index {
+  background-image: url('../img/6b25a318c4717492cbe571fbfa21504.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  z-index: 0;
+}
+.index .mask {
+  background-color: rgba(0, 0, 0, 0.462);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.index .mask .logo {
+  width: 150px;
+  float: left;
+  position: relative;
+}
+.index .mask .logo span:nth-child(1) {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+}
+.index .mask .logo span:nth-child(2) {
+  font-size: 32px;
+  font-weight: 100;
+  color: #fff;
+}
+.index .mask .logo .wrap {
+  width: 1000px;
+  margin-top: 150px;
+}
+.index .mask .logo .wrap button {
+  padding: 14px 42px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 42px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: red;
+  transition: all 1.8s ease-in-out;
+}
+.index .mask .logo .wrap p {
+  font-size: 16px;
+  line-height: 32px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.12);
+  display: inline-block;
+  padding: 6px 30px;
+  border-radius: 32px;
+}
+.index .mask .logo .wrap h1 {
+  font-size: 65px;
+  line-height: 75px;
+  margin-bottom: 18px;
+  color: #fff;
+  max-width: 700px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.index .mask .logo .wrap h1 span.big {
+  font-size: 65px;
+  line-height: 75px;
+  margin-bottom: 18px;
+  color: #fff;
+  max-width: 700px;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0 30px;
+}
+.index .mask .header {
+  height: 42.4px;
+  width: 1000px;
+  margin: 0px auto;
+  padding: 30px;
+}
+.index .mask .header .right {
+  float: right;
+  padding: 0.7px;
+}
+.index .mask .header .right ul.nav {
+  border: none;
+  float: left;
+  margin-right: 160px;
+}
+.index .mask .header .right ul.nav li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 0;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 40px;
+}
+.index .mask .header .right ul.nav li:nth-child(1) {
+  color: red;
+}
+.index .mask .header .right .search {
+  float: right;
+}
+.index .mask .header .right .search input {
+  height: 40px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.195);
+  border: 1px solid rgba(255, 255, 255, 0.303);
+  color: rgba(255, 255, 255, 0.737);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.index .mask .header .right .search i {
+  color: white;
+}
+.index .mask .header .right .search i:nth-of-type(1) {
+  background-color: red;
+  padding: 12px;
+  margin-top: 1px;
+  margin-left: -4.5px;
+  vertical-align: bottom;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.index .mask .header .right .search i:nth-child(3) {
+  font-size: 20px;
+  padding-left: 5px;
+  vertical-align: sub;
+}
+/*# sourceMappingURL=./index.css.map */

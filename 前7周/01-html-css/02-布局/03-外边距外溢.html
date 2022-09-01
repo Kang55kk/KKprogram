@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bigbox">
+      <div class="box boxA">boxA</div>
+      <div class="box boxB">boxB</div>
+      <div class="box boxC">boxC</div>
+    </div>
+    <span>ssssssssssssss</span>
+
+    <style>
+      .bigbox {
+        background-color: lightblue;
+
+        /* 1  */
+        padding: 50px 0;
+        /* padding: 1px; */
+
+        /* 2 不大合适 */
+        /* border: 1px solid red; */
+
+        /* 3 也不大多使用 */
+        /* display: table;
+        width: 100%; */
+      }
+      .box {
+        width: 400px;
+        background-color: aqua;
+
+        /* margin: 50px 0; */
+      }
+      /* 默认情况 第一个子元素的上外边距 和 最后一个元素的下外边距 会发生外溢（撑不大父盒子） */
+
+      /* .boxA {
+        margin: 50px 0;
+      }
+      .boxB {
+        margin: 100px 0;
+      } */
+
+      /* 外边距 上下取最大值 */
+    </style>
+  </body>
+</html>

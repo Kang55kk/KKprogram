@@ -1,0 +1,48 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.wrap {
+  width: 1000px;
+  background-color: aquamarine;
+  margin: 100px auto;
+}
+.big ul li {
+  width: 25%;
+  height: 300px;
+  float: left;
+}
+.big ul li .content {
+  position: relative;
+  margin: 0 10px;
+}
+.big ul li .content img {
+  width: 100%;
+  height: auto;
+}
+.big ul li .content .mask {
+  height: 100%;
+  background-color: #00ffff4f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.big ul li .content .mask .text {
+  padding: 98px 0;
+}
+.big ul li .content:hover .mask {
+  transform: scale(1);
+}
+.big ul li .content:hover .icon {
+  opacity: 0;
+}
+.big ul li .content .icon {
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+/*# sourceMappingURL=./index.css.map */

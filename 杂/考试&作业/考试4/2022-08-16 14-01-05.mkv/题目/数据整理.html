@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 有如下数组
+      var citys = [
+        { id: 1, nm: "北京", py: "beijing" },
+        { id: 45, nm: "重庆", py: "chongqing" },
+        { id: 59, nm: "成都", py: "chengdu" },
+        { id: 70, nm: "长沙", py: "changsha" },
+        { id: 84, nm: "保定", py: "baoding" },
+        { id: 88, nm: "蚌埠", py: "bengbu" },
+        { id: 89, nm: "常州", py: "changzhou" },
+        { id: 150, nm: "阿拉善盟", py: "alashanmeng" },
+        { id: 151, nm: "鞍山", py: "anshan" },
+        { id: 197, nm: "安庆", py: "anqing" },
+        { id: 238, nm: "安阳", py: "anyang" },
+        { id: 700, nm: "承德县", py: "chengdexian" },
+      ];
+
+      //   parseCity(citys)
+      //   变成如下结构
+      
+      var parsedCitys = [
+        {
+          letter: "A",
+          citys: [
+            { id: 150, nm: "阿拉善盟", py: "alashanmeng" },
+            { id: 151, nm: "鞍山", py: "anshan" },
+            { id: 197, nm: "安庆", py: "anqing" },
+            { id: 238, nm: "安阳", py: "anyang" },
+          ],
+        },
+        {
+          letter: "B",
+          citys: [
+            { id: 1, nm: "北京", py: "beijing" },
+            { id: 84, nm: "保定", py: "baoding" },
+            { id: 88, nm: "蚌埠", py: "bengbu" },
+          ],
+        },
+        {
+          letter: "C",
+          citys: [
+            { id: 45, nm: "重庆", py: "chongqing" },
+            { id: 59, nm: "成都", py: "chengdu" },
+            { id: 70, nm: "长沙", py: "changsha" },
+            { id: 89, nm: "常州", py: "changzhou" },
+            { id: 700, nm: "承德县", py: "chengdexian" },
+          ],
+        },
+      ];
+      console.log(parsedCitys);
+    </script>
+
+    <script>
+      // 手风琴
+      // https://pvp.qq.com/web201605/herolist.shtml
+    </script>
+  </body>
+</html>

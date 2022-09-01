@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="swiper" class="swiper">
+      <div class="list">
+        <img src="./normal1.jpg" alt="" />
+        <img src="./normal2.jpg" alt="" />
+        <img src="./normal3.jpg" alt="" />
+        <img src="./normal4.jpg" alt="" />
+      </div>
+      <ul class="dots">
+        <!-- <li title="0"></li>
+        <li title="1"></li> -->
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <style>
+      .swiper {
+        width: 300px;
+        background-color: red;
+        position: relative;
+      }
+      .swiper .list {
+        position: relative;
+      }
+      .swiper .list img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        transition: all 0.3s;
+      }
+      .swiper .list img:first-child {
+        position: relative;
+      }
+      .swiper ul.dots {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+      }
+      .swiper ul.dots li {
+        width: 20px;
+        height: 20px;
+        background-color: orange;
+        margin: 0 10px;
+        border-radius: 50%;
+      }
+    </style>
+    <script>
+      // 默认显示第一个（初始化条件）
+      var current = 0;
+
+      var swiperEl = document.getElementById("swiper");
+      //   根据id获取元素
+      //   var swiperListEl = swiperEl.getElementsByClassName("list");
+      //   html集合 （类数组）（有数组的长度属性 有下标 []）
+      //   访问使用 swiperListEl[0]
+
+      var imgs = swiperEl.getElementsByTagName("img");
+      //   根据标签获取元素（类数组）
+
+      var dots = swiperEl.getElementsByClassName("dots")[0].getElementsByTagName("li");
+      // 变量的声明要写在 使用的前面
+
+      //   初始化（默认显示第一个，其他所有图片隐藏）
+      for (var i = 0; i < imgs.length; i++) {
+        if (i === current) {
+          imgs[i].style.opacity = 1;
+          dots[i].style.background = "red";
+        } else {
+          imgs[i].style.opacity = 0;
+          dots[i].style.background = "orange";
+        }
+      }
+
+      //   dots[0].onclick = function () {
+      //     console.log(123);
+      //   };
+
+      //   给所有的 dot 元素添加点击事件
+      //   for (let i = 0; i < dots.length; i++) {
+      //     dots[i].onclick = function () {
+      //       console.log("click", i);
+      //       //   这里的 i 都是4，有问题不是我们想要的 0123
+      //       //   1 最最最简单的办法 是把var换成let
+      //     };
+      //   }
+
+      //   for (let i = 0; i < dots.length; i++) {
+      //     dots[i].title = i;
+      //   }
+
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].title = i;
+        // 给每一个dot 添加顺序标识
+
+        dots[i].onclick = function () {
+          //   console.log("click", i);
+          //   这里的 i 都是4，有问题不是我们想要的 0123
+          //   这里的i早就遍历完成 变成最后一个失败的条件 4
+          //   点击没有遍历快（同步与异步 *****）
+
+          // this关键词（ ***** ）
+          console.log(this.title, typeof this.title);
+          //   这里的this 指向的是 事件函数绑定的元素
+          //   1 事件处理函数内部的 this 指向事件绑定的元素 (也是一个对象)
+          //   2... this 指向函数运行时 这个函数挂载的 对象（this是动态指向）
+
+          //   获取到当前点击的小点点的序号 对应的图片显示 其他隐藏
+          //   debugger;
+          for (var i = 0; i < imgs.length; i++) {
+            if (i == this.title) {
+              imgs[i].style.opacity = 1;
+            } else {
+              imgs[i].style.opacity = 0;
+            }
+          }
+
+          //   当前的小点点 高亮
+          for (let i = 0; i < dots.length; i++) {
+            dots[i].style.background = "orange";
+          }
+          this.style.background = "red";
+        };
+      }
+      console.log(i);
+      //   这里的i 是4
+    </script>
+
+    <hr />
+
+    <button id="zzz" title="xxx" class="yyy" style="color: red">btn</button>
+    <script>
+      document.getElementsByTagName("button")[0].onclick = function () {
+        console.log(this.title);
+        // element.title  element.className  class是关键词（有其他作用）
+      };
+    </script>
+
+    <script>
+      var obj = {
+        name: "nick",
+        age: 17,
+      };
+
+      var obj2 = {
+        0: "nick",
+        1: "xxx",
+        2: "yyy",
+        length: 3,
+      };
+    </script>
+  </body>
+</html>

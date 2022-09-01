@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .fangda {
+      }
+      .fangda .thumb {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        /* margin: 0 auto; */
+      }
+      .fangda .thumb img {
+        width: 100%;
+        display: block;
+      }
+      .fangda .thumb .mask {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 255, 0.5);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .fangda .zoom {
+        width: 300px;
+        height: 300px;
+        background-color: lightblue;
+
+        background-image: url("./1.jpg");
+        /* background-size: 200%; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fangda">
+      <div class="thumb">
+        <img src="./1.jpg" alt="" />
+        <div class="mask"></div>
+      </div>
+      <div class="zoom"></div>
+    </div>
+
+    <script>
+      var level = 3;
+      var thumbEl = document.querySelector(".fangda .thumb");
+      //   querySelector 只能选中一个   querySelectorAll 多个（节点列表）
+      var maskEl = document.querySelector(".fangda .thumb .mask");
+      var zoomEl = document.querySelector(".fangda .zoom");
+
+      //   根据放大级别设置背景图的大小
+      //   zoomEl.style.backgroundSize = level * 100 + "%";
+      zoomEl.style["background-size"] = level * 100 + "%";
+
+      var zoomWidth = zoomEl.offsetWidth;
+      var zoomHeight = zoomEl.offsetHeight;
+
+      //   获取缩略图的宽高
+      var thumbWidth = thumbEl.offsetWidth;
+      var thumbHeight = thumbEl.offsetHeight;
+
+      //   计算mask的宽度
+      var maskWidth = thumbWidth / level;
+      var maskHeight = thumbEl.offsetHeight / level;
+      // 设置mask 的宽度
+      maskEl.style.width = maskWidth + "px";
+      maskEl.style.height = maskHeight + "px";
+
+      var offsetLeft = thumbEl.offsetLeft;
+      var offsetTop = thumbEl.offsetTop;
+      //   鼠标移动的时候
+      thumbEl.onmousemove = function () {
+        // 取到鼠标移动的位置
+        // console.log(event.offsetX, event.offsetY);
+        console.log(event.pageX - offsetLeft, event.pageY - offsetTop);
+
+        // mx 代表鼠标的坐标
+        var mx = event.pageX - offsetLeft;
+        var my = event.pageY - offsetTop;
+
+        // 遮罩的左上角的坐标
+        var maskX = mx - maskWidth / 2;
+        var maskY = my - maskHeight / 2;
+        // 限定遮罩层移动的范围
+        if (maskX < 0) {
+          maskX = 0;
+        }
+        if (maskX > thumbWidth - maskWidth) {
+          maskX = thumbWidth - maskWidth;
+        }
+        if (maskY < 0) {
+          maskY = 0;
+        }
+        if (maskY > thumbHeight - maskHeight) {
+          maskY = thumbHeight - maskHeight;
+        }
+
+        // 遮罩层跟着鼠标走
+        maskEl.style.left = maskX + "px";
+        maskEl.style.top = maskY + "px";
+
+        //
+        zoomEl.style["background-position"] =
+          -(zoomWidth / maskWidth) * maskX + "px " + -(zoomHeight / maskHeight) * maskY + "px";
+      };
+    </script>
+  </body>
+</html>

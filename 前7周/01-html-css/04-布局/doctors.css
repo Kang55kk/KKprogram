@@ -1,0 +1,49 @@
+.doctors {
+  background: lightblue;
+  padding: 50px 0;
+}
+
+.doctors .wrapper {
+  width: 1000px;
+  background: lightcoral;
+  margin: 0 auto;
+}
+
+.doctors .wrapper header.title {
+}
+.doctors .wrapper ul.list {
+  background: rgb(145, 223, 154);
+  overflow: hidden;
+}
+.doctors .wrapper ul.list li.card {
+  width: 303px;
+  /* background: rgb(73, 48, 48); */
+  float: left;
+  margin: 15px;
+  text-align: center;
+}
+
+.doctors .wrapper ul.list li.card img {
+  width: 100%;
+  /* 百分比是基于父级宽度 */
+  border-radius: 50%;
+  /* 百分比是基于父级宽度和高度 */
+
+  border: 10px solid white;
+
+  /* 100% + 边框 往外扩大 */
+  /* width: 283px; */
+
+  box-sizing: border-box;
+  /* box-sizing: content-box; */
+  /*  chrome firefox 标准盒模型 content-box 宽度设定的是从内容算  border-box从边框算 怪异盒模型 IE  */
+}
+.doctors .wrapper ul.list li.card h5 {
+}
+
+.doctors .wrapper ul.list li.card p {
+}
+
+.doctors .wrapper ul.list li.card .icons i {
+  margin: 5px;
+}

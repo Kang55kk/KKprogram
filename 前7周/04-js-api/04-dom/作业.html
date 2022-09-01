@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      var person = {
+        name: "nick",
+        age: 17,
+        job: "无业游民",
+      };
+      //   console.log(person);
+
+      for (key in person) {
+        console.log(key, person[key]);
+      }
+    </script> -->
+
+    <!-- <script>
+      // 'abcdefaabbaf'
+
+      var str = "abcdefafabbafff";
+      // 拆分成字母
+      var arr = str.split("");
+
+      //   arr = arr.sort();
+
+      // [a,b]
+      // [4,3]
+
+      //   {b:3,a:4}
+      // [{letter:b, count: 3}, {letter:a, count: 4}]
+
+      var tmp = {};
+      arr.forEach(function (e, i) {
+        // console.log(tmp[e]);
+        if (tmp[e]) {
+          tmp[e] += 1;
+        } else {
+          // 不存在
+          tmp[e] = 1;
+          //   console.log(tmp[e]);
+        }
+      });
+
+      //   console.log(tmp);
+      var count = 0;
+      var letter;
+      for (key in tmp) {
+        // console.log(tmp[key]);
+
+        if (tmp[key] > count) {
+          count = tmp[key];
+          letter = key;
+        }
+      }
+    </script> -->
+
+    <script>
+      // 'abcdefaabbaf'
+
+      var str = "abcdefafabbafff";
+      // 拆分成字母
+      var arr = str.split("");
+
+      //   [{letter:b, count: 3}, {letter:a, count: 4}]
+
+      //   var tmp = [
+      //     { letter: "b", count: 3 },
+      //     { letter: "a", count: 4 },
+      //   ];
+
+      var tmp = [];
+
+      //   var res = tmp.find(function (ele) {
+      //     return ele.letter === "a";
+      //   });
+      arr.forEach(function (e) {
+        // console.log(e);
+        var res = tmp.find(function (ele) {
+          return ele.letter === e;
+        });
+        if (res) {
+          // 找到了
+          res.count++;
+        } else {
+          tmp.push({
+            letter: e,
+            count: 1,
+          });
+        }
+      });
+
+      tmp.sort(function (a, b) {
+        return a.count - b.count;
+      });
+
+      console.log(tmp[tmp.length - 1]);
+    </script>
+  </body>
+</html>

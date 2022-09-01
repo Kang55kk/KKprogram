@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script>
+      console.log(_.chunk(["a", "b", "c", "d"], 2));
+    </script>
+
+    <div class="box"></div>
+
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: lightblue;
+      }
+    </style>
+    <!-- <script>
+      var id;
+      document.querySelector(".box").onmousemove = function () {
+        clearTimeout(id);
+
+        id = setTimeout(function () {
+          console.log(123, new Date().getSeconds());
+        }, 3000);
+      };
+    </script> -->
+
+    <script>
+      function xxx(e) {
+        console.log(new Date().getSeconds(), this, arguments, e);
+      }
+        document.querySelector(".box").onmousemove = xxx;
+
+        console.log(_.debounce(xxx, 3000));
+        var yyy = _.debounce(xxx, 3000);
+        document.querySelector(".box").onmousemove = yyy;
+
+        var zzz = _.throttle(xxx, 3000);
+        document.querySelector(".box").onmousemove = zzz;
+
+        document.querySelector(".box").onmousemove = _.throttle(xxx, 3000);
+
+      function debounce(func, wait) {
+        var id;
+
+        return function () {
+          clearTimeout(id);
+          //只管 event
+          // id = setTimeout(func.bind(this), wait, event);
+
+          // 获取dom
+          var _this = this;
+          var parmas = arguments;
+          // arguments 就是事件处理函数的所有参数
+          id = setTimeout(function () {
+            // 这里使用_this获取dom 不能使用this  是因为在定时器的匿名函数里面
+            func.apply(_this, Array.prototype.slice(parmas));
+            // 临时把 func借用到 _this（DOM）
+            // apply 第二个参数是一个数组 代表传递给 func的所有参数
+          }, wait);
+        };
+      }
+
+      document.querySelector(".box").onmousemove = debounce(xxx, 100);  
+
+      // function f(a, b, c) {
+      //   console.log(a, b, c);
+      // }
+      //
+      // document.querySelector(".box").onclick = function () {
+      //   f(event, 1, 2);
+      // };
+    </script>
+  </body>
+</html>

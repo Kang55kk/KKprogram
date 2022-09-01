@@ -1,0 +1,50 @@
+body {
+  background-image: url('src=http___pic.16pic.com_00_21_42_16pic_2142229_b.jpg&refer=http___pic.16pic.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+ul,
+body {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  width: 120px;
+  padding: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  margin: 2px;
+}
+.city {
+  margin: 0 auto;
+  width: 500px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.441);
+  overflow: auto;
+  top: 50px;
+  position: relative;
+}
+.city .sheng {
+  width: 125px;
+}
+.city .town {
+  position: absolute;
+  left: 135px;
+  top: 0px;
+  width: 125px;
+  height: 300px;
+}
+.city .area {
+  position: absolute;
+  left: 134px;
+  top: 0px;
+  height: 300px;
+}
+.active {
+  background-color: rgba(150, 207, 230, 0.608);
+}
+/*# sourceMappingURL=./chengshi.css.map */

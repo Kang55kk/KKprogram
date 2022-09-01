@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      var x = 10;
+      console.log("he\nllo wr\nol\td " + x);
+      //   \n 换行 \t 制表符
+
+      console.log("============");
+    </script> -->
+
+    <!-- <script>
+      for (var i = 0; i < 3; i++) {
+        for (var j = 0; j < 4; j++) {
+          console.log(i, j);
+        }
+      }
+      //   循环嵌套  外层循环每经历一次迭代 内层循环会 走完整个循环
+
+      //   console.log("开始");
+
+      //   for (let i = 0; i < 3; i++) {
+      //     console.log(i);
+      //   }
+
+      //   console.log("结束");
+    </script> -->
+
+    <!-- <script>
+      for (var i = 1; i <= 3; i++) {
+        // 外层
+        var str = "";
+
+        for (let j = 1; j <= 3; j++) {
+          if (j > i) {
+            break;
+          }
+          //   console.log(j, i);
+          str = str + j + "x" + i + "=" + +(j * i) + "\t";
+        }
+        // 假设i是2 内层循环会走 2次 会打印2次 两行
+        // 不能再内层循环里面打印
+        console.log(str);
+        // console.log("========");
+      }
+    </script> -->
+
+    <script>
+      //   debugger;
+      for (var i = 1; i <= 3; i++) {
+        var str = "";
+
+        for (let j = 1; j <= i; j++) {
+          str = str + j + "x" + i + "=" + +(j * i) + "\t";
+        }
+
+        console.log(str);
+      }
+    </script>
+
+  </body>
+</html>

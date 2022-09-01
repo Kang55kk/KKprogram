@@ -1,0 +1,168 @@
+.dollar {
+  margin: 60px 0 ;
+}
+.dollar .wrap {
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto;
+}
+.dollar .wrap .box1 {
+  float: left;
+  width: 300px;
+}
+.dollar .wrap .box1 span {
+  margin-bottom: 10px;
+  color: #fd4d40;
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-family: "Indie Flower", cursive !important;
+}
+.dollar .wrap .box1 h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.dollar .wrap .box1 p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #364d59 !important;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.dollar .wrap .box2 {
+  float: left;
+  width: 300px;
+  margin: 0 50px;
+}
+.dollar .wrap .box2 .circle {
+  width: 90px;
+  height: 90px;
+  background-color: #16c3b0;
+  position: relative;
+  border-radius: 50%;
+}
+.dollar .wrap .box2 .circle p {
+  line-height: 74px;
+  background-color: #16c3b0;
+  width: 80px;
+  font-weight: 300;
+  text-align: center;
+  font-size: 26px;
+  box-sizing: border-box;
+  border: 3px solid white;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+}
+.dollar .wrap .box2 h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  color: #364d59;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+.dollar .wrap .box2 .yes {
+  margin-top: -30px;
+}
+.dollar .wrap .box2 .yes i {
+  color: #67c667;
+  display: inline-block;
+  margin-right: 10px;
+}
+.dollar .wrap .box2 .yes p {
+  display: inline-block;
+  line-height: 50px;
+}
+.dollar .wrap .box2 button {
+  background: #16c3b0;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 10px 20px;
+  margin-top: 3rem !important;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5;
+  border-color: transparent;
+  color: white;
+}
+.dollar .wrap .box2 button:hover {
+  cursor: pointer;
+}
+.dollar .wrap .box3 {
+  float: left;
+  width: 300px;
+}
+.dollar .wrap .box3 .circle {
+  width: 90px;
+  height: 90px;
+  background-color: red;
+  position: relative;
+  border-radius: 50%;
+}
+.dollar .wrap .box3 .circle p {
+  line-height: 74px;
+  background-color: #fd4d40;
+  width: 80px;
+  font-weight: 300;
+  text-align: center;
+  font-size: 26px;
+  box-sizing: border-box;
+  border: 3px solid white;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border-radius: 50%;
+}
+.dollar .wrap .box3 h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  color: #364d59;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+.dollar .wrap .box3 .yes {
+  margin-top: -30px;
+}
+.dollar .wrap .box3 .yes i {
+  color: red;
+  display: inline-block;
+  margin-right: 10px;
+}
+.dollar .wrap .box3 .yes p {
+  display: inline-block;
+  line-height: 50px;
+}
+.dollar .wrap .box3 button {
+  background: #fd4d40;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 10px 20px;
+  margin-top: 3rem !important;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5;
+  border-color: transparent;
+  color: white;
+}
+.dollar .wrap .box3 button:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=./dollar.css.map */

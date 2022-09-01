@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  perspective: 500px;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+@keyframes xxx {
+  from {
+    transform: rotateX(0deg) rotatey(0deg);
+  }
+  to {
+    transform: rotateX(0deg) rotatey(360deg);
+  }
+}
+.box > div {
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(195, 144, 144, 0.711);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
+}
+.box > div:nth-child(1) {
+  background-color: rgba(179, 234, 179, 0.586);
+  transform: rotateY(-90deg) translateZ(100px);
+  background-color: rgba(45, 222, 222, 0.34);
+}
+.box > div:nth-child(2) {
+  background-color: rgba(179, 234, 179, 0.586);
+  transform: rotateY(90deg) translateZ(100px);
+  background-color: rgba(45, 222, 222, 0.34);
+}
+.box > div:nth-child(3) {
+  background-color: rgba(146, 146, 192, 0.637);
+  transform: rotateY(0deg) translateZ(100px);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgba(45, 222, 222, 0.34);
+}
+.box > div:nth-child(4) {
+  background-color: rgba(118, 171, 172, 0.652);
+  transform: rotateY(180deg) translateZ(100px);
+  background-color: rgba(45, 222, 222, 0.34);
+}
+.box > div:nth-child(5) {
+  background-color: rgba(130, 93, 130, 0.678);
+  transform: rotateX(90deg) translateZ(100px);
+  background-color: rgba(45, 222, 222, 0.34);
+}
+.box > div:nth-child(6) {
+  background-color: rgba(170, 153, 123, 0.689);
+  transform: rotateX(-90deg) translateZ(100px);
+  background-color: rgba(45, 222, 222, 0.34);
+}
+/*# sourceMappingURL=./zft.css.map */

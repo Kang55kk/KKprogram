@@ -1,0 +1,94 @@
+nav.wrap {
+    width: 1000px;
+    background-color: lightblue;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    h1.logo {
+        float: left;
+        padding-top: 14px;
+    }
+
+    ul.menu {
+        float: right;
+        overflow: hidden;
+
+        // 空格 代表 后代 没有空格代表 且  > 代表直接子元素
+        &>li {
+            float: left;
+            // line-height: 102px;
+            margin-left: 20px;
+            background-color: lightblue;
+
+            position: relative;
+            border-bottom: 2px solid transparent;
+            box-sizing: border-box;
+            margin-top: 10px;
+
+            &>a {
+                text-decoration: none;
+
+                line-height: 28px;
+                font-weight: 500;
+                color: black;
+                background-color: lightcoral;
+            }
+
+            &:hover {
+                border-bottom: 2px solid red;
+            }
+
+
+            &:first-child {
+                border-bottom: 2px solid red;
+            }
+
+            &:last-child {
+                border: 1px solid red;
+                padding: 0 15px;
+                line-height: 50px;
+                box-sizing: border-box;
+                text-transform: uppercase;
+                border-radius: 5px;
+                background-color: lightblue;
+                margin-top: 0;
+
+                a {
+                    border-bottom: none;
+                    line-height: 0;
+                }
+            }
+
+            &:hover {
+                ul.subnav {
+                    display: block;
+                }
+            }
+
+            ul.subnav {
+                background-color: rebeccapurple;
+                position: absolute;
+                top: 30px;
+                left: 0;
+                display: none;
+
+                li {
+
+                    background: none;
+                    width: 150px;
+
+                    a {
+                        background: none;
+                        color: white;
+                        text-decoration: none;
+                        padding: 10px;
+                        line-height: 2em;
+                        font-size: 14px;
+
+                    }
+                }
+            }
+        }
+    }
+}

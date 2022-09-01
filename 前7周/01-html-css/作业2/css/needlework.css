@@ -1,0 +1,86 @@
+.needlework {
+  background-image: url("../img/needlework.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  z-index: 0;
+  position: relative;
+}
+.needlework .mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.523);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  margin: 0 -200px 0 0;
+}
+.needlework .mask .wrap {
+  margin: 90px auto;
+  position: relative;
+  width: 1200px;
+  height: 200px;
+}
+.needlework .mask .wrap .left {
+  width: 600px;
+  float: left;
+  overflow: hidden;
+  position: absolute;
+  margin: 80px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.needlework .mask .wrap .left .title {
+  margin-bottom: 30px;
+}
+.needlework .mask .wrap .left .title span {
+  font-size: 44px;
+  line-height: 50px;
+  font-weight: bold;
+  color: #fff;
+}
+.needlework .mask .wrap .left .title span:nth-child(2) {
+  font-weight: 150;
+}
+.needlework .mask .wrap .left .title span:nth-child(4) {
+  font-weight: 100;
+}
+.needlework .mask .wrap .left .text p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+.needlework .mask .wrap .right {
+  float: right;
+  height: 150px;
+  position: relative;
+  width: 300px;
+}
+.needlework .mask .wrap .right button {
+  float: right;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  padding: 14px 42px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 42px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: red;
+  transition: all 1.8s ease-in-out;
+  height: 56px;
+}
+/*# sourceMappingURL=./needlework.css.map */

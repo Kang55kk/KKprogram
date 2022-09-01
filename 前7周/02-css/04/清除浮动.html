@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box clear">
+      <div class="left">left</div>
+      <div class="right">right</div>
+
+      <!-- <div class="xxx"></div> -->
+    </div>
+    <style>
+      .box {
+        background-color: lightblue;
+        /* overflow: hidden; */
+      }
+      .box .left {
+        width: 100px;
+        height: 100px;
+        float: left;
+        background-color: lightcoral;
+      }
+      .box .right {
+        width: 100px;
+        height: 200px;
+        float: right;
+        background-color: rgb(152, 91, 91);
+      }
+
+      /* .box .xxx {
+        clear: both;
+      } */
+
+      .clear::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="stage">
+    </div>
+
+    <style>
+        .stage {
+            width: 500px;
+            height: 500px;
+            background-color: lightblue;
+            position: relative;
+        }
+    </style>
+
+    <script>
+        var stage = document.querySelector(".stage");
+
+        function Car(width, height, backgroundColor, left, top, speed) {
+            this.width = width,
+                this.height = height,
+                this.speed = speed,
+                this.backgroundColor = backgroundColor,
+                this.left = left,
+                this.top = top
+        }
+        Car.prototype.create = function (classname) {
+            this.classname = classname
+            var car = document.createElement("div")
+            stage.appendChild(car)
+            car.classList.add(classname)
+            car.style.width = this.width + "px";
+            car.style.height = this.height + "px";
+            car.style.background = this.backgroundColor
+            car.style.left = this.left + "px";
+            car.style.top = this.top + "px";
+            car.style.position = "absolute"
+            console.log(this);
+    
+
+            setInterval(() => {
+
+                this.left = this.left + this.speed
+                car.style.left = this.left + "px"
+                console.log();
+                
+
+                if (this.left>=(500-this.width) ||this.left<=0) {
+                    this.speed = -this.speed
+                }
+            }, 1000/60)
+        }
+
+        // var red = new Car(50, 30, "red", 0, 0, 10)
+        // red.create("red")
+
+        function jiehe(width, height, backgroundColor, left, top, speed,classname) {
+            var car = new Car(width, height, backgroundColor, left, top, speed)
+            car.create(classname)
+        }
+
+        jiehe(20,33,"blue",0,100,230,"blue")
+    </script>
+</body>
+
+</html>

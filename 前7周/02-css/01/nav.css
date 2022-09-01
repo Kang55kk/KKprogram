@@ -1,0 +1,74 @@
+nav.wrap {
+  width: 1000px;
+  background-color: lightblue;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+nav.wrap h1.logo {
+  float: left;
+  padding-top: 14px;
+}
+nav.wrap ul.menu {
+  float: right;
+  overflow: hidden;
+}
+nav.wrap ul.menu > li {
+  float: left;
+  margin-left: 20px;
+  background-color: lightblue;
+  position: relative;
+  border-bottom: 2px solid transparent;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+nav.wrap ul.menu > li > a {
+  text-decoration: none;
+  line-height: 28px;
+  font-weight: 500;
+  color: black;
+  background-color: lightcoral;
+}
+nav.wrap ul.menu > li:hover {
+  border-bottom: 2px solid red;
+}
+nav.wrap ul.menu > li:first-child {
+  border-bottom: 2px solid red;
+}
+nav.wrap ul.menu > li:last-child {
+  border: 1px solid red;
+  padding: 0 15px;
+  line-height: 50px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: lightblue;
+  margin-top: 0;
+}
+nav.wrap ul.menu > li:last-child a {
+  border-bottom: none;
+  line-height: 0;
+}
+nav.wrap ul.menu > li:hover ul.subnav {
+  display: block;
+}
+nav.wrap ul.menu > li ul.subnav {
+  background-color: rebeccapurple;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: none;
+}
+nav.wrap ul.menu > li ul.subnav li {
+  background: none;
+  width: 150px;
+}
+nav.wrap ul.menu > li ul.subnav li a {
+  background: none;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  line-height: 2em;
+  font-size: 14px;
+}
+/*# sourceMappingURL=./nav.css.map */

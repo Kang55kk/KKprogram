@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    // background-image: linear-gradient(45deg, rgba(240, 101, 85, 0.484), rgba(45, 247, 45, 0.533));
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    perspective: 1000px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h3,
+h5,
+p {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: lightcoral;
+    background-image: url("../css3-3d-column-chart/600x600.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+
+    transform-style: preserve-3d;
+    transform-origin: center center 100px;
+
+    transition: all .3s;
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        border-radius: 20px;
+        box-shadow: 0 0 10px 0 gray;
+
+        transition: inherit;
+        // 继承
+
+    }
+
+    &::before {
+        background-color: rgba(169, 145, 37, 0.303);
+        z-index: 1;
+
+    }
+
+    &::after {
+        background-color: rgb(49, 49, 49);
+        z-index: -1;
+        transform: translateZ(-20px);
+    }
+
+
+    h3,
+    h5,
+    p {
+        transition: inherit;
+        z-index: 9;
+    }
+
+    &.active {
+        transform: rotateX(60deg) translateZ(50px);
+
+        &::before,
+        &::after {
+            box-shadow: 0 0 30px 0 rgb(255, 9, 9);
+
+        }
+
+        &::before {
+            background-color: rgba(20, 50, 245, 0.303);
+        }
+
+
+        h3 {
+            transform: translateZ(50px);
+        }
+
+        h5 {
+            transform: translateZ(30px);
+        }
+
+        p {
+            transform: translateZ(10px);
+        }
+
+        ul {
+            li {
+                &:nth-child(1) {
+                    transform: rotate(-45deg) translateZ(150px);
+
+                }
+
+                &:nth-child(2) {
+                    transform: rotate(-45deg) translateZ(80px);
+
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translateZ(80px);
+
+                }
+
+                &:nth-child(4) {
+                    transform: rotate(-45deg) translateZ(60px);
+
+                }
+
+                &:nth-child(5) {
+                    transform: rotate(-45deg) translateZ(75px);
+
+                }
+            }
+        }
+    }
+
+
+
+    ul {
+        transform-style: preserve-3d;
+        transition: inherit;
+
+        display: flex;
+        z-index: 9;
+
+        li {
+            width: 20px;
+            height: 20px;
+            margin: 30px 10px;
+            background-color: white;
+
+            transform-style: preserve-3d;
+
+            transform: rotate(-45deg) translateZ(0px);
+            transition: inherit;
+            // transform: rotate(-45deg);
+
+            &::before,
+            &::after {
+                content: '2000';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200px;
+                height: 100%;
+
+
+                transform-origin: left bottom;
+
+                background-image: linear-gradient(to right, white, rgb(150, 150, 150));
+            }
+
+            &::before {
+                // background-color: rgb(32, 248, 3);
+                transform-origin: left center;
+                transform: rotateY(90deg) rotateX(180deg);
+            }
+
+            &::after {
+
+                // background-color: rgba(0, 0, 255, 0.897);
+                transform: rotateY(90deg) rotateX(-90deg);
+
+            }
+        }
+    }
+
+
+
+}

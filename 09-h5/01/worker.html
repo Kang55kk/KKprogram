@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box"></div>
+    <input type="number" />
+    <input type="button" value="计算" />
+    <style>
+      .box {
+        width: 20px;
+        height: 20px;
+        background-color: lightblue;
+      }
+    </style>
+    <!-- <script src="./worker.js"></script>
+    <script>
+      var x = 0;
+      var speed = 3;
+      console.log("start");
+
+      console.log("end");
+
+      setTimeout(function () {
+        console.log(f(43));
+      }, 3000);
+
+      setInterval(function () {
+        x += speed;
+        document.querySelector(".box").style.marginLeft = x + "px";
+      }, 100);
+    </script> -->
+
+    <!-- <script>
+      var x = 0;
+      var speed = 3;
+      setInterval(function () {
+        x += speed;
+        document.querySelector(".box").style.marginLeft = x + "px";
+      }, 100);
+
+      var w = new Worker("./worker.js");
+      //   console.log(w);
+      w.onmessage = function (event) { //添加一个事件监听器
+        console.log("result", event.data);
+      };
+
+      document.querySelector("input[type=button]").onclick = function () {
+        w.postMessage(Number(document.querySelector("input[type=number]").value));
+      };
+    </script> -->
+  </body>
+</html>

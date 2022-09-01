@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .huadong {
+            display: flex;
+            width: 100%;
+            height: 700px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper {
+            width: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .swiper .list {
+            width: 100%;
+            display: flex;
+            transition: all 0.3s;
+        }
+
+        .swiper .list img {
+            width: 100%;
+            display: block;
+        }
+
+        .swiper ul.dots {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            z-index: 9;
+        }
+
+        .swiper ul.dots li {
+            width: 30px;
+            height: 30px;
+            background-color: rgba(227, 222, 211, 0.682);
+            margin: 0 20px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .swiper .control {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            cursor: pointer;
+            font-size: 70px;
+            background-color: rgba(255, 255, 255, 0.684);
+            color: rgba(255, 255, 255, 0.597);
+            border-color: transparent;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="huadong">
+        <div id="swiper" class="swiper">
+            <div class="list">
+                <img src="./4.jpg" alt="" />
+                <img src="./2.jpg" alt="" />
+                <img src="./3.jpg" alt="" />
+                <img src="./1.jpg" alt="" />
+            </div>
+            <ul class="dots">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <div class="control">
+                <button>
+                    <</button> <button>>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var swiperEl = document.getElementById("swiper");
+        var listEl = document.getElementsByClassName("list")[0];
+        var imgs = swiperEl.getElementsByClassName("list")[0].getElementsByTagName("img");
+        var dots = swiperEl.getElementsByClassName("dots")[0].getElementsByTagName("li");
+
+        var prevBtn = swiperEl.getElementsByClassName("control")[0].getElementsByTagName("button")[0];
+        var nextBtn = swiperEl.getElementsByClassName("control")[0].getElementsByTagName("button")[1];
+
+        var current = 0;
+
+        function showImg(index) {
+            listEl.style.marginLeft = -index * 600 + "px";
+            current = index;
+            return current
+        }
+
+        Array.prototype.slice.call(dots);
+
+        Array.prototype.slice.call(dots).forEach(function (dot, i) {
+            // console.log(dot, i);
+            dot.onclick = function () {
+                showImg(i);
+            };
+        });
+
+        setInterval(function () {
+            showNext();
+        }, 3000);
+
+        function showNext() {
+            current++;
+            if (current >= imgs.length) {
+                current = 0;
+            }
+            showImg(current);}
+
+
+            nextBtn.onclick = function () {
+                var index = current >= imgs.length - 1 ? 0 : ++current;
+                showImg(index);
+            };
+
+            prevBtn.onclick = function () {
+                var index = current <= 0 ? imgs.length - 1 : --current;
+                showImg(index);
+            };
+    </script>
+
+</body>
+
+</html>

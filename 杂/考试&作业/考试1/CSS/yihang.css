@@ -1,0 +1,40 @@
+.yihang {
+  background-color: #ffc107;
+  height: 150px;
+  width: 100%;
+}
+.yihang .wrap {
+  width: 800px;
+  overflow: hidden;
+  margin: 0px auto;
+  height: 150px;
+}
+.yihang .wrap h3 {
+  color: #fff !important;
+  font-weight: 300;
+  font-size: 30px;
+  display: block;
+  float: left;
+  margin: 55px 0;
+}
+.yihang .wrap button {
+  color: #fff;
+  float: right;
+  background-color: #c82333;
+  border-color: transparent;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 16px;
+  margin: 47.4px 0;
+}
+.yihang .wrap button:hover {
+  background-color: #ae1818;
+  cursor: pointer;
+}
+/*# sourceMappingURL=./yihang.css.map */

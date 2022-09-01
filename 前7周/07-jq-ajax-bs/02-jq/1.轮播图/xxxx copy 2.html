@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="swiper" class="swiper">
+      <div class="list">
+        <img src="./normal1.jpg" alt="" />
+        <img src="./normal2.jpg" alt="" />
+        <img src="./normal3.jpg" alt="" />
+        <img src="./normal4.jpg" alt="" />
+      </div>
+      <ul class="dots"></ul>
+      <!-- <div class="control">
+        <button class="prevBtn">prev</button>
+        <button class="nextBtn">next</button>
+      </div> -->
+    </div>
+
+    <div id="swiper1" class="swiper">
+      <div class="list">
+        <img src="./normal1.jpg" alt="" />
+        <img src="./normal2.jpg" alt="" />
+        <img src="./normal3.jpg" alt="" />
+        <img src="./normal4.jpg" alt="" />
+      </div>
+      <ul class="dots"></ul>
+    </div>
+
+    <style>
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .swiper {
+        width: 300px;
+        position: relative;
+      }
+      .swiper .list {
+        position: relative;
+      }
+      .swiper .list img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .swiper .dots {
+        display: flex;
+        justify-content: center;
+
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+      }
+      .swiper .dots li {
+        width: 10px;
+        height: 10px;
+        background-color: orange;
+        margin: 5px;
+      }
+      .swiper .dots li.active {
+        background-color: blue;
+      }
+
+      .swiper .control {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        bottom: 50%;
+        left: 0;
+      }
+    </style>
+
+    <script>
+      function Swiper(selecter, options) {
+        this.opt = {
+          current: options.current || 0,
+          t: options.t || 10000,
+          autoplay: options.autoplay || true,
+          hasDots: options.hasDots === undefined ? true : options.hasDots,
+        };
+        // 这里默认参数有问题  当携带的参数 是否定意味的（转换为布尔值为 fasle 的）
+
+        this.container = $(selecter);
+
+        var that = this;
+        if (this.opt.hasDots) {
+          this.container.find(".list img").each(function (i, o) {
+            that.container.find(".dots").append("<li></li>");
+          });
+
+          this.container
+            .find(".dots")
+            .children()
+            .click(function () {
+              // console.log(that);
+              that.show($(this).index(), that.opt.t);
+            });
+        }
+
+        this.show(this.opt.current, 0);
+      }
+
+      Swiper.prototype.show = function (n) {
+        this.opt.current = n;
+        if (this.opt.t === undefined) {
+          this.opt.t = 10000;
+        }
+        this.container
+          .find(".list img")
+          .eq(n)
+          .fadeIn(this.opt.t)
+          .css({
+            position: "relative",
+          })
+          .siblings()
+          .fadeOut(this.opt.t)
+          .css({
+            position: "absolute",
+          })
+          .end()
+          .end()
+          .end()
+          .find(".dots")
+          .children()
+          .eq(n)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+
+        // console.log(current);
+      };
+
+      var s1 = new Swiper("#swiper", {
+        t: 1000,
+        autoplay: true,
+        hasDots: true,
+      });
+      // swiper("#swiper");
+
+      var s2 = new Swiper("#swiper1", {
+        t: 300,
+        hasDots: false,
+      });
+    </script>
+    <!-- <script>
+      $(".swiper")
+        .find(".list img")
+        .each(function (i, o) {
+          $(".swiper").find(".dots").append("<li></li>");
+        });
+
+      function show(n, t) {
+        $(".swiper")
+          .find(".list img")
+          .eq(n)
+          .fadeIn(t)
+          .css({
+            position: "relative",
+          })
+          .siblings()
+          .fadeOut(t)
+          .css({
+            position: "absolute",
+          })
+          .end()
+          .end()
+          .end()
+          .find(".dots")
+          .children()
+          .eq(n)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+      }
+      show(0, 0);
+
+      $(".swiper")
+        .find(".dots")
+        .children()
+        .click(function () {
+          show($(this).index(), 500);
+        });
+    </script> -->
+  </body>
+</html>

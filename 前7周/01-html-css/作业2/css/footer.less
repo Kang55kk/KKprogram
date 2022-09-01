@@ -1,0 +1,142 @@
+i.fa-level-up {
+    color: white;
+    font-size: 30px;
+    line-height: 61.15px;
+    position: fixed;
+    bottom: 100px;
+    right: 0px;
+    padding: 0 22px;
+    border-radius: 80px;
+    background-color: red;
+
+}
+
+.footer {
+    background-image: url("../img/footer.jpg");
+    background-size: cover;
+    background-position: center;
+    // width: 1200px;
+    // height: 600px;
+
+    .mask {
+        background-color: rgba(0, 0, 0, 0.627);
+        z-index: -1;
+
+        .wrap {
+            padding: 100px 0;
+            display: flex;
+            width: 1200px;
+            overflow: hidden;
+            margin: 0 auto;
+            flex-direction: column;
+
+            i {
+                color: white;
+                margin-right: 15px;
+                transition: all .5s;
+                cursor: pointer;
+
+                &:hover {
+                    color: red;
+                }
+            }
+
+            .up {
+                display: flex;
+
+                p {
+                    color: #fff;
+                    opacity: .9;
+                    font-size: 16px;
+                    line-height: 40px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    line-height: 25px;
+                    margin-bottom: 30px;
+                    font-weight: bold;
+                    color: white;
+                }
+
+                .card2,
+                .card1,
+                .card3,
+                .card4 {
+                    // float: left;
+                    margin-right: 50px;
+                }
+
+                .card1 {
+                    margin-top: 5px;
+                    width: 30%;
+
+                    p {
+                        line-height: 30px;
+                        margin-bottom: 30px;
+                    }
+
+                    // float: left;
+                    h1 {
+                        margin-bottom: 25px;
+
+                        span {
+                            color: #fff;
+                            font-size: 32px;
+                            font-weight: 800;
+
+
+                            &:nth-child(2) {
+                                font-weight: 300;
+                            }
+                        }
+                    }
+
+                }
+
+                .card2 {
+                    // float: left;
+                    width: 200px;
+
+
+                }
+
+                .card3 {
+                    width: 200px;
+                }
+
+
+                .card4 {
+                    width: 250px;
+
+                    // float: left;
+                    .text {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+
+                }
+            }
+
+            .down {
+                // float: left;
+                margin-top: 60px;
+                // display: flex;
+                text-align: center;
+                border-top: 2px solid rgb(103, 101, 101);
+                padding-top: 50px;
+
+
+                span {
+                    color: #fff;
+                    opacity: .8;
+
+                    &:nth-child(2) {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

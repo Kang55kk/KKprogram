@@ -1,0 +1,88 @@
+.skin {
+  margin: 40px auto;
+}
+.skin .wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.skin .wrapper .header {
+  width: 1172px;
+  overflow: hidden;
+}
+.skin .wrapper .header button {
+  float: right;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 30px 10px;
+  color: #111111;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 2px solid #13a2b7;
+  background-color: transparent;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.skin .wrapper .header .title {
+  float: left;
+  width: 500px;
+}
+.skin .wrapper .header .title p {
+  font-size: 15px;
+  color: #888888;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.skin .wrapper .header .title h3 {
+  color: #111111;
+  font-weight: 700;
+  margin-top: 8px;
+  font-size: 40px;
+}
+.skin ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.skin ul li .box {
+  width: 310px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
+  padding: 10px;
+  margin-bottom: 30px;
+  float: left;
+  padding: 0 30px;
+  overflow: hidden;
+  margin-right: 30px;
+}
+.skin ul li .box .pgh h5 {
+  color: #111111;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 17px;
+}
+.skin ul li .box .pgh span {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #666666;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0 0 15px 0;
+}
+.skin ul li .box .box2 {
+  padding: 1px;
+  margin: 10px 10px 10px 0;
+}
+.skin ul li .box img {
+  border-radius: 50%;
+  margin-right: 10px;
+  float: left;
+}
+.skin ul li .box p {
+  margin: 5px;
+  list-style: none;
+  font-size: 13px;
+  color: #888888;
+  font-weight: 300;
+}
+/*# sourceMappingURL=./hw-news.css.map */

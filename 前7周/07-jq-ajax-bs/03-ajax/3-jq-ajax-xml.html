@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="div1">xxx</div>
+    <p>yyy</p>
+    <script>
+      console.log("start");
+
+      //   $("#div1").load("./test.txt", function () {
+      //     console.log("完成");
+      //   });
+      // $("#div1").load("./test.html #p1");
+
+      //   $.get(URL,data,function(data,status,xhr),dataType)
+
+      //   $.get("./test.html", { name: "nick" });
+      $.get("./test.xml", function (res, status) {
+        console.log(res, status);
+
+        // 提取xml内容
+        // console.log(res.getElementsByTagName("url")[0].childNodes[0]);
+
+        // var sites = res.getElementsByTagName("site");
+        // for (var i = 0; i < sites.length; i++) {
+        //   console.log(sites[i].getElementsByTagName("name")[0].childNodes[0]);
+        //   console.log(sites[i].getElementsByTagName("url")[0].childNodes[0]);
+        // }
+
+        // console.log($(res).find("site").eq(0).find('url').text());
+      });
+
+      console.log("end");
+
+      // JSON 是存储和交换文本信息的语法，类似 XML。
+      // JSON 比 XML 更小、更快，更易解析。
+      // JSON 易于人阅读和编写。
+
+      // html xhtml xml  json
+
+
+      // json vs xml  https://www.runoob.com/json/json-vs-xml.html
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="box data-id='8' ">
+        <li class="xxx data-id='3'">1</li>
+        <li>2</li>
+        <li>3</li>
+    </div>
+    <div class="box1"></div>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            background-color: yellow;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 20px;
+        }
+
+        .active {
+            background-color: greenyellow;
+        }
+    </style>
+    <script>
+        box = $(".box")[0]
+        console.log($(".box").data("id"));
+        
+        console.log($("li").eq(1).data("id"));
+        var li = document.querySelectorAll("li");
+        li= $("li")
+        
+        // box.addEventListener('click', function (e) {
+        //     console.log(e.target.tagName);
+        //     if (e.target.tagName == "LI") {
+        //         // e.target.classList.add("active");
+        //         // $(e.target).hide()
+        //         // $(e.target).siblings().removeClass("active")
+        //         // $(e.target).toggleClass("active");
+
+        //         // $(e.target).css({
+        //         //     "color":"red",
+        //         //     'width':"100px"
+        //         // })
+        //     }
+        // })
+
+        // $("li").each(function(i,ele){
+        //     console.log(ele);
+        //     $(ele).addClass("active")
+        // })
+        // // console.log(li[0].parent()[0]);
+
+        // // li.eq(1).addClass("active")
+
+        // $("li").click (function () {
+        //     console.log(this);
+        // })
+        
+        // // $('li').click(function(){
+        // //     console.log("aa");
+
+        // // })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+.AESTHETIC {
+  margin-top: 300px;
+  background-image: url("../img/black.png");
+  padding-bottom: 30px;
+}
+.AESTHETIC .line .header {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.AESTHETIC .line .header img {
+  color: white;
+  margin: 30px;
+  width: 200px;
+  float: left;
+}
+.AESTHETIC .line .header .icon {
+  overflow: hidden;
+  height: 88.75px;
+}
+.AESTHETIC .line .header .icon i {
+  margin-top: 19.375px;
+  float: right;
+  border-radius: 50%;
+  margin-left: 10px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  line-height: 50px;
+  color: white;
+}
+.AESTHETIC .wrapper {
+  width: 1100px;
+  margin: 0 auto;
+}
+.AESTHETIC .wrapper .main .content {
+  overflow: hidden;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+.AESTHETIC .wrapper .main .content .photo {
+  float: right;
+  max-width: 320px;
+  height: auto;
+}
+.AESTHETIC .wrapper .main .content .photo img {
+  width: 310px;
+  height: auto;
+}
+.AESTHETIC .wrapper .main .content .company,
+.AESTHETIC .wrapper .main .content .Quick,
+.AESTHETIC .wrapper .main .content .Contact {
+  margin-right: 80px;
+}
+.AESTHETIC .wrapper .main .content .company {
+  float: left;
+}
+.AESTHETIC .wrapper .main .content .Quick {
+  float: left;
+}
+.AESTHETIC .wrapper .main .content .Contact {
+  float: left;
+}
+.AESTHETIC .wrapper .main .content .Contact .submenu {
+  padding: 0;
+}
+.AESTHETIC .wrapper .main .content .Contact .submenu li {
+  line-height: 3em;
+  font-size: 14px;
+  color: lightgray;
+  list-style: none;
+}
+.AESTHETIC .wrapper .main .content .Contact .submenu li i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-right: 10px;
+}
+.AESTHETIC .wrapper .main .content h5 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.AESTHETIC .wrapper .main .content p {
+  font-size: 13px;
+  color: #c4c4c4;
+  font-weight: 300;
+  line-height: 26px;
+}
+.AESTHETIC .wrapper .bottom {
+  overflow: hidden;
+  margin-top: 60px;
+  width: 100%;
+}
+.AESTHETIC .wrapper .bottom .Copyright {
+  float: left;
+}
+.AESTHETIC .wrapper .bottom .Copyright li {
+  font-size: 14px;
+  color: #c4c4c4;
+  font-weight: 300;
+  margin-bottom: 0;
+  list-style: none;
+  margin-right: 3px;
+  float: left;
+}
+.AESTHETIC .wrapper .Term {
+  float: right;
+}
+.AESTHETIC .wrapper .Term p {
+  list-style: none;
+  display: inline-block;
+  font-size: 14px;
+  color: #c4c4c4;
+  font-weight: 300;
+  position: relative;
+}
+/*# sourceMappingURL=./footer.css.map */

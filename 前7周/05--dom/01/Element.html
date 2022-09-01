@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">box</div>
+    <!-- <script>
+      var box = document.querySelector(".box");
+
+      var node = document.createElement("button");
+      node.innerText = "btn";
+
+      //   console.log(node);
+
+      box.appendChild(node);
+    </script> -->
+
+    <ul>
+      <li>111</li>
+      <li class="test" data-xxx="123">
+        <i>222</i>
+        <!-- dd -->
+      </li>
+      <li>333</li>
+      <li>333</li>
+    </ul>
+
+    <script>
+      var list = document.querySelector("ul");
+
+      var node = document.createElement("li");
+      node.innerText = "xxx";
+
+      //   list.appendChild(node);
+
+      //   list.insertBefore(node, document.querySelector("ul li.test"));
+
+      console.log(
+        document.querySelector("ul li:nth-child(1)").isEqualNode(document.querySelector("ul li:nth-child(5)"))
+      );
+      console.log(
+        document.querySelector("ul li:nth-child(4)").isSameNode(document.querySelector("ul li:nth-child(5)"))
+      );
+
+      //   isEqualNode 相同  isSameNode同一个
+
+      //   [1,2,3] == [1,2,3]
+
+      console.log(document.querySelector("ul li.test").nextSibling);//返回某个元素之后紧跟的节点:
+      console.log(document.querySelector("ul li.test").nextElementSibling);
+
+      console.log(document.querySelector("ul li.test").nodeName);
+      console.log(document.querySelector("ul li.test").nodeType);
+
+      console.log(document.querySelector("ul li.test").childNodes);
+      console.log(document.querySelector("ul li.test").childNodes[0].nodeType);
+      console.log(document.querySelector("ul li.test").childNodes[1].nodeType);
+      console.log(document.querySelector("ul li.test").childNodes[3].nodeType);
+      console.log(document.querySelector("ul li.test").childNodes[2].nodeValue);
+
+      // 如果节点是一个元素节点，nodeType 属性返回 1。
+      // 如果节点是属性节点, nodeType 属性返回 2。
+      // 如果节点是一个文本节点，nodeType 属性返回 3。
+      // 如果节点是一个注释节点，nodeType 属性返回 8。
+
+      console.log(document.querySelector("ul li.test").ownerDocument);
+      console.log(document.querySelector("ul li.test").parentNode);
+      console.log(document.querySelector("ul li.test").previousSibling);
+      console.log(document.querySelector("ul li.test").previousElementSibling);
+
+      //   console.log(document.querySelector("ul li.test").removeAttribute("class"));
+
+      //   list.replaceChild(node, document.querySelector("ul li.test"));
+    </script>
+
+    <div class="big">
+      <div class="small">
+        才他火的登可而兴绪，资到姑永绝会，气问等治败纯平，韩衣在的重快联了非制失，商区秦想是不来而此应所看，不生血今的开非者德怒说他言决们法有收，以的丐国让秦判方韩，郭的手路面对的朗徒人不到落我杀实褒说陀，非案龄身破，是君没别次连锐台，学备药仅平，梵高在回金三即。
+        才他火的登可而兴绪，气问等治败纯平，韩衣在的重快联了非制失，商区秦想是不来而此应所看，不生血今的开非者德怒说他言决们法有收，以的丐国让秦判方韩，郭的手路面对的朗徒人不到落我杀实褒说陀，非案龄身破，是君没别次连锐台，学备药仅平，梵高在回金三即。
+      </div>
+    </div>
+    <style>
+      .big {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+
+        overflow: auto;
+      }
+      .small {
+        /* width: 500px; */
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    </style>
+    <script>
+      var big = document.querySelector(".big");
+      var small = document.querySelector(".small");
+
+      //   console.log(big.scrollHeight);
+      //   console.log(small.scrollHeight);
+      console.log(big.scrollWidth);
+      //   console.log(small.scrollWidth);
+
+      console.log(big.scrollLeft);
+      //   console.log(small.scrollLeft);
+    </script>
+
+    <input type="text" name="" id="" />
+    <script>
+      document.querySelector("input").oninput = function () {
+        console.log(event, document.querySelector("input").value, this.value, event.target.value);
+      };
+    </script>
+
+    <script>
+      var arr = [11, 22, 33];
+      var obj = {
+        name: "nick",
+        age: 17,
+      };
+      console.log("=============");
+      console.log(123);
+      console.info(123);
+      console.warn(123);
+      console.table(arr);
+      console.log(arr);
+
+      console.table(obj);
+    </script>
+  </body>
+</html>

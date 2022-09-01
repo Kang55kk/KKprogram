@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 版心  1920 1600 1400 1440 1280  -->
+
+    <div class="offer">
+      <div class="wrapper">
+        <h3 class="section-title">
+          <p class="sub-title">WHY CHOOSE US?</p>
+          <p class="title">Offer for you</p>
+        </h3>
+
+        <div class="content">
+          <div class="card">
+            <img src="./ci-1.png" alt="" />
+            <h5>Advanced equipment</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit sunt</p>
+          </div>
+          <div class="card">
+            <img src="./ci-1.png" alt="" />
+            <h5>Advanced equipment</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit sunt</p>
+          </div>
+          <div class="card">
+            <img src="./ci-1.png" alt="" />
+            <h5>Advanced equipment</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit sunt</p>
+          </div>
+          <div class="card">
+            <img src="./ci-1.png" alt="" />
+            <h5>Advanced equipment</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit sunt</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="wrapper">wrapper</div>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      /* 组合选择器 ， 代表  h1选择器 和 h2 选择器*/
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+
+      .wrapper {
+        width: 1000px;
+        /* height: 200px; */
+        background-color: red;
+        margin: 0 auto;
+        /* 块元素居中 需要子元素宽度确定并且小于父元素 子元素设置外边距左右 auto */
+        /* 行内元素或者文本的居中 父元素用 text-align */
+
+        /* padding: 50px; */
+        /* margin: 50px auto; */
+      }
+
+      .offer {
+        /* height: 100px; */
+        background-color: lightblue;
+        padding: 50px 0;
+      }
+
+      /* 组合选择器  空格代表后代  没有空格 代表 h3.xxx  class是xxx并且标签是h3 */
+      .offer h3.section-title {
+        text-align: center;
+      }
+      .offer h3.section-title .sub-title {
+        font-size: 14px;
+      }
+      .offer h3.section-title .title {
+        font-size: 28px;
+      }
+
+      .offer .content {
+        overflow: hidden;
+      }
+
+      .offer .content .card {
+        width: 220px;
+        /* background-color: rgb(69, 168, 202); */
+        text-align: center;
+
+        float: left;
+        margin: 0 15px;
+        /* padding: 0 15px; */
+      }
+
+      .service {
+        /* background-color: aqua; */
+        /* background: url("https://show.17sucai.com/preview/3/2022-07-04/%E6%95%B4%E5%BD%A2%E7%BE%8E%E5%AE%B9%E5%8C%BB%E9%99%A2%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF/%E2%95%92%E2%88%9A%E2%95%A8%E2%95%AC%E2%94%9C%E2%94%94%E2%95%9A%E2%96%8C%E2%95%A5%E2%95%9C%E2%95%98%E2%95%91%E2%95%90%C2%B0%E2%95%92%E2%95%9B%E2%94%80%C3%BA%E2%96%91%CF%83/img/services-bg.jpg"); */
+        /* xxx-yyy  xxx 叫复合属性 */
+
+        background-image: url("./services-bg.jpg");
+        /* 路径 http开头的 绝对路径  相对路径 ./  ../返回上一级 */
+        padding: 50px 0;
+      }
+    </style>
+  </body>
+</html>

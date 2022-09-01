@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="referrer" content="never">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./bili.css">
+</head>
+
+<body>
+    <div class="bili">
+        <div class="wrap">
+            <div class="text">
+                <div class="ticai">题材</div>
+                <div class="diqu">地区</div>
+                <div class="jindu">进度</div>
+                <div class="shoufei">收费</div>
+                <div class="paixu">排序</div>
+            </div>
+            <div class="contain">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var ticaiarr = ["全部", "热血", "古风", "玄幻", '奇幻', '悬疑', "都市", "历史", "武侠仙侠", "游戏竞技", "悬疑灵异", "架空", "青春", "西幻", "现代",
+            "正能量", "科幻"
+        ];
+        var ticai2 = [-1, 999, 997, 1016, 998, 1023, 1002, 1096, 1092, 1088, 1081, 1063, 1060, 1054, 1048, 1028]
+        var diquarr = ["全部", "大陆日本", "韩国", "其他"];
+        var diqu2 = [-1,1,2,6,5]
+        var jinduarr = ["全部", "连结", "完结"];
+        var jindu2 = [-1,0,1]
+        var shoufeiarr = ["全部", "免费", "付费", "等就免费"];
+        var shoufei2 = [-1,1,2,3]
+        var paixuarr = ["人气推荐", "更新时间", "追漫人数", "上架时间"];
+        var paixu2 = [0,1,2,3]
+
+        var ticai = $(".ticai")[0];
+        var diqu = $(".diqu")[0];
+        var shoufei = $(".shoufei")[0];
+        var paixu = $(".paixu")[0];
+        var jindu = $(".jindu")[0];
+        var alls = [ticaiarr, diquarr, jindu, shoufeiarr, paixuarr];
+
+        function Dot(n, father, arr) {
+            this.node = document.createElement("span");
+            this.node.innerHTML = arr[n];
+            father.appendChild(this.node);
+        }
+
+        ticaiarr.forEach(function (ele, i) {
+            var xx = new Dot(i, ticai, ticaiarr)
+        });
+        diquarr.forEach(function (ele, i) {
+            var ee = new Dot(i, diqu, diquarr)
+        });
+        paixuarr.forEach(function (ele, i) {
+            var ee = new Dot(i, paixu, paixuarr)
+        });
+        shoufeiarr.forEach(function (ele, i) {
+            var ee = new Dot(i, shoufei, shoufeiarr)
+        });
+        jinduarr.forEach(function (ele, i) {
+            var ee = new Dot(i, jindu, jinduarr)
+        });
+
+        function getJSON(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    callback(JSON.parse(xhr.response));
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+
+        ticai.addEventListener('click', function (e) {
+            // document.querySelector('.contain').empty();
+            var yyy = $(".contain")[0];
+            var zzz = document.querySelectorAll("img")
+            zzz.forEach(function (ele,i) {
+                yyy.remove(zzz[i])
+            });
+
+            console.log(e.target.innerHTML);
+            ticaiarr.forEach(function (ele, i) {
+                if (e.target.innerHTML == ele) {
+                    var x = ticai2[i]
+                    console.log(x);
+                }
+                str = "https://apis.netstart.cn/bcomic/ClassPage?styleId="+ ticai2[2]+"&areaId=-1&isFinish=-1&order=0"
+                $.get(str,
+                    function (res) {
+                        console.log(res.data);
+                        for (i in res.data) {
+                            console.log(res.data[i]);
+                            var img = document.createElement('img')
+                            img.src = res.data[i].horizontal_cover
+                            document.querySelector('.contain').appendChild(img)
+                        }
+                    });
+            });
+        })
+
+        jindu.addEventListener('click', function (e) {
+            // location.reload()
+            console.log(e.target.innerHTML);
+            jinduarr.forEach(function (ele, i) {
+                if (e.target.innerHTML == ele) {
+                    var x = jindu2[i]
+                    console.log(x);
+                }
+                str =
+                    "https://apis.netstart.cn/bcomic/ClassPage?styleId=-1&areaId=-1&isFinish=" +
+                    jindu2[i] + "&order=0"
+                $.get(str,
+                    function (res) {
+                        console.log(res.data);
+                        for (i in res.data) {
+                            console.log(res.data[i]);
+                            var img = document.createElement('img')
+                            img.src = res.data[i].horizontal_cover
+                            document.querySelector('.contain').appendChild(img)
+                        }
+                    });
+            });
+        })
+shoufei.addEventListener('click', function (e) {
+            // document.querySelector('.contain').empty();
+            var yyy = $(".contain")[0];
+            var zzz = document.querySelectorAll("img")
+            zzz.forEach(function (ele,i) {
+                yyy.remove(zzz[i])
+            });
+
+            console.log(e.target.innerHTML);
+            shoufeiarr.forEach(function (ele, i) {
+                if (e.target.innerHTML == ele) {
+                    var x = shoufei2[i]
+                    console.log(x);
+                }
+                str = "https://apis.netstart.cn/bcomic/ClassPage?styleId="+ shoufei2[2]+"&areaId=-1&isFinish=-1&order=0"
+                $.get(str,
+                    function (res) {
+                        console.log(res.data);
+                        for (i in res.data) {
+                            console.log(res.data[i]);
+                            var img = document.createElement('img')
+                            img.src = res.data[i].horizontal_cover
+                            document.querySelector('.contain').appendChild(img)
+                        }
+                    });
+            });
+        })
+        paixu.addEventListener('click', function (e) {
+            // document.querySelector('.contain').empty();
+            var yyy = $(".contain")[0];
+            var zzz = document.querySelectorAll("img")
+            zzz.forEach(function (ele,i) {
+                yyy.remove(zzz[i])
+            });
+
+            console.log(e.target.innerHTML);
+            paixuarr.forEach(function (ele, i) {
+                if (e.target.innerHTML == ele) {
+                    var x = paixu2[i]
+                    console.log(x);
+                }
+                str = "https://apis.netstart.cn/bcomic/ClassPage?styleId="+"-1"+"&areaId=-1&isFinish=-1&order=0"
+                $.get(str,
+                    function (res) {
+                        console.log(res.data);
+                        for (i in res.data) {
+                            console.log(res.data[i]);
+                            var img = document.createElement('img')
+                            img.src = res.data[i].horizontal_cover
+                            document.querySelector('.contain').appendChild(img)
+                        }
+                    });
+            });
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      canvas {
+        border: 1px solid red;
+      }
+    </style>
+    <canvas id="canvas" width="300" height="300"></canvas>
+
+    <script>
+      var canvas = document.getElementById("canvas");
+
+      //   获取绘制环境上下文
+      var context = canvas.getContext("2d");
+
+      function Dot(x, y, r, sx, sy) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.sx = sx;
+        this.sy = sy;
+        this.color = "#" + String(Math.random()).slice(-6);
+        this.blood = 0;
+      }
+
+      Dot.prototype.draw = function () {
+        context.beginPath();
+        context.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        context.fillStyle = this.color;
+        context.fill();
+      };
+      Dot.prototype.move = function () {
+        if (this.x >= 300 - this.r || this.x <= this.r) {
+          this.sx *= -1;
+          this.blood++;
+        }
+        if (this.y >= 300 - this.r || this.y <= this.r) {
+          this.sy *= -1;
+          this.blood++;
+        }
+        this.x += this.sx;
+        this.y += this.sy;
+      };
+
+      Dot.prototype.checkBoom = function () {
+        if (this.blood >= 3) {
+          var that = this;
+          for (var i = 0; i < 6; i++) {
+            dots.push(new Dot(this.x, this.y, 3, Math.random() * 4 - 2, Math.random() * 4 - 2));
+          }
+          //   console.log(dots, that);
+
+          dots = dots.filter(function (dot) {
+            return dot !== that;
+          });
+          //   console.log(dots);
+        }
+      };
+
+      var dots = [new Dot(100, 100, 10, 2, 1)];
+      setInterval(() => {
+        context.clearRect(0, 0, 300, 300);
+        // 清除画布
+
+        dots.forEach(function (dot) {
+          dot.move();
+          dot.checkBoom();
+          dot.draw();
+        });
+        console.log(dots.length);
+      }, 30);
+    </script>
+
+
+
+<!-- 
+
+
+
+SVG 与 Canvas两者间的区别
+SVG 是一种使用 XML 描述 2D 图形的语言。
+
+Canvas 通过 JavaScript 来绘制 2D 图形。
+
+SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。
+
+在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。
+
+Canvas 是逐像素进行渲染的。在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
+
+Canvas 与 SVG 的比较
+下表列出了 canvas 与 SVG 之间的一些不同之处。
+
+Canvas
+依赖分辨率
+不支持事件处理器
+弱的文本渲染能力
+能够以 .png 或 .jpg 格式保存结果图像
+最适合图像密集型的游戏，其中的许多对象会被频繁重绘
+游戏框架游戏引擎 微信小游戏
+
+www.cocos.com
+www.egret.com
+www.layabox.com
+
+
+SVG
+不依赖分辨率
+支持事件处理器
+最适合带有大型渲染区域的应用程序（比如谷歌地图）
+复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）
+不适合游戏应用
+
+
+ -->
+  </body>
+</html>

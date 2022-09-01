@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function pad0(n) {
+        return n > 9 ? String(n) : "0" + n;
+      }
+
+      setInterval(function () {
+        var d = new Date(2022, 08, 01);
+        var now = new Date();
+        //   console.log(d - now);
+        var s = parseInt((d - now) / 1000);
+
+        var dd = parseInt(s / (24 * 60 * 60));
+      
+        var hh = parseInt((s % (24 * 60 * 60)) / (60 * 60));
+        var mm = parseInt(((s % (24 * 60 * 60)) % (60 * 60)) / 60);
+        var ss = parseInt(((s % (24 * 60 * 60)) % (60 * 60)) % 60);
+
+        console.log(pad0(dd), pad0(hh), pad0(mm), pad0(ss));
+      }, 1000);
+    </script>
+  </body>
+</html>

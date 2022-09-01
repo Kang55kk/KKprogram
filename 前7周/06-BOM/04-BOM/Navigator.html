@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(navigator);
+      console.log(navigator.userAgent);
+      console.log(screen);
+
+      //   console.log(history.length);
+      //   history.back()
+      //   history.forward()
+
+      console.log(location);
+      console.log(location.search);
+      console.log(location.hash);
+      //   页内跳转到id
+
+      var x = new URLSearchParams(location.search);
+
+      console.log(x.get("age"));
+      //   #yyy url的hash
+
+      //   http://127.0.0.1:5500/06-BOM/04-BOM/Navigator.html?name=nick&age=17#yyy
+
+      //   location.reload()
+      // assign()
+      // replace()
+    </script>
+
+    <script>
+      "use strict";
+      //   adddlert("欢迎光临！");
+
+      //   try {
+      //     console.log(y);
+      //     adddlert("欢迎光临！");
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+
+      //   xhtml html区别
+      // 严格模式
+      // 1 必须var
+      // 2
+
+      var a = 10;
+      var a = 20;
+
+      var obj = {
+        name: "nick",
+        age: 17,
+      };
+
+      //   delete a; // 全局失败
+      //   delete obj.age; // 对象某个属性成功
+      //   function x(p1, p1) {} // 函数参数不能重名
+
+      function f() {
+        return this;
+      }
+      f();
+      //   !this 是不是window 如果是就返回 true 不是就返回false
+
+      obj.f = f;
+
+      function Dot() {
+        this.x = 10;
+      }
+
+      var aa = new Dot();
+      var bb = Dot();
+    </script>
+
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+    <div id="xxx">xxx</div>
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+    <div id="yyy">yyy</div>
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+    <div id="zzz">zzz</div>
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+    <div id="aaa">aaa</div>
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+    <br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s<br />s
+  </body>
+</html>

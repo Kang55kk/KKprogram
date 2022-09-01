@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+
+     算术运算
+
+      */
+      console.log(1 + 1);
+      console.log(1 - 1);
+      console.log(1 * 1);
+      console.log(4 / 2);
+      //   console.log(2 % 2);
+      console.log(3 % 2);
+      //   取余 取模(判断奇偶)
+
+      var x = 10;
+      var y = 10;
+      console.log(x++);
+      console.log(++y);
+      //   加号在前 先加在返回
+      // 加号在后 先返回后加
+
+      /* 
+      
+      赋值运算符
+      
+      */
+
+      x = 20;
+      x += 5; // x = x + 5    x+=1  x=x+1
+      //   -=  *=  /= %=
+
+      /* 
+      
+      比较运算符
+      
+      */
+
+      console.log(8 > 5);
+      console.log(8 <= 5);
+      //   > >= < <=
+      //   js弱类型 声明的时候不需要设定类型 任意改变类型
+      console.log(5 == "5");
+      //   隐式转化
+      console.log(5 === "5");
+      //   需要 值和类型 都相等
+
+      console.log(0 == false); // true
+      console.log(0 === false); // false
+
+      console.log(1 == true); // true
+      console.log(1 === true); // false
+
+      console.log(-1 == true); // false
+      console.log(-1 === true); // false
+
+      //   使用比较运算符  0 false   1 true
+
+      console.log("true" == true); // false
+      console.log("" == false); // true
+      console.log("" === false); // false
+
+      console.log(undefined == false); // false
+      console.log(undefined === false); // false
+      console.log(null == false); // false
+      //   因为很乱 所以记得 尽可能的 使用 === 绝对相等
+
+      console.log(5 != "5"); // false
+      console.log(5 != ""); // true
+      //   !=
+
+      /* 
+      
+      逻辑运算符
+      ||  &&  !
+      */
+
+      console.log("==============");
+      var haveApple = true;
+      var haveMianbao = false;
+      var haveYoutiao = false;
+
+      var ishaveZaocan = haveApple || haveMianbao;
+
+      //
+
+      var xilian = true;
+      var shuaya = true;
+
+      var 是否周末 = false;
+
+      //   var 上学 = xilian && shuaya;
+
+      //   var 上学 = xilian && shuaya && !是否周末;
+
+      var 上学 = xilian && shuaya && !是否周末 && (haveApple || haveMianbao);
+
+      // 三目运算符（条件运算符）  条件 ? 为真的时候的表达式的返回值 ： 为假的时候的表达式的返回值
+
+      console.log(8 > 5 ? "真" : "假");
+
+      // 字符串拼接
+      var x = 5;
+      console.log(x + 5);
+      console.log(x + "5");
+
+      var y = "hello";
+      console.log(y + "xxx");
+      console.log(y + 10);
+
+      console.log(y - 10); // NaN   not a number非数也是数值
+
+      //
+      console.log(undefined === undefined);
+      console.log(null === null);
+      console.log(NaN == NaN);
+    </script>
+  </body>
+</html>

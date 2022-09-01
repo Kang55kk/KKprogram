@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: red;
+        margin: 0 auto;
+      }
+      .box2 {
+        width: 400px;
+        height: 400px;
+        background-color: yellow;
+        margin: 0 auto;
+      }
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 冒泡： 由内到外部 -->
+    <!-- 捕获： 由外到内部 -->
+    <div class="box">
+      <div class="box2">
+        <div class="box3"></div>
+      </div>
+    </div>
+
+    <script>
+      //封装一个获取dom节点的方法 驼峰命名发
+      function $(cssSelect) {
+        // 获取所有节点
+        var dom = document.querySelectorAll(cssSelect);
+        // 当节点的长度为零时
+        if (dom.length == 0) {
+          return null;
+        }
+        // 当节点只有一个时
+        if (dom.length == 1) {
+          return dom[0];
+        }
+        return dom;
+      }
+
+      $(".box3").onclick = function () {
+        console.log("最小的盒子");
+      };
+      $(".box2").onclick = function (e) {
+        console.log("中间的盒子");
+        // 阻止冒泡
+        // e.stopPropagation();
+      };
+      $(".box").onclick = function () {
+        console.log("最大的盒子");
+      };
+
+      // 1. 触发的事件
+      // 2. 触发事件所要执行的方法
+      // 3. boolean false==> 默认  true == > 捕获阶段
+    //   $(".box").addEventListener(
+    //     "click",
+    //     function () {
+    //       console.log("大");
+    //     },
+    //     true
+    //   );
+    //   $(".box2").addEventListener(
+    //     "click",
+    //     function () {
+    //       console.log("中");
+    //     },
+    //     true
+    //   );
+    //   $(".box3").addEventListener(
+    //     "click",
+    //     function () {
+    //       console.log("小");
+    //     },
+    //     true
+    //   );
+
+
+        // $(".box").onclick = function () { 
+        //     console.log(666);
+        //  }
+        //  $(".box").onclick = function () { 
+        //     console.log(999);
+        //  }
+        //  $(".box").addEventListener("click",function () {  
+        //     console.log(666);
+        //  })
+        //  $(".box").addEventListener("click",function () {  
+        //     console.log(888);
+        //  })
+
+    </script>
+  </body>
+</html>

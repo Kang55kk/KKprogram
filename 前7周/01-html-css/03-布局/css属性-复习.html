@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">box</div>
+    <div class="rect">rect</div>
+    <div class="rect2">rect2</div>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        color: red;
+        background: lightblue;
+
+        padding: 20px;
+        /* border: 10px dotted red; */
+        /* border: 10px solid red; */
+        border: 10px dashed red;
+        /* border-style: double; */
+        /* border-style: groove; */
+
+        margin: 50px;
+
+        /* border-radius: 10px; */
+        /* border-radius: 80px; */
+        /*  正圆 半径需要是 最终尺寸的一半 */
+        border-radius: 100%;
+      }
+
+      .rect {
+        width: 200px;
+        height: 100px;
+        background: lightblue;
+
+        /* border-radius: 10px; */
+        /* border-radius: 50px; */
+        /* border-radius: 100px; */
+        /* 100 和50效果一样   最小尺寸的方向 的 一半 */
+
+        /* border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px; */
+        border-radius: 50px 0 50px 50px;
+      }
+
+      .rect2 {
+        margin-top: 20px;
+        width: 200px;
+        height: 100px;
+        background: lightblue;
+
+        /* border-radius: 50%; */
+        border-radius: 50% 0 50% 0;
+        /* border-radius: 50% 0; */
+      }
+    </style>
+
+    <hr />
+
+    <div class="bigbox">
+      <div class="card1">card1</div>
+      <div class="card2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias quis voluptas ipsum eum sequi
+        perferendis. Incidunt reiciendis, sequi enim magni aliquam similique adipisci soluta ratione aliquid impedit
+        dolor deserunt.
+      </div>
+    </div>
+    <style>
+      .bigbox {
+        background-color: bisque;
+        overflow: hidden;
+        width: 400px;
+      }
+      .card1 {
+        background-color: rebeccapurple;
+        float: left;
+        width: 100px;
+        text-align: right;
+        font-size: 28px;
+        /* font-weight: 400; */
+        font-weight: bold;
+
+        /* font-family: '黑体'; */
+        /* font-family: '宋体';
+        font-family: '仿宋'; */
+        font-family: 'Courier New', Courier, monospace;
+        /* 暂时 必须是本地字体 */
+      }
+      .card2 {
+        background-color: cadetblue;
+        float: left;
+        width: 300px;
+        text-align: center;
+      }
+    </style>
+
+    <h1>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro itaque pariatur quas ullam similique, earum facere
+      eligendi repellat corporis, adipisci odit quia! Rem necessitatibus aliquam alias corporis adipisci veniam id.
+    </h1>
+  </body>
+</html>

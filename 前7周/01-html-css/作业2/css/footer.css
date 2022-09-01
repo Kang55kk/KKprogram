@@ -1,0 +1,105 @@
+i.fa-level-up {
+  color: white;
+  font-size: 30px;
+  line-height: 61.15px;
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  padding: 0 22px;
+  border-radius: 80px;
+  background-color: red;
+}
+.footer {
+  background-image: url("../img/footer.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.footer .mask {
+  background-color: rgba(0, 0, 0, 0.627);
+  z-index: -1;
+}
+.footer .mask .wrap {
+  padding: 100px 0;
+  display: flex;
+  width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.footer .mask .wrap i {
+  color: white;
+  margin-right: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.footer .mask .wrap i:hover {
+  color: red;
+}
+.footer .mask .wrap .up {
+  display: flex;
+}
+.footer .mask .wrap .up p {
+  color: #fff;
+  opacity: 0.9;
+  font-size: 16px;
+  line-height: 40px;
+}
+.footer .mask .wrap .up h3 {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: white;
+}
+.footer .mask .wrap .up .card2,
+.footer .mask .wrap .up .card1,
+.footer .mask .wrap .up .card3,
+.footer .mask .wrap .up .card4 {
+  margin-right: 50px;
+}
+.footer .mask .wrap .up .card1 {
+  margin-top: 5px;
+  width: 30%;
+}
+.footer .mask .wrap .up .card1 p {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.footer .mask .wrap .up .card1 h1 {
+  margin-bottom: 25px;
+}
+.footer .mask .wrap .up .card1 h1 span {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+}
+.footer .mask .wrap .up .card1 h1 span:nth-child(2) {
+  font-weight: 300;
+}
+.footer .mask .wrap .up .card2 {
+  width: 200px;
+}
+.footer .mask .wrap .up .card3 {
+  width: 200px;
+}
+.footer .mask .wrap .up .card4 {
+  width: 250px;
+}
+.footer .mask .wrap .up .card4 .text {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .mask .wrap .down {
+  margin-top: 60px;
+  text-align: center;
+  border-top: 2px solid #676565;
+  padding-top: 50px;
+}
+.footer .mask .wrap .down span {
+  color: #fff;
+  opacity: 0.8;
+}
+.footer .mask .wrap .down span:nth-child(2) {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=./footer.css.map */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="box"></div>
+    <style>
+      @keyframes xxx {
+        from {
+          margin-left: 0;
+          background-color: blue;
+        }
+        to {
+          margin-left: 500px;
+          background-color: lightcoral;
+        }
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+
+        /* animation: xxx 5s; */
+        animation-name: xxx;
+        animation-duration: 5s;
+        animation-delay: 3s;
+
+        animation-iteration-count: infinite;
+
+        /* animation-fill-mode: forwards; */
+        /* animation-fill-mode: backwards; */
+        /* animation-fill-mode: both; */
+        /* animation-timing-function: linear; */
+        /* animation-timing-function: steps(3, end); */
+        animation-timing-function: steps(3, start);
+      }
+    </style> -->
+
+    <div class="box"></div>
+    <style>
+      @keyframes xxx {
+        from {
+          background-position-x: 0;
+        }
+        to {
+          background-position-x: -1000px;
+        }
+      }
+      .box {
+        width: 142.85px;
+        height: 177px;
+        background-color: lightblue;
+        background-image: url("./space-to-top.png");
+        background-repeat: no-repeat;
+
+        animation-name: xxx;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        /* animation-timing-function: linear; */
+        animation-timing-function: steps(7, end);
+      }
+    </style>
+
+    <div class="mos"></div>
+    <style>
+      @keyframes mos {
+        from {
+          background-position-x: 0;
+        }
+        to {
+          background-position-x: -320px;
+        }
+      }
+      .mos {
+        width: 80px;
+        height: 96px;
+        background-image: url("./monster.png");
+        background-repeat: no-repeat;
+        /* background-position-y: -96px; */
+        /* background-position-y: -192px; */
+        background-position-y: -288px;
+
+        animation: mos 1s steps(4, end) 0s infinite;
+      }
+    </style>
+  </body>
+</html>

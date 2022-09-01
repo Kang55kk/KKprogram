@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="big">
+            <div class="b1"></div>
+            <div class="b2"></div>
+            <div class="b3"></div>
+            <div class="b4"></div>
+        </div>
+    </div>
+    <style>
+        body {
+            perspective: 500px;
+        }
+
+        .box {
+            background-image: url(./600x600.jpg);
+            width: 300px;
+            height: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 300px auto;
+            border-radius: 20px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .box .big {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-45deg);
+            transform-style: preserve-3d;
+        }
+
+        .box .big div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 200px;
+
+        }
+
+        .box .big .b1 {
+            background-color: red;
+            transform: rotateX(100deg)translateY(50px);
+        }
+
+        .box .big .b2 {
+            background-color: red;
+            transform-origin: right;
+            transform: rotateX(100deg) translateY(50px) rotateY(-90deg);
+        }
+
+        .box .big .b3 {
+            background-color: red;
+            transform-origin: left;
+            transform: rotateX(100deg) translateY(50px) rotateY(90deg);
+        }
+
+        .box .big .b4 {
+            background-color: red(32, 178, 171);
+            transform: rotateX(100deg) translateZ(-20px) translateY(50px);
+
+        }
+
+        @keyframes box {
+            from {
+                transform: rotateX(0deg);
+            }
+
+            to {
+                transform: rotateX(45deg);
+            }
+        }
+
+        .active {
+            animation-name: box;
+            box-shadow: 0 20px 10px 0px rgb(45, 44, 44);
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+
+        }
+
+        @keyframes box1 {
+            from {
+                transform: rotateX(45deg);
+                box-shadow: 0 20px 10px 0px rgb(45, 44, 44);
+            }
+
+            to {
+                transform: rotateX(0deg);
+            }
+        }
+
+        .active1 {
+            animation-name: box1;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+
+        }
+
+        .box .big div.active2 {
+            animation-name: box2;
+            animation-duration: 1s;
+            /* animation-fill-mode: forwards; */
+        }
+
+        @keyframes box2 {
+            from {
+                height: 0px;
+                width: 20px;
+            }
+
+            to {
+                width: 20px;
+                height: 200px;
+            }
+        }
+    </style>
+    <script>
+        var boxEl = document.querySelector('.box');
+        var bigEl = document.querySelectorAll('.big div');
+        boxEl.addEventListener('click', myFunction);
+        tilted = false;
+
+        function myFunction() {
+            tilted = !tilted;
+            if (tilted) {
+                boxEl.classList.add('active');
+                boxEl.classList.remove('active1');
+                bigEl.classList.add('active2');
+            } else {
+                boxEl.classList.remove('active');
+                boxEl.classList.add('active1');
+                bigEl.classList.remove('active2');
+            }
+        }
+    </script>
+</body>
+
+</html>

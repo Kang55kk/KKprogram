@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="swiper" class="swiper">
+      <div class="list">
+        <img src="./normal1.jpg" alt="" />
+        <img src="./normal2.jpg" alt="" />
+        <img src="./normal3.jpg" alt="" />
+        <img src="./normal4.jpg" alt="" />
+      </div>
+      <ul class="dots"></ul>
+      <!-- <div class="control">
+        <button class="prevBtn">prev</button>
+        <button class="nextBtn">next</button>
+      </div> -->
+    </div>
+    <style>
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .swiper {
+        width: 300px;
+        position: relative;
+      }
+      .swiper .list {
+        position: relative;
+      }
+      .swiper .list img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .swiper .dots {
+        display: flex;
+        justify-content: center;
+
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+      }
+      .swiper .dots li {
+        width: 20px;
+        height: 20px;
+        background-color: orange;
+        margin: 5px;
+      }
+      .swiper .dots li.active {
+        background-color: blue;
+      }
+
+      .swiper .control {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        bottom: 50%;
+        left: 0;
+      }
+    </style>
+
+    <script>
+      function swiper(selecter, options) {
+        var current = 0;
+        var opt = {
+          t: options.t || 10000,
+          autoplay: options.autoplay || true,
+          hasDots: options.hasDots || true,
+        };
+
+        if (options.hasDots) {
+          $(selecter)
+            .find(".list img")
+            .each(function (i, o) {
+              $(".swiper").find(".dots").append("<li></li>");
+            });
+
+          $(selecter)
+            .find(".dots")
+            .children()
+            .click(function () {
+              show($(this).index(), opt.t);
+            });
+        }
+
+        function show(n, t) {
+          current = n;
+          if (opt.t === undefined) {
+            opt.t = 10000;
+          }
+          $(selecter)
+            .find(".list img")
+            .eq(n)
+            .fadeIn(t)
+            .css({
+              position: "relative",
+            })
+            .siblings()
+            .fadeOut(t)
+            .css({
+              position: "absolute",
+            })
+            .end()
+            .end()
+            .end()
+            .find(".dots")
+            .children()
+            .eq(n)
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+
+          // console.log(current);
+        }
+        show(current, 0);
+      }
+
+      swiper("#swiper", {
+        t: 1000,
+        autoplay: true,
+        hasDots: true,
+      });
+      // swiper("#swiper");
+    </script>
+    <!-- <script>
+      $(".swiper")
+        .find(".list img")
+        .each(function (i, o) {
+          $(".swiper").find(".dots").append("<li></li>");
+        });
+
+      function show(n, t) {
+        $(".swiper")
+          .find(".list img")
+          .eq(n)
+          .fadeIn(t)
+          .css({
+            position: "relative",
+          })
+          .siblings()
+          .fadeOut(t)
+          .css({
+            position: "absolute",
+          })
+          .end()
+          .end()
+          .end()
+          .find(".dots")
+          .children()
+          .eq(n)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+      }
+      show(0, 0);
+
+      $(".swiper")
+        .find(".dots")
+        .children()
+        .click(function () {
+          show($(this).index(), 500);
+        });
+    </script> -->
+  </body>
+</html>

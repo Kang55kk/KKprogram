@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选项卡</title>
+    <link rel="stylesheet" href="./choise.css">
+</head>
+
+<body>
+    <div id="choise" class="choise">
+        <div class="wrap">
+            <div class="tag">
+                <span>公告</span>
+                <span>决定</span>
+                <span>会议</span>
+            </div>
+            <div class="text">
+                <p>1111111111111</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var choise = document.getElementById("choise")
+        var span = choise.getElementsByTagName("span");
+        var text = choise.getElementsByClassName("text")[0].getElementsByTagName("p");
+        textchange(0);
+        function textchange(d) {
+            if (d == 0) {
+                text[0].innerHTML = "我是第一条信息";
+            } else {
+                if (d == 1) {
+                    text[0].innerHTML = "我是第二条信息";
+                }
+                else{
+                    text[0].innerHTML = "我是第三条信息";
+                }
+            }
+        }
+        for (var i = 0; i < span.length; i++) {
+            span[i].index = i;
+            span[i].onclick = function () {
+                textchange(Number(this.index));
+            }
+        }
+    </script>
+</body>
+</html>

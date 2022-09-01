@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>块元素</div>
+    <span>行元素</span>
+
+    <style>
+      div {
+        color: red;
+        background-color: rgb(213, 213, 213);
+
+        width: 100px;
+        /* 宽度 */
+        height: 100px;
+        /* 高度 */
+
+        /* 100*100 浅蓝色 */
+
+        padding: 20px;
+        /* 140*140 内边距 内补 会透出背景色 盒子撑大   果绿色*/
+
+        border: 20px dashed red;
+        /* 180*180  边框 背景色也会填充边框  浅黄色  */
+
+        margin: 20px;
+        /*  180*180 外边距 留白 背景色不填充区域  橙色部分 */
+
+        /* 盒子大小=设定的尺寸 + 内边距/内补 + 边框   可以右键量出来*/
+        /* 手机 包软泡沫（padding） + 纸盒子（边框） */
+
+        /* 盒子在页面占用的尺寸 盒子大小 + 外边距  实际*/
+      }
+
+      span {
+        color: rebeccapurple;
+        background-color: bisque;
+
+        /* width: 100px;
+        height: 100px; */
+        /* 行内元素不能设置尺寸 设置了也不生效 */
+      }
+    </style>
+  </body>
+</html>

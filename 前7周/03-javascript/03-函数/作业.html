@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   debugger;
+      for (var i = 9; i >= 1; i--) {
+        var str = "";
+
+        for (let j = 1; j <= i; j++) {
+          str = str + j + "x" + i + "=" + +(j * i) + "\t";
+        }
+
+        console.log(str);
+      }
+    </script>
+
+    <script>
+      // 数组所有项之和
+      var nums = [11, 4, 34, 2, 3];
+
+      var sum = 0;
+      for (var i = 0; i < nums.length; i++) {
+        // console.log(nums[i]);
+        sum += nums[i];
+      }
+      console.log(sum);
+    </script>
+
+    <script>
+      // 100以内的所有3的倍数的和
+      var sum = 0;
+
+      for (let i = 0; i <= 100; i++) {
+        if (i % 3 === 0) {
+          //   console.log(i);
+          sum += i;
+        }
+      }
+
+      console.log(sum);
+    </script>
+  </body>
+</html>

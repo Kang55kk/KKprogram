@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div class="stage">
+    </div>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .stage {
+            width: 1000px;
+            height: 1000px;
+            background-color: lightblue;
+            position: relative;
+        }
+        .stage div{
+            border-radius: 50%;
+            transition: all 0.1s;
+        }
+    </style>
+
+    <script>
+        var stage = document.querySelector(".stage");
+
+        function Car(width, height, backgroundColor, left, top, speedx,speedy,a) {
+            this.width = width,
+                this.height = height,
+                this.speedx = speedx,
+                this.speedy = speedy
+                this.a = a
+                this.backgroundColor = backgroundColor,
+                this.left = left,
+                this.top = top
+        }
+        Car.prototype.create = function (classname) {
+            this.classname = classname
+            var car = document.createElement("div")
+            stage.appendChild(car)
+            car.classList.add(classname)
+            car.style.width = this.width + "px";
+            car.style.height = this.height + "px";
+            car.style.background = this.backgroundColor
+            car.style.left = this.left + "px";
+            car.style.top = this.top + "px";
+            car.style.position = "absolute"
+            console.log(this);
+    
+            setInterval(() => {
+                
+                this.left = this.left + this.speedx
+                car.style.left = this.left + "px"
+                this.top = this.top+this.speedy
+                car.style.top = this.top+"px"
+                this.speedy = this.speedy+this.a
+
+                if (this.left>=(1000-this.width) ||this.left<=0) {
+                    this.speedx = -this.speedx
+                }
+                if (this.top>=(1000-this.height)||this.top<=0) {
+                    this.speedy = -this.speedy
+                }
+
+
+            }, 100)
+        }
+
+        var red = new Car(40, 40, "red", 0, 0, 20,10,2)
+        red.create("red")
+
+        // function jiehe(width, height, backgroundColor, left, top, speedx,classname) {
+        //     var car = new Car(width, height, backgroundColor, left, top, speedx)
+        //     car.create(classname)
+        // }
+
+        // jiehe(20,20,"blue",0,0,10,"blue",10,10)
+    </script>
+</body>
+
+</html>

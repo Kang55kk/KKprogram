@@ -1,0 +1,36 @@
+.offer .row h2 {
+  text-align: center;
+  margin: 2em 0;
+}
+.offer .row .item {
+  text-align: center;
+}
+.offer .row .item h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+.services {
+  background-image: url('imgs/services-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 50px 0;
+}
+.services .row .left h2 {
+  margin-top: 0;
+  color: white;
+}
+.services .row .right {
+  text-align: right;
+}
+.services .row .right button {
+  background-color: transparent;
+}
+.services .row .col-xs-12 {
+  margin: 15px 0;
+}
+.services .row .col-xs-12 .media {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=./整形.css.map */

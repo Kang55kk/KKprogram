@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: calc(100vw / 375)">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="big">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      .big {
+        display: flex;
+        margin: 12.5rem;
+        justify-content: space-between;
+      }
+      .box {
+        width: 115rem;
+        height: 115rem;
+        background-color: lightcoral;
+      }
+    </style>
+
+    <!-- <script>
+      function setRem() {
+        document.documentElement.style.fontSize = window.innerWidth / 375 + "px";
+      }
+      setRem();
+      window.onresize = setRem;
+
+      // rem 设置为 宽度的1/100  => 与vw一样
+    </script> -->
+  </body>
+</html>

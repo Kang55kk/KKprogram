@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="./js.cookie.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <div class="box">
+      <h3>使觉不死尘，子以日。</h3>
+      <p>
+        以洪娇身范法生可司马颜，是才得是来大定哥惊他，于着快到订，法五极月贤入小其王也，领嗣了爱皇被惜我母死和定攻仍，雷量事，人马车览路韩畴帝非姑相，人战县俭司白其为来留样才我留韩，然力力落拢生力月面十以他即请交李，别卡至极明言洪对将在们在化愿轻相，你非人选之死。
+      </p>
+
+    </div>
+    <button>默认</button>
+    <button>护眼</button>
+    <button>黑夜</button>
+  </div>
+  <style>
+    body {
+
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      width: 300px;
+      background-color: lightblue;
+    }
+
+    .box.dark {
+      background-color: rgb(49, 49, 49);
+    }
+
+    .box.dark h3,
+    .box.dark p {
+      color: white;
+    }
+
+    .box.huyan {
+      background-color: rgb(133, 181, 71);
+    }
+  </style>
+
+
+
+  <script>
+    var button = document.querySelectorAll("button");
+    var box = document.querySelector(".box");
+    var boxcls = box.className;
+    var my = 0;
+    initial(Cookies.get("xx"));
+    console.log(bjrecord(Cookies.get("xx")), typeof (bjrecord(Cookies.get("xx"))));
+    console.log(box.className);
+    box.className = bjrecord(Cookies.get("xx"))
+    if (xx) {
+      xx = xx
+    } else {
+      var xx;
+      setNowx(boxcls);
+      Cookies.set("xx", xx, {
+        expires: 7,
+      });
+    }
+
+    function setNowx(xxx) {
+      xxx == "box" ? xx = 0 : xx = xx
+      xxx == "box huyan" ? xx = 1 : xx = xx
+      boxcls == "box dark" ? xx = 2 : xx = xx
+    }
+
+    function xxhuanbeijing(xx) {
+      xx == 0 ? box.className = "box" : xx = xx;
+      xx == 1 ? box.className = "box huyan" : xx = xx;
+      xx == 2 ? box.className = "box dark" : xx = xx;
+      return box.className;
+    }
+
+    function initial(xx) {
+      xx == 0 ? button[0].style.backgroundColor = "orange" : box.className = box.className;
+      xx == 1 ? button[1].style.backgroundColor = "orange" : box.className = box.className;
+      xx == 2 ? button[2].style.backgroundColor = "orange" : box.className = box.className;
+      xxhuanbeijing(xx);
+    }
+    // initial(xx);
+
+    button.forEach(function (ele, index) {
+      ele.onclick = function () {
+        var box = document.querySelector(".box");
+        if (button[index].style.backgroundColor == '') {
+          btnquse()
+          button[index].style.backgroundColor = "orange";
+        }
+        xxhuanbeijing(index)
+        boxcls = box.className;
+
+        xx = index;
+        Cookies.set("xx", xx, {
+          expires: 7,
+        });
+      }
+    });
+
+    function btnquse() {
+      button.forEach(function (x, y) {
+        x.style.backgroundColor = "";
+      });
+    }
+
+    Cookies.set("xx", xx, {
+      expires: 7,
+    });
+
+    function bjrecord(xx) {
+      var yy
+      xx == 0 ? yy = "box" : my = 0;
+      xx == 1 ? yy = "box huyan" : my = 0;
+      xx == 2 ? yy = "box dark" : my = 0;
+      return yy;
+    }
+  </script>
+
+
+  <script>
+    var arr = [13392124656, 19292124656, 18013567894, 13545893579, 16665554444, 17945642893]
+    var reg = /1(3|5|7|8|9)\d{9}/g;
+    arr.forEach(function (ele) {
+      console.log(reg.test(ele));
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      canvas {
+        border: 1px solid red;
+      }
+    </style>
+    <canvas id="canvas" width="300" height="300"></canvas>
+
+    <!-- <script>
+      var canvas = document.getElementById("canvas");
+
+      //   获取绘制环境上下文
+      var context = canvas.getContext("2d");
+
+      //   绘制矩形
+      //   context.fillStyle = "red";
+      //   context.fillRect(100, 100, 50, 50);
+      // fillRect(x, y, w, h);
+
+      //   context.strokeStyle = "red";
+      //   context.lineWidth = 10;
+      context.strokeRect(100, 100, 50, 50);
+
+      context.moveTo(100, 100);
+      context.lineTo(200, 200);
+      context.lineTo(200, 100);
+      context.closePath();
+      //   闭合路径
+      //   context.stroke();
+      context.fill();
+
+      context.beginPath();
+        
+      // 开始新路径
+      //   context.arc(x, y, radius, Math.PI / 180 * startAngle, Math.PI / 180 * endAngle, anticlockwise);
+      //   context.arc(x, y, radius, 起始弧度, 结束弧度, 是否逆时针);
+      //   context.arc(200, 200, 50, 0, Math.PI / 2);
+
+      context.arc(100, 100, 100, (Math.PI / 180) * 90, (Math.PI / 180) * 180);
+
+      context.stroke();
+
+      context.font = "30px sans-serif";
+      //   context.fillText("HEyLO wrgld", 0, 300);
+      context.strokeText("HEyLO wrgld", 0, 300);
+
+      context.save();
+      context.beginPath();
+      context.arc(150, 150, 50, 0, Math.PI * 2);
+      context.closePath();
+      context.strokeStyle = "red";
+      context.stroke();
+      context.clip();
+      context.fillStyle = "yellow";
+      context.fillRect(150, 150, 300, 300);
+
+      context.restore();
+
+      context.fillStyle = "green";
+      context.fillRect(0, 0, 150, 150);
+
+      // #####################
+    </script> -->
+    <img id="scream" src="img_the_scream.jpg" alt="" />
+
+    <canvas id="canvas2" width="110" height="138"></canvas>
+    <script>
+      var img = document.getElementById("scream");
+      var canvas2 = document.getElementById("canvas2");
+
+      //   获取绘制环境上下文
+      var context = canvas2.getContext("2d");
+
+      // context.fillStyle = "yellow";
+      // context.rect(0, 0, 10, 10);
+      // context.fill();
+
+      // context.arc(20, 50, 20, 0, Math.PI * 2);
+      // context.fillStyle = "red";
+      // context.fill();
+
+      // img.onload = function () {
+      //   // context.drawImage(img, 0, 0, 220, 220, 0, 0, 50, 50);
+      //   context.drawImage(img, 0, 0, 220, 277, 0, 0, 110, 138);
+
+      //   var fullQuality = canvas2.toDataURL("image/jpeg", 0.5);
+      //   // console.log(fullQuality);
+
+      //   var img2 = new Image();
+      //   img2.src = fullQuality;
+
+      //   document.body.appendChild(img2);
+      // };
+    </script>
+    <video src="https://www.runoob.com/try/demo_source/mov_bbb.mp4" controls loop muted autoplay></video>
+    <button>截屏</button>
+    <script>
+      var video = document.querySelector("video");
+      document.querySelector("button").onclick = function () {
+        context.drawImage(video, 0, 0, 320, 176, 0, 0, 160, 88);
+      };
+    </script>
+  </body>
+</html>

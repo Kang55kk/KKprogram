@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var x = 10;
+      console.log(x);
+
+      //   console.log(y);
+      //   var y = 20;
+
+      //   如果变量没有声明 会报错
+      // 先使用后声明（赋值） 会有变量提升
+
+      //   变量提升
+      var y;
+      console.log(y);
+      y = 20;
+
+      //   js代码运行前 会把当前作用域的var变量  全部提升到最顶端
+    </script>
+
+    <script>
+      xxx();
+      //   函数的提升 不会变为undefined
+      function xxx() {
+        console.log("xxx");
+      }
+
+      var yyy;
+      yyy();
+      // yyy is not a function
+      var yyy = function () {
+        console.log("yyy");
+      };
+    </script>
+    <script>
+      var a = 10;
+      console.log(a);
+      var a = 20;
+      console.log(a);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="big">
+        <div class="jiangyou">
+            <div class="small">small</div>
+        </div>
+    </div>
+    <div class="box">box</div>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            padding: 20px;
+
+            border-top: 10px dashed red;
+            border-right: 20px dashed red;
+            border-bottom: 10px dashed red;
+            border-left: 15px dashed red;
+            margin: 50px auto;
+        }
+
+        .big {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            position: relative;
+        }
+
+        .small {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</body>
+<script>
+    // var boxE1 = document.getElementsByClassName("box")[0]
+
+    // console.log(boxE1.clientTop); // border-top值
+
+    // console.log(boxE1.clientWidth); //+padding
+
+    var str = "ABCD EFGH IJKL ABCD"
+
+    // console.log(str.constructor);
+    // console.log(str.length);
+    // console.log(str + " 555");
+    // console.log(str.concat("555"));
+    // console.log(str.indexOf("D"));
+    // console.log(str.lastIndexOf("D"));
+    // console.log(str.indexOf("D"));
+    console.log(str.includes("ABCDE"));
+    // console.log(str.repeat(3));
+    // console.log(str);
+    // console.log(str.slice(3, 7));
+    // console.log(str.slice(-3));
+
+    // console.log(str.substring(3, 7));
+    // console.log(str.substring(3));
+    // console.log(str.toLowerCase()); //小写
+    // console.log(str.trim());
+    // console.log(str.startsWith("ABCD "));
+    // console.log(str.split("I"));
+    console.log(str.replace("ABCD", "MNOP"));
+    // console.log(str.indexOf("BCD "));
+    // console.log(str.search("D"));
+    // console.log(str.charAt(2));
+    // console.log(str[2]);
+
+    // 需求 从一串字符中
+    //  "fdfsdjksduiwsgubsjkadweuiyejdsfjdsghjtywgmzxhb
+    //  1统计出现的最多的手母是哪个 
+    //  2出现最多的字母出现了多少次
+    //  3最多的前三个统计出现次数
+
+    // var s1 = "fdfsdjksduiwsgubsjkadweuiyejdsfjdsghjtywgmzxhb"
+    // s1.length
+    // var s2 = s1.replace("a","")
+    // s2.length
+    // var s3 = "azcdefg"
+    // console.log(s3.charCodeAt(0))
+    // console.log(s3.charCodeAt(1))
+    // var s4 = "97"
+    // console.log(s4.charCodeAt(1))
+    //统计每个出现了多少次:
+    //  1.将a用空代替  2.长度差为a的数量  3.把该数量装进数组里面
+    // 4.数组排序   5.for循环 比对哪一个是次数为最多的 输出
+
+
+    // console.log(s1.length-s2.length);
+    // var shu = s1.length - s2.length
+    // num1.push(shu)
+    // console.log(String(zimu) + "的出现次数为:" + shu);
+
+    // for (let qw = 0; qw < 46; qw++) {
+    //     tihuan("j")
+    //     console.log(s2);
+    // }
+
+
+    function tihuan(a) {
+        var s1 = "fdfsdjksduiwsgubsjkadweuiyejdsfjdsghjtywgmzxhb"
+        for (var i = 0; i < 46; i++) {
+            s2 = s1.replace(a, "")
+            s1 = s2
+        }
+        return 46 - s1.length
+    }
+    s4 = "abcdefghijklnmopqrstuvwxyz"
+    obj = {}
+
+
+    for (i = 0; i < 26; i++) {
+        obj.push(obj.s4[0], tihuan(s4[0]))
+    }
+    console.log(obj);
+
+
+
+
+
+    // var s1 = "fdfsdjksduiwsgubsjkadweuiyejdsfjdsghjtywgmzxhb"
+    // var s2=s1.split('');
+    // var s3=[];
+    // s2.forEach(function(item){
+    //     var index=s3.findIndex(function(v){
+    //         return item==v.name
+    //     });
+    //     index ==-1?s3.push({name:item,num:1}):s3[index].num++;
+    // })
+    // console.log(s3);
+</script>
+
+</html>

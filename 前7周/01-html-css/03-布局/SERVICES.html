@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 引入外部样式文件 -->
+    <!-- <link rel="stylesheet" href="./test-style.css"> -->
+    <link rel="stylesheet" href="./my-minireset.css" />
+  </head>
+  <body>
+    <div class="servive">
+      <div class="wrapper">
+        <div class="header">
+          <div class="title">
+            <div class="sub">OUR SERVICES</div>
+            <h3>Offer for you</h3>
+          </div>
+          <button class="btn">Contact us</button>
+        </div>
+
+        <div class="list">
+          <div class="card">
+            <img class="icon" src="./ci-1.png" alt="" />
+            <div class="info">
+              <h5>Advanced equipment</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit sunt</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="icon" src="./ci-1.png" alt="" />
+            <div class="info">
+              <h5>Advanced equipment</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit sunt</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="icon" src="./ci-1.png" alt="" />
+            <div class="info">
+              <h5>Advanced equipment3</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit sunt</p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="icon" src="./ci-1.png" alt="" />
+            <div class="info">
+              <h5>Advanced equipment4</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odit sunt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .wrapper {
+        width: 1000px;
+        /* background-color: aqua; */
+        margin: 0 auto;
+      }
+
+      .servive {
+        background-color: lightblue;
+        background-image: url("./services-bg.jpg");
+        padding: 50px 0;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .servive .header {
+        overflow: hidden;
+        /* background-color: blueviolet; */
+      }
+      .servive .header .title {
+        /* background-color: lightcoral; */
+        float: left;
+      }
+      .servive .header .btn {
+        background-color: transparent;
+        /* transparent 透明 */
+        color: white;
+        /* border: 1px solid aqua; */
+        border-color: gold;
+
+        float: right;
+      }
+      .servive .list {
+        overflow: hidden;
+      }
+      .servive .list .card {
+        width: 410px;
+        background-color: white;
+        float: left;
+        margin: 15px;
+        /* border: 1px solid black; */
+
+        border-radius: 10px;
+        /* 圆角 */
+
+        padding: 30px;
+      }
+      .servive .list .card .icon {
+        float: left;
+        width: 60px;
+        margin-right: 20px;
+      }
+      .servive .list .card .info {
+        width: 330px;
+        float: left;
+        /*  浮动本质是 让文字环绕图片*/
+      }
+    </style>
+  </body>
+</html>

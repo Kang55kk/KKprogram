@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            background-color: lightgreen;
+            position: relative;
+        }
+
+        ul li {
+            margin: 0;
+            position: absolute;
+            padding: 0;
+            list-style: none;
+            background-color: rgb(61, 186, 236);
+            box-sizing: border-box;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+    </ul>
+</body>
+
+<script>
+    var uls = document.querySelector("ul");
+    var li = document.querySelectorAll("li");
+    uls.style.width = window.innerWidth + "px";
+    uls.style.height = window.innerHeight + "px";
+
+    function randomNum(start, end) {
+        var x = Math.round(Math.random() * (end - start) + start)
+        return x
+    }
+
+    function Dot() {
+        this.width = randomNum(50, 150),
+            this.height = this.width,
+            this.left = randomNum(0, (window.innerWidth - 150)),
+            this.top = randomNum(0, (window.innerHeight - 150))
+        this.angle = randomNum(-30, 30)
+        var node = document.createElement("li")
+        uls.appendChild(node);
+        this.node = node;
+    }
+
+    Dot.prototype.draw = function () {
+        this.node.style.left = this.left + "px";
+        this.node.style.top = this.top + "px";
+        this.node.style.width = this.width + "px";
+        this.node.style.height = this.height + "px";
+        this.node.style.transform = "rotate(" + this.angle + "deg)";
+    }
+
+    uls.addEventListener('click', function (e) {
+        if (e.target == uls) {
+            alert("Game Over");
+            console.log(e.target);
+            var xx = document.querySelectorAll("li");
+            xx.forEach(function (ele, i) {
+                uls.removeChild(ele)
+            });
+        }
+        console.log(e.target);
+
+        uls.removeChild(e.target);
+    })
+
+    // setInterval(() => {
+    //     var y = new Dot();
+    //     y.draw();
+    // }, 1000);
+</script>
+
+</html>

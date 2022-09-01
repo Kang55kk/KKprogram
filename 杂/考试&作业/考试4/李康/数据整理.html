@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var citys = [
+        { id: 1, nm: "北京", py: "beijing" },
+        { id: 45, nm: "重庆", py: "chongqing" },
+        { id: 59, nm: "成都", py: "chengdu" },
+        { id: 70, nm: "长沙", py: "changsha" },
+        { id: 84, nm: "保定", py: "baoding" },
+        { id: 88, nm: "蚌埠", py: "bengbu" },
+        { id: 89, nm: "常州", py: "changzhou" },
+        { id: 150, nm: "阿拉善盟", py: "alashanmeng" },
+        { id: 151, nm: "鞍山", py: "anshan" },
+        { id: 197, nm: "安庆", py: "anqing" },
+        { id: 238, nm: "安阳", py: "anyang" },
+        { id: 700, nm: "承德县", py: "chengdexian" },
+        ];
+
+        function parsedCitys(citys) {
+            var arr1 = []
+        citys.forEach(function (ele) {
+            arr1.push(ele)
+        })
+        var arr2 = []
+        arr1.forEach(function (ele, i) {
+            arr2.push(arr1[i].py.split('')[0])
+            arr2 = arr2.sort()
+        })
+
+        arr2 = _.uniq(arr2)
+        console.log("====",arr2);
+        var arr3 = []
+        arr2.forEach(function (ele, i) {
+            arr3.push({})
+            arr3[i].letter = arr2[i].toUpperCase()
+            console.log(arr3[i],arr2[i]);
+            arr3[i].citys = []
+            arr1.forEach(function (ele2, j) {
+                if (ele2.py.split('')[0] == arr2[i]) {
+                    arr3[i].citys.push(ele2)
+                }
+            });
+        });
+
+        arr3 = _.sortBy(arr3, function (item) {
+            return item.id;
+        });
+        // console.log(arr3);
+        return arr3
+        }
+        console.log(parsedCitys(citys));
+    </script>
+</body>
+
+</html>

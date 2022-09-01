@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box"></div>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            /* background-image: linear-gradient(to bottom, red, green, yellow); */
+            /* background-image: linear-gradient(135deg, red, green, yellow); */
+            /* background-image: linear-gradient(to right bottom, red, green, yellow); */
+            /* 从右上角开始渐变 */
+            /* background-image: linear-gradient(red 50%, green 95%, yellow); */
+            /* 绿色从剩下50%拿95% */
+            /* background-image: linear-gradient(red 50%, green 50%, green 69%, yellow 70%); */
+            /* 0% 表示起始点, 而100%表示终点,如果有些位置你没有明确设置，那么它将会被自动计算 */
+            /* background: linear-gradient(red 20%, blue 80%); */
+            /* 在容器顶部的 20% 区域被填充为 red 实色，而底部 20% 区域被填充为 blue 实色。真正的渐变只出现在容器 60% 的高度区域。如果我们把两个色标继续拉近（分别改为 40% 和 60%） */
+            /* background-image: linear-gradient(red 50%, green 50%); */
+            /* 一半一半 */
+            /* background-image: linear-gradient(rgb(207, 185, 74) 10%, rgb(192, 246, 57) 10%); */
+            /* 加起来不到100%,剩下的都为第二种颜色 */
+            /* background-image: repeating-linear-gradient(red 0%, red 10%, green 10%, green 20%, yellow 20%, yellow 30%); */
+
+            /* background-image: repeating-linear-gradient(rgba(255, 0, 0, 0.3) 0px,
+                    rgba(255, 0, 0, 0.3) 20px,
+                    transparent 20px,
+                    transparent 40px), repeating-linear-gradient(to right,
+                    rgba(255, 0, 0, 0.3) 0px,
+                    rgba(255, 0, 0, 0.3) 20px,
+                    transparent 20px,
+                    transparent 40px); */
+            /* 
+            width: 500px;
+            height: 500px; */
+            /* background-size: 50px 50px;
+            background-position: 0 0, -25px -25px;
+            background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+                linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black); */
+
+            /* background-image: radial-gradient(red, green);
+        background-image: radial-gradient(circle, red, green);
+        background-image: radial-gradient(circle closest-side, red, green);
+        background-image: radial-gradient(circle farthest-side at top right, red, green); */
+            /* background-image: radial-gradient(red 50px, green 50px); */
+            /* background-image: repeating-radial-gradient(red 0px, red 50px, green 50px, green 100px); */
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .potato {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            position: relative;
+        }
+
+        .potato>div {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .potato>div:nth-child(1) {
+            top: 0;
+            left: 0;
+        }
+
+        .potato>div:nth-child(2) {
+            top: 150px;
+            left: 0;
+        }
+
+        .potato>div:nth-child(3) {
+            top: 300px;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="potato"></div>
+
+    <script>
+        function Div(w, h, bgc, left, speed) {
+            this.width = w + 'px';
+            this.height = h + 'px';
+            this.backgroundColor = bgc;
+            this.left = left,
+                this.speed = speed;
+        }
+
+        Div.prototype.potato = function (className) {
+            var potatoEl = document.querySelector('.potato');
+            var divEl = document.createElement('div');
+            divEl.classList.add(className);
+            console.log(this);
+
+            setInterval(() => {
+                this.left = this.left + this.speed
+                divEl.style.left = this.left + "px"
+                console.log(this);
+            }, 300)
+
+
+
+            divEl.style.width = this.width;
+            divEl.style.height = this.height;
+            divEl.style.backgroundColor = this.backgroundColor;
+            potatoEl.appendChild(divEl);
+        }
+
+        var a = new Div(100, 100, 'red', 0, 10)
+        // var b = new Div(100, 100, 'blue')
+        // var c = new Div(100, 100, 'green')
+        a.potato('red');
+        // b.potato('blue');
+        // c.potato('green');
+    </script>
+
+
+
+
+
+</body>
+
+</html>

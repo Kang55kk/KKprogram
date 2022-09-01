@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .stage {
+        display: flex;
+        flex-wrap: wrap;
+        width: 320px;
+        height: 320px;
+        justify-content: space-between;
+        align-content: space-between;
+      }
+      .stage span,
+      .stage i {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .stage i {
+        background-color: orange;
+      }
+
+      .stage span.active {
+        background-color: rgb(96, 96, 96);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <span class="">手机</span>
+      <span class="">平板</span>
+      <span class="">电磁炉</span>
+      <span class="">电视</span>
+      <i style="cursor: pointer">开始</i>
+      <span class="">洗衣机</span>
+      <span class="">电脑</span>
+      <span class="">冰箱</span>
+      <span class="">衣柜</span>
+    </div>
+
+    <script>
+      var spans = document.querySelectorAll(".stage span");
+      var start = document.querySelector(".stage i");
+
+      var orders = [0, 1, 2, 4, 7, 6, 5, 3];
+
+      function showIndex(n) {
+        orders.forEach(function (order, index) {
+          if (n === index) {
+            spans[order].classList.add("active");
+          } else {
+            spans[order].classList.remove("active");
+          }
+        });
+      }
+
+      start.onclick = function () {
+        var num = Math.floor(Math.random() * 8);
+
+        var current = -1;
+        var id = setInterval(function () {
+          current++;
+
+          showIndex(current % 8);
+          if (current > 7 + 8 + 8 + num) {
+            clearInterval(id);
+            console.log(num, spans[num].innerText);
+          }
+        }, 300);
+      };
+    </script>
+  </body>
+</html>

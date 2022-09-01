@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            background-color: aqua;
+        }
+        ul li{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+        <li>4444</li>
+        <li>5555</li>
+        <li>6666</li>
+    </ul>
+    <script>
+        // 把事件委托给别人代为处理
+
+        // 事件委托的原理：给父元素注册事件，利用事件冒泡，当子元素的事件触发，会冒泡到父元素，然后去控制相应的子元素
+
+        // var lis = document.querySelectorAll("ul li");
+        // for(var i = 0; i < lis.length; i++){
+        //     lis[i].onclick = function(){
+        //         console.log(this.innerHTML);
+        //     }
+        // }
+
+        var ul = document.querySelector("ul");
+        var li = document.querySelectorAll("li");
+        // ul.onclick = function(e){
+        //     // console.log(this.innerHTML);
+        //     console.log(e.target);
+        // }
+
+        ul.addEventListener('click',function(e){
+            // console.log(this); 
+            // console.log(this.innerHTML);
+            console.log(e.target==li[0]);
+        })
+
+        // 事件委托的作用：减少DOM操作，提高了程序性能
+        // 动态创建的子元素，也拥有事件
+        
+
+    </script>
+</body>
+</html>

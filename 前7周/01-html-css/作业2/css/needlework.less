@@ -1,0 +1,114 @@
+.needlework {
+
+
+
+    background-image: url("../img/needlework.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    // width: 100%;
+    z-index: 0;
+    position: relative;
+
+    .mask {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.523);
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+        margin: 0 -200px 0 0;
+
+        .wrap {
+            margin: 90px auto;
+            // z-index: 1;
+            position: relative;
+            width: 1200px;
+            height: 200px;
+
+            // background-color: lawngreen;
+            .left {
+                width: 600px;
+                height: 200px;
+                float: left;
+                overflow: hidden;
+                position: absolute;
+                margin: 80px;
+                height: 200px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto 0;
+
+
+                // background-color: lightblue;
+                .title {
+                    margin-bottom: 30px;
+
+                    span {
+                        font-size: 44px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        color: #fff;
+                        // margin-right: 20px;
+
+                        &:nth-child(2) {
+                            font-weight: 150;
+
+                        }
+
+                        &:nth-child(4) {
+                            font-weight: 100;
+
+                        }
+                    }
+
+
+                }
+
+                .text {
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        font-size: 16px;
+                        line-height: 28px;
+                        // color: var(--font-color);
+                        letter-spacing: .2px;
+                        color: #fff;
+                    }
+                }
+
+            }
+
+            .right {
+                float: right;
+                height: 150px;
+                position: relative;
+                width: 300px;
+                button{
+                float: right;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                position: absolute;
+                padding: 14px 42px;
+                    font-size: 16px;
+                    color: #fff;
+                    border-radius: 42px;
+                    font-weight: bold;
+                    outline: none;
+                    border: none;
+                    background: red;
+                    transition: all 1.8s ease-in-out;
+                    height: 56px;
+
+                }
+                
+            }
+        }
+    }
+}

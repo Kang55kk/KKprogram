@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 同步代码 -->
+    <!-- <script>
+      console.log("start");
+      //   var a = 20;
+      //   console.log(a + 10);
+
+      function f(n) {
+        if (n < 2) {
+          return n;
+        }
+        return f(n - 1) + f(n - 2);
+      }
+      console.log(f(32));
+
+      console.log("end");
+    </script> -->
+
+    <!-- 异步代码 -->
+
+    <button>btn</button>
+    <script>
+      // 定时器 事件 （回调函数）
+      console.log("start");
+
+      function x() {
+        console.log(123);
+      }
+
+      // setTimeout(x, 3000);
+      setTimeout(x, 0);
+      document.querySelector("button").onclick = x;
+      //   以上两个代码 都不会阻止同步代码运行
+      //   $("button").click(x);
+      //   $('button').click(function () {
+      //     // 需要执行的代码
+      //   })
+
+      console.log("end");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <script>
+      window.onload = function () {
+        var boxEl = document.getElementsByClassName("box")[0];
+        console.lg();
+        console.log(boxEl);
+      };
+    </script> -->
+    <!-- js代码在html之前 获取不到html元素 -->
+    <!-- 事件都是异步（定时器 等一会 即便是0） -->
+
+    <!-- <div class="box" onclick="console.log(123);console.log(456)">box</div> -->
+    <!-- <div class="box" onclick="clickHandler()">box</div> -->
+    <div class="box">
+      <!-- <mark>box</mark> -->
+    </div>
+
+    <!-- <script>
+      function clickHandler() {
+        console.log(123);
+      }
+    </script> -->
+
+    <!-- <script>
+      var boxEl = document.getElementsByClassName("box")[0];
+      boxEl.onclick = function () {
+        console.log("click");
+      };
+      //   onclick 事件   clickHandler事件处理函数
+
+      boxEl.onmouseover = function () {
+        console.log("over");
+      };
+
+      boxEl.onmouseout = function () {
+        console.log("out");
+      };
+
+      boxEl.ondblclick = function () {
+        console.log("ondblclick");
+      };
+
+      boxEl.onmousemove = function () {
+        console.log("onmousemove");
+      };
+
+      //   onmouseenter onmouseover    onmouseleave onmouseout 对比区别（用多个盒子嵌套）
+    </script> -->
+    <!-- 绝大多数js代码是在 body结束之前  1调试 2页面渲染 -->
+
+    <script>
+      var boxEl = document.getElementsByClassName("box")[0];
+      //   boxEl.onclick = function (a) {
+      //     console.log("click", a, event);
+      //     // a 只是形参在事件出发的时候会自动填充为 event(事件处理函数内部自动有的 无需声明)
+      //   };
+
+      boxEl.onclick = function () {
+        console.log("click", event);
+        // event 就叫事件对象
+
+        /* 
+        
+x: 105
+y: 105
+pageX: 105
+pageY: 105
+layerX: 105
+layerY: 105
+clientX: 105
+clientY: 105  文档
+
+target
+type: "click"
+
+       screenX: 970
+screenY: 185  屏幕
+
+X: 98
+offsetY: 98  元素
+
+
+*/
+      };
+
+      boxEl.onmousemove = function () {
+        console.log(event.offsetX, event.offsetY);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+.offer {
+  margin: 0;
+  background-color: white;
+}
+.offer h1,
+.offer h2,
+.offer h3,
+.offer h4,
+.offer h5,
+.offer h6 {
+  margin: 0;
+}
+.offer h5 {
+  margin: 10px;
+  color: #666666;
+  font-size: 15px;
+}
+.offer h3 {
+  margin: 10px 0;
+}
+.offer .sub-title {
+  background-color: white;
+  text-align: center;
+  color: #888888;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.offer .title {
+  background-color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.offer .card {
+  width: 1000px;
+  background-color: white;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1px;
+  /* border: 1px solid #000; */
+}
+.offer .card1 {
+  width: 220px;
+  float: left;
+  margin: 10px;
+  padding: 5px;
+}
+/*# sourceMappingURL=./offer.css.map */

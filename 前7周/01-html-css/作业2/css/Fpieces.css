@@ -1,0 +1,178 @@
+.Fpieces {
+  height: 900px;
+}
+.Fpieces .first {
+  width: 50%;
+  float: left;
+  position: relative;
+  height: 300px;
+}
+.Fpieces .first .wrap1 {
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  height: 225px;
+}
+.Fpieces .first .wrap1 .title {
+  margin-bottom: 10px;
+}
+.Fpieces .first .wrap1 .title span:nth-child(1) {
+  font-weight: 100;
+  font-size: 44px;
+  line-height: 50px;
+  margin-right: 10px;
+}
+.Fpieces .first .wrap1 .title span:nth-child(2) {
+  font-weight: bolder;
+  font-size: 44px;
+  line-height: 50px;
+}
+.Fpieces .first .wrap1 p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--font-color);
+  letter-spacing: 0.2px;
+  margin-bottom: 30px;
+}
+.Fpieces .first .wrap1 button {
+  padding: 14px 42px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 42px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: red;
+}
+.Fpieces .second {
+  width: 50%;
+  float: right;
+  background-color: #ffd97f;
+  height: 300px;
+  background-image: url("../img/F1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.Fpieces .third {
+  width: 50%;
+  float: left;
+  height: 300px;
+}
+.Fpieces .third .left {
+  width: 50%;
+  height: 100%;
+  background-image: url("../img/F2.jpg");
+  float: left;
+}
+.Fpieces .third .right {
+  float: right;
+  width: 50%;
+  position: relative;
+  height: 300px;
+}
+.Fpieces .third .right .wrap2 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  width: 335px;
+  height: 150px;
+}
+.Fpieces .third .right .wrap2 .people {
+  margin: 0 auto;
+  text-align: center;
+}
+.Fpieces .third .right .wrap2 .people i {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-weight: 900;
+  color: red;
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+.Fpieces .third .right .wrap2 h3 {
+  font-size: 22px;
+  line-height: 32px;
+  color: var(--heading-color);
+  margin-bottom: 0px;
+  font-weight: bold;
+  text-align: center;
+}
+.Fpieces .third .right .wrap2 p {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 10px;
+}
+.Fpieces .fourth {
+  width: 50%;
+  float: left;
+  height: 300px;
+}
+.Fpieces .fourth .left {
+  width: 50%;
+  height: 100%;
+  background-image: url("../img/F2.jpg");
+  float: left;
+}
+.Fpieces .fourth .right {
+  float: right;
+  width: 50%;
+  position: relative;
+  height: 300px;
+}
+.Fpieces .fourth .right .wrap2 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  width: 335px;
+  height: 150px;
+}
+.Fpieces .fourth .right .wrap2 .people {
+  margin: 0 auto;
+  text-align: center;
+}
+.Fpieces .fourth .right .wrap2 .people i {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-weight: 900;
+  color: red;
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+.Fpieces .fourth .right .wrap2 h3 {
+  font-size: 22px;
+  line-height: 32px;
+  color: var(--heading-color);
+  margin-bottom: 0px;
+  font-weight: bold;
+  text-align: center;
+}
+.Fpieces .fourth .right .wrap2 p {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=./Fpieces.css.map */

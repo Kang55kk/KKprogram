@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="fkshizhong">
+        <div class="hour">
+            <li class="num1"></li>
+            <li class="num2"></li>
+        </div>
+        <div class="min">
+            <li class="num3"></li>
+            <li class="num4"></li>
+        </div>
+        <div class="scd">
+            <li class="num5"></li>
+            <li class="num6"></li>
+        </div>
+    </div>
+
+
+
+    <style>
+        ul,
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hour,
+        .min,
+        .scd {
+            display: flex;
+            justify-content: space-between;
+            width: 320px;
+        }
+
+        .fkshizhong {
+            width: 1100px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .fkshizhong div {
+            display: flex;
+        }
+
+
+        li {
+            width: 150px;
+            height: 250px;
+            /* background-color: lightblue; */
+            flex-wrap: wrap;
+            display: flex;
+            overflow: hidden;
+        }
+
+        li i {
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            display: block;
+
+        }
+
+        .active {
+            background-color: red;
+            box-sizing: border-box;
+            border: 1px solid orange;
+
+        }
+    </style>
+
+    <script>
+        var fkshizhong = document.querySelector(".fkshizhong")
+        var num1 = document.querySelector(".num1")
+        var num2 = document.querySelector(".num2")
+        var num3 = document.querySelector(".num3")
+        var num4 = document.querySelector(".num4")
+        var num5 = document.querySelector(".num5")
+        var num6 = document.querySelector(".num6")
+        var nums = [
+            [
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 0, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+            ],
+            [
+                [0, 1, 0],
+                [1, 1, 0],
+                [0, 1, 0],
+                [0, 1, 0],
+                [1, 1, 1]
+            ],
+            [
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1],
+                [1, 0, 0],
+                [1, 1, 1]
+            ],
+            [
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1]
+            ],
+            [
+                [1, 0, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+                [0, 0, 1],
+                [0, 0, 1]
+            ],
+            [
+                [1, 1, 1],
+                [1, 0, 0],
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1]
+            ],
+            [
+                [1, 1, 1],
+                [1, 0, 0],
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 1, 1]
+            ],
+            [
+                [1, 1, 1],
+                [0, 0, 1],
+                [0, 0, 1],
+                [0, 0, 1],
+                [0, 0, 1]
+            ],
+            [
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 1, 1]
+            ],
+            [
+                [1, 1, 1],
+                [1, 0, 1],
+                [1, 1, 1],
+                [0, 0, 1],
+                [1, 1, 1]
+            ]
+        ]
+
+
+setInterval(() => {
+    var now = new Date()
+        var h = String(now.getHours()).padStart(2, "0");
+        var m = String(now.getMinutes()).padStart(2, "0");
+        var s = String(now.getSeconds()).padStart(2, "0");
+        var h1 = parseInt(h[0])
+        var h2 = parseInt(h[1])
+        var m1 = parseInt(m[0])
+        var m2 = parseInt(m[1])
+        var s1 = parseInt(s[0])
+        var s2 = parseInt(s[1])
+
+
+        function needshow(numji,n) {
+            nums[n].forEach(function (yiwei, index) {
+                yiwei.forEach(function (ele, index2) {
+                    var node = document.createElement("i");
+                    if (ele) {
+                        node.classList.add("active")
+                    }
+                    else{
+                        node.classList.remove("active")
+                    }
+                    numji.appendChild(node)
+                    setTimeout(() => {
+                        nums[n].forEach(function (yiwei, index){
+                            yiwei.forEach(function (ele, index2){
+                                numji.removeChild(node)
+                            })
+                        })
+                    }, 1000);
+                });
+            });
+        }
+        needshow(num1,h1)
+        needshow(num2,h2)
+        needshow(num3,m1)
+        needshow(num4,m2)
+        needshow(num5,s1)
+        needshow(num6,s2)
+    
+}, 1000);
+        
+    </script>
+</body>
+
+</html>

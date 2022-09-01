@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 10;
+      // a 变量 是全局作用域 在任意地方都可以访问
+      // 控制台可以访问的是全局的变量
+      console.log(a);
+
+      function xxx() {
+        var b = 20;
+        // b 变量是在函数内部声明的 只能在函数内部使用
+        // b变量 作用域是 当前函数的局部作用域
+        // b 变量在函数运行开始时声明 在函数运行结束时销毁（变量的生命周期）
+        console.log(a, b);
+      }
+
+      xxx();
+
+      //   console.log(b);
+
+      var yyy = function () {
+        var c = 30;
+        // console.log(a, b, c);
+      };
+      yyy();
+
+      function zzz() {
+        var m = 5;
+        // var a = 200;
+        function zzzChild() {
+          var n = 15;
+          var m = 100;
+          console.log(a, m, n);
+        }
+        // 局部作用内部访问变量  优先访问自己的作用域的变量 如果没有 再访问上一级的
+        zzzChild();
+      }
+      zzz();
+    </script>
+
+    <script>
+      console.log("============");
+      var a1 = 10;
+      function f1() {
+        var a1 = 20;
+        // function fc() {
+        //   console.log(a1);
+        //   var a1 = 30;
+        // }
+
+        function fc(a1) {
+          console.log(a1);
+          var a1 = 44;
+          console.log(a1);
+        }
+        fc(33);
+      }
+      f1();
+    </script>
+
+    <!-- <script>
+      var a = 3;
+
+      function c() {
+        console.log(a);
+      }
+
+      function ffc() {
+        var a = 4;
+
+        c();
+      }
+      ffc();
+
+      //   js中变量的作用域链与定义时的环境有关，与执行时无关。执行环境只会改变this、传递的参数、全局变量等
+
+      //   var ff1 = function () {
+      //     console.log("ff1");
+      //   };
+      //   ff1();
+
+      //   (function () {
+      //     console.log("ff1");
+      //   })();
+      //   自调用函数
+    </script> -->
+
+    <script>
+      var a = 3;
+
+      function c(a) {
+        console.log(a);
+      }
+
+      function ffc() {
+        var a = 4;
+
+        c(a);
+      }
+      ffc();
+    </script>
+
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <script>
+      var btns = document.getElementsByTagName("button");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = (function (i) {
+          console.log(i);
+        })(i);
+      }
+    </script>
+  </body>
+</html>

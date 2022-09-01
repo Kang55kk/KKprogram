@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <script>
+      function yyy(params) {
+        console.log(params);
+      }
+    </script>
+    <script src="https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=123&cb=yyy"></script>
+    <script src="https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=李白&cb=yyy"></script>
+    <script src="https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=诸葛亮&cb=yyy"></script>
+    <script src="https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=鲁班&cb=yyy"></script> 
+    -->
+
+  <input type="text" />
+  <ul></ul>
+
+  <script>
+    function jsonp(url, callback) {
+      var fn = "xxx" + Date.now();
+
+      var s = document.createElement("script");
+      s.src = url + "&cb=" + fn;
+
+      window[fn] = callback;
+      document.body.appendChild(s);
+
+      s.onload = function () {
+        document.body.removeChild(s);
+      };
+    }
+
+    // function xxx(value) {
+    //   console.log(value);
+    // }
+
+    // jsonp("https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=123", function (res) {
+    //   console.log(res);
+    // });
+    // jsonp("https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=诸葛亮", function (res) {
+    //   console.log(res);
+    // });
+
+    // document.querySelector("input").oninput = function () {
+    //   jsonp("https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=" + this.value, function (res) {
+    //     //   console.log(res.g);
+    //     var html = "";
+    //     res.g.forEach(function (o) {
+    //       html += "<li>" + o.q + "</li>\n";
+    //     });
+    //     document.querySelector("ul").innerHTML = html;
+    //   });
+    // };
+  </script>
+
+  <script>
+    var jsonp = function jsonp(url, callback) {
+      var s = document.createElement("script")
+      var fn = "xxx" + Date.now()
+      var str = url + "&cb=" + fn
+      s.src = str;
+      window[str] = callback
+
+      function xxx(params) {
+        console.log(params);
+      }
+    }
+
+    function jsonp(url, fn, callback) {
+      let script = document.createElement('script');
+      script.src = url;
+      let body = document.querySelector('body');
+      Window[fn] = callback;
+      body.appendChild(script);
+    }
+
+    jsonp("http://localhost:3000/jsonp?cb=str", 'str', function (params) {
+      console.log(params);
+    });
+  </script>
+
+  <!-- <script src="http://localhost:3000/jsonp?cb=str"></script> -->
+  <!-- str() -->
+
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <!-- <script src="http://localhost:3000/jsonp?cb=d"></script>
+  <script>
+    xxx({});
+  </script> -->
+
+  <!-- <script>
+      // $.get(URL,data,function(data,status,xhr),dataType)
+      $("input").on("input", function () {
+        // $.get(
+        //   "https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=" + $(this).val(),
+        //   function (res) {
+        //     console.log(res);
+        //   },
+        //   "jsonp"
+        // );
+
+        $.ajax({
+          type: "GET",
+          url: "https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&from=pc_web&wd=" + $(this).val(),
+          dataType: "jsonp",
+          jsonp: "cb",
+          success: function (res) {
+            console.log(res);
+          },
+        });
+      });
+    </script> -->
+</body>
+
+</html>

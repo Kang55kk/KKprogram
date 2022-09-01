@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="./jQuery-imgzoom.js"></script>
+    <style>
+      #small {
+        width: 250px;
+        /* height: 365px; */
+        border: 1px solid #000;
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        /* float: left; */
+      }
+      #small img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3 style="padding-left: 100px">jQuery放大镜插件效果</h3>
+    <div id="small" style="width: 250px">
+      <img src="./normal1.jpg" />
+    </div>
+  </body>
+  <script>
+    $("#small").imgzoom({ times: "1" });
+
+    // 测试jq对象上面 挂方法 （jq插件的原理）
+    $.fn.xxx = function () {
+      console.log(this);
+      return Math.random();
+    };
+
+    // $('#swiper').init({
+    //     autoplay: fasle
+    // })
+
+    // prop() attr() 区别
+    // closest() parents()  区别
+
+    // bind (live  delegate()) on() 绑定事件
+    // unbind()  (die  undelegate())  off 解除事件绑定
+  </script>
+</html>

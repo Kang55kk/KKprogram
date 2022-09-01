@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 500px;
+            height: 100vh;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            /* transform: skewY(20deg); */
+            /* transform: translate(100px); */
+            transform: rotatey(45deg);
+            transform-origin: center center 100px;
+        }
+
+        .floor {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0.578);
+            position: absolute;
+            transform: rotateX(80deg);
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box"></div>
+    <div class="floor">
+    </div> -->
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="stage">
+    <div class="hour"></div>
+    <div class="tail"></div>
+  <style>
+    .stage {
+      width: 500px;
+      height: 500px;
+      background-color: lightblue;
+      /* border-radius: 50%; */
+      position: relative;
+    }
+
+    .hour {
+      width: 10px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+      top: 140px;
+      left: 245px;
+
+    }
+
+    .stage .tail {
+      /* display: flex; */
+      position: relative;
+    }
+
+    .stage .tail i {
+      display: block;
+      transform-origin: center 250px;
+    }
+
+    .stage .tail i.b {
+      width: 8px;
+      height: 40px;
+      background-color: lightcoral;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -4px;
+
+      /* transform: rotate(45deg); */
+    }
+
+    .stage .tail i.s {
+      width: 4px;
+      height: 20px;
+      background-color: black;
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -2px;
+      /* transform: rotate(45deg); */
+    }
+  </style>
+
+  <script>
+    for (let i = 0; i < 12 * 5; i++) {
+      var node = document.createElement("i");
+      if (i % 5 === 0) {
+        node.className = "b";
+      } else {
+        node.className = "s";
+      }
+
+      node.style.transform = "rotate(" + i * (360 / (12 * 5)) + "deg)";
+      document.querySelector(".tail").appendChild(node);
+    }
+  </script>
+</body>
+
+</html>

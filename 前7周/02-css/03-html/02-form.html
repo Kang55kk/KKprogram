@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- method get post -->
+    <!-- 02-form.html?nickname=nick&password=123 -->
+    <!-- get方式会把表单内容当成 url的一部分（search） 密码也会出现在url 可以收藏 -->
+    <!-- url长度限制 2048 -->
+    <!-- 简单 快速 -->
+    <!-- <form action="#" method="get">
+      <input type="text" name="nickname" />
+      <input type="password" name="password" />
+
+      <input type="submit" value="提交" />
+    </form> -->
+
+    <!-- post  默认请求体内部编码也是  key=value&key=value nickname=nick&password=123 -->
+    <p>123</p>
+    <form action="#" method="post">
+      <input type="text" name="nickname" autofocus />
+      <input type="password" name="password" placeholder="请输入密码" />
+      <input type="email" value="789@qq.com" />
+      <input type="tel" disabled />
+      <input type="color" />
+      <input type="date" />
+      <input type="file" />
+      <hr />
+
+      <label><input type="radio" name="gender" />男 </label>
+      <input type="radio" name="gender" id="nv" />
+      <label for="nv">女</label>
+
+      <hr />
+
+      <input type="range" name="" id="" min="0" max="10" step="2" />
+      <hr />
+
+      <label><input type="checkbox" checked /> 苹果</label>
+      <label><input type="checkbox" /> 葡萄</label>
+      <label><input type="checkbox" /> 橘子</label>
+      <hr />
+      <input type="button" value="按钮" />
+      <button>按钮</button>
+      <hr />
+      <textarea name="" id="" cols="1" rows="10"></textarea>
+
+      <hr />
+      <select name="" id="">
+        <option value="">BMW</option>
+        <option value="">BENZ</option>
+        <option value="">AUDI</option>
+      </select>
+
+      <select name="" id="" multiple>
+        <option value="">BMW</option>
+        <option value="">BENZ</option>
+        <option value="">AUDI</option>
+      </select>
+
+      <select name="" id="" disabled>
+        <optgroup label="德国">
+          <option value="">BMW</option>
+          <option value="">BENZ</option>
+          <option value="">AUDI</option>
+        </optgroup>
+        <optgroup label="国产">
+          <option value="">小鹏</option>
+          <option value="">蔚来</option>
+          <option value="">问界</option>
+        </optgroup>
+      </select>
+
+      <input type="reset" />
+      <input type="submit" value="提交" />
+    </form>
+  </body>
+</html>

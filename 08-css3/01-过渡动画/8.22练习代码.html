@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            /* animation: mymove 3s; */
+            /* animation-iteration-count: 2; */
+            animation-fill-mode: forwards;
+            /* animation-fill-mode: backwards; */
+            /* animation-timing-function: steps(3); */
+            animation: mymove 3s ease 3s 2 alternate forwards;
+            /* forwards可以停留在最后的样子 */
+            /* animation-delay: -1s; */
+
+        }
+
+        ul {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+        }
+
+        @keyframes mymove {
+            from {
+                top: 0px;
+            }
+
+            to {
+                top: 200px;
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+
+        <div></div>
+    </ul>
+
+</body>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <div class="box2">
+            </div>
+        </div>
+    </div>
+    <style>
+        .box,
+        .box1,
+        .box2,
+        .box3 {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(242, 237, 237);
+            margin: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 5px 0 rgba(215, 210, 210, 0.885);
+            animation-name: anniu;
+            animation-duration: 2.9s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+            animation-timing-function: ease-in-out;
+
+
+            /* 无限次 */
+        }
+
+
+        .box1,
+        .box2 {
+            flex-shrink: 0;
+            animation-delay: -1s;
+        }
+
+        .box2 {
+            animation-delay: -1.5s;
+        }
+
+        @keyframes anniu {
+            from {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        body {
+            /* background-color: gray; */
+        }
+    </style>
+
+    <div class="jingling"></div>
+    <style>
+        .jingling{
+            background-image: url('./微信图片_20220822203207.jpg');
+            width: 170px;
+            height: 183.33px;
+            animation: bashen .1s steps(5,start) infinite;
+            background-color: lightblue;
+
+        }
+        @keyframes bashen{
+            from{
+                background-position-x: 0;
+            }
+            to{
+                background-position-x: -850px;
+            }
+
+        }
+    </style>
+</body>
+
+</html>

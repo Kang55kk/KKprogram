@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./my-minireset.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <div class="search-area">
+      <div class="search">
+        <!-- <div style="width: 200px; height: 100px; background-color: red; float: left"></div> -->
+        <input type="text" />
+        <i class="fa fa-search"></i>
+        <!-- <i>123</i> -->
+      </div>
+      <i class="fa fa-moon-o mode"></i>
+    </div>
+
+    <style>
+      .search-area {
+      }
+      .search-area .search {
+        overflow: hidden;
+        float: left;
+      }
+      .search-area .search input {
+        height: 100px;
+        float: left;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .search-area .search i {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+
+        display: block;
+        float: left;
+
+        line-height: 100px;
+        text-align: center;
+        /* line-height: 100px; */
+      }
+
+      .search-area i.mode {
+        width: 100px;
+        height: 100px;
+        /* background-color: rgb(36, 170, 214); */
+        float: left;
+        line-height: 100px;
+        text-align: center;
+        font-size: 24px;
+      }
+    </style>
+  </body>
+</html>

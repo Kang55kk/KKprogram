@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="box active xxx yyy bbb active123" id="box">123</div>
+    <hr>
+    <style>
+        #box {
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+        }
+
+        .aaa {
+            opacity: 0;
+        }
+
+        .bbb {
+            opacity: 1;
+        }
+    </style>
+    <!-- 
+    <div class="boxDom" id="box111" title="2">123
+
+        <p>dsad</p>
+        <p>dsad</p>
+        <span>2222</span>
+    </div> -->
+    <!-- <div class="boxDom" id="test" title="2">123 -->
+    <!-- <div class="box boxDom xxx yyy " id="box111" title="2">123 -->
+    <button class="btn" onclick="showhidden()">隐藏/显示</button>
+
+
+</body>
+
+<script>
+    // var boxDom = document.querySelector("#box111")
+    // console.log(boxDom.attributes); //查看元素有多少个属性
+    // console.log(boxDom.attributes.length, boxDom.attributes.class.value); //调用属性方法,查看属性信息
+    // boxDom.attributes.title.value = "yyy"; //修改属性
+    // console.log(boxDom.childNodes); // 查看子节点  和子元素不同  一般比子元素多 <div>后面换行也算一个节点
+    // console.log(boxDom.firstChild); // 返回第一个节点
+    // console.log(boxDom.children); // 返回所有子元素
+    // console.log(boxDom.firstElementChild);
+    // console.log(boxDom.lastElementChild); // 元素
+    // console.log(boxDom.className);
+    // // boxDom.className = "box123" 修改类名
+    // console.log(boxDom.classList);
+    // boxDom.classList.add("xxx"); //增加类名
+    // boxDom.classList.remove("xxx");
+    // console.log(boxDom.className);
+    // boxDom.classList.add("active123")
+    // boxDom.classList.remove("active");
+    // console.log(boxDom.classList.contains("active")); //false
+    // var btn = document.querySelector("button");
+    // var btn1 = btn.cloneNode(true);
+    // console.log(btn.cloneNode(true));
+    // document.getElementById("test").appendChild(btn1);
+    // console.log(document.getElementById("test").compareDocumentPosition(btn1));
+    // console.log(boxDom.getAttribute("title"));
+    // console.log(boxDom.getAttributeNode("title"));
+</script>
+
+<script>
+    //  现在  class="box active xxx yyy active123"  要删除active 不知道其他名字
+    //  作业 实现一个方法 addClass(element, string) removeClass(element, string)
+    // 作业 实现一个按钮点击 切换toggle 一个盒子的显隐 不能用 classList.toggle
+    //作业1
+    function remove(tagName, clsName) {
+        x = String(tagName)
+        console.log(x);
+        c = String(clsName)
+        var tag = document.querySelector(x)
+        console.log(tag);
+        y = tag.className
+        console.log(y);
+        z = y.replace(c, '')
+        // return z
+        console.log(z);
+        tag.className = z
+    }
+    // remove("div","active")
+
+    // 作业2  为输入的tag的元素增加一个类名
+    function addClass(element, string) {
+        var ele = document.querySelector(element)
+        str = ele.className
+        strnew = str + " " + string
+        ele.className = strnew
+        console.log(ele.className);
+    }
+    addClass("div", "ddd")
+
+
+    function removeClass(element, string) {
+        var ele = document.querySelector(element)
+        str = ele.className
+        console.log(str);
+        // strnew = str + " " + string
+        strnew = str.replace(string, "")
+        ele.className = strnew
+        console.log(ele.className);
+
+    }
+    removeClass("div", "xxx")
+
+    //作业3
+    var btn = document.querySelector("button")
+    var box = document.querySelector("div")
+
+    function showhidden() {
+        str = box.className;
+        console.log(str = box.className);
+        if (str.includes("aaa")) {
+            strnew = str.replace("aaa", "bbb")
+            box.className = strnew
+        } else {
+            if (str.includes("bbb")) {
+                strnew = str.replace("bbb", "aaa")
+                box.className = strnew
+            }
+        }
+    }
+
+
+    // 作业4,一维数组和二维数组的相互转换
+    function oneToTwo(data) {
+        var newArr = [];
+        var zzz = 4;
+        for (var i = 0; i < Math.ceil(data.length / zzz); i++) { //向上取整
+            newArr[i] = [];
+            newArr[i].push(data[i * zzz]);
+            for (var j = 1; j < zzz; j++) {
+                newArr[i].push(data[i * zzz + j]);
+            }
+        }
+        return newArr;
+    }
+    var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+    var arr = oneToTwo(arr)
+    console.log(arr)
+
+
+
+
+    var arr1 = [
+        [0, 1],
+        [2, 3],
+        [4, 5]
+    ];
+    var arr2 = [].concat.apply([], arr1);
+    console.log(arr2);
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 版心  1920 1600 1400 1440 1280  -->
+
+    <div class="offer">
+      <div class="wrapper">wrapper</div>
+    </div>
+
+    <div class="service">
+      <div class="wrapper">wrapper</div>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      .wrapper {
+        width: 300px;
+        height: 200px;
+        background-color: red;
+        margin: 0 auto;
+        /* 块元素居中 需要子元素宽度确定并且小于父元素 子元素设置外边距左右 auto */
+        /* 行内元素或者文本的居中 父元素用 text-align */
+
+        /* padding: 50px; */
+        margin: 50px auto;
+      }
+
+      .offer {
+        /* height: 100px; */
+        background-color: lightblue;
+      }
+      .service {
+        /* background-color: aqua; */
+        /* background: url("https://show.17sucai.com/preview/3/2022-07-04/%E6%95%B4%E5%BD%A2%E7%BE%8E%E5%AE%B9%E5%8C%BB%E9%99%A2%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF/%E2%95%92%E2%88%9A%E2%95%A8%E2%95%AC%E2%94%9C%E2%94%94%E2%95%9A%E2%96%8C%E2%95%A5%E2%95%9C%E2%95%98%E2%95%91%E2%95%90%C2%B0%E2%95%92%E2%95%9B%E2%94%80%C3%BA%E2%96%91%CF%83/img/services-bg.jpg"); */
+        /* xxx-yyy  xxx 叫复合属性 */
+
+        background-image: url("./services-bg.jpg");
+        /* 路径 http开头的 绝对路径  相对路径 ./  ../返回上一级 */
+      }
+    </style>
+  </body>
+</html>

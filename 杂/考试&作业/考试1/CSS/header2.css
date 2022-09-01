@@ -1,0 +1,141 @@
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.header2 {
+  background-color: #b2b2b2;
+}
+.header2 .wrap {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  height: 845px;
+  z-index: 1;
+}
+.header2 .wrap .up .first {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.header2 .wrap .up .first .left {
+  width: 40%;
+  float: left;
+}
+.header2 .wrap .up .first .left span {
+  font-size: 2.7rem;
+  color: white;
+}
+.header2 .wrap .up .first .left span:hover {
+  cursor: pointer;
+}
+.header2 .wrap .up .first .right {
+  width: 60%;
+  float: right;
+  padding: 8.465px 0;
+}
+.header2 .wrap .up .first .right i {
+  font-size: 20px;
+  color: orange;
+  margin-right: 15px;
+  display: block;
+  float: left;
+  line-height: 42.67px;
+}
+.header2 .wrap .up .first .right span {
+  display: block;
+  color: white;
+}
+.header2 .wrap .up .first .right .location {
+  width: 47%;
+  float: right;
+}
+.header2 .wrap .up .first .right .time {
+  width: 43%;
+  float: right;
+}
+.header2 .wrap .up .first .right .time i {
+  color: red;
+  margin-left: 30px;
+}
+.header2 .wrap .up .nav {
+  float: left;
+  width: 1000px;
+  height: 70px;
+  background-color: white;
+  padding: 0 30px;
+  border-radius: 70px;
+  box-sizing: border-box;
+}
+.header2 .wrap .up .nav a {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  line-height: 70px;
+}
+.header2 .wrap .up .nav i {
+  float: right;
+  line-height: 70px;
+  letter-spacing: 30px;
+}
+.header2 .wrap .up .nav i:hover {
+  cursor: pointer;
+}
+.header2 .wrap .down .left {
+  float: left;
+  width: 410px;
+}
+.header2 .wrap .down .left h5 {
+  font-weight: 300;
+  color: #fd4d40;
+  margin-bottom: 0.5rem;
+  font-weight: 700 !important;
+  font-family: "Indie Flower", cursive !important;
+  margin-top: 200px;
+}
+.header2 .wrap .down .left h1 {
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 1rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 50px;
+}
+.header2 .wrap .down .left p {
+  font-size: 18px;
+  color: #fff;
+}
+.header2 .wrap .down .left button {
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #fff;
+  background-color: #c82333;
+  border-color: transparent;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 400;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 10px 20px;
+  margin-top: 100px;
+}
+.header2 .wrap .down .left button:hover {
+  background-color: #a71120;
+  cursor: pointer;
+}
+.header2 .wrap .down .right {
+  float: right;
+  margin: -177px -14px 0px 0px;
+  width: 485px;
+  background-image: url("../img/haizi.png");
+  height: 830px;
+  z-index: -1;
+  background-size: cover;
+  position: relative;
+}
+/*# sourceMappingURL=./header2.css.map */

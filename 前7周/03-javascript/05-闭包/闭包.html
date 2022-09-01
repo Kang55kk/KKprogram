@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <script>
+      var a = 7;
+      function yyy() {
+        console.log(a);
+      }
+
+      function xxx() {
+        var a = 10;
+        yyy();
+      }
+      console.log(a);
+    </script>
+
+    <script>
+      var a = 10;
+      function xxx() {
+        var a = 10;
+        function yyy() {
+          console.log(a);
+        }
+
+        yyy();
+      }
+      console.log(a);
+    </script> -->
+
+  <!-- <script>
+      function xxx() {
+        var a = 10;
+        function yyy() {
+          return ++a;
+        }
+        return yyy;
+      }
+      var f = xxx();
+    </script> -->
+
+  <!-- <script>
+      function xxx() {
+        var a = 10;
+        return function () {
+          return ++a;
+        };
+      }
+      var f = xxx();
+    </script> -->
+
+  <!-- <script>
+      var f = (function () {
+        var a = 10;
+        return function () {
+          return ++a;
+        };
+      })();
+    </script> -->
+  <!-- 这就是闭包
+    闭包就是 内层函数可以访问外层函数的局部变量  
+              外层函数返回内层函数
+              运行外层函数结果就是内层函数
+              没有其他方法可以修改a 只有运行f
+
+    
+    -->
+
+  <script>
+    var add = (function () {
+      var a = 0;
+      return function () {
+        return ++a;
+      };
+    })();
+
+    //   私有变量
+    //   保护里面的私有变量不受外界干扰
+    //   形成一个不销毁的栈环境
+
+    //   因为变量被引用着所以不会被回收，因此可以用来封装一个私有变量
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        border-image: source slice width outset repeat|initial|inherit; 
+    
+    border-image-source	用于指定要用于绘制边框的图像的位置
+    border-image-slice	图像边界向内偏移
+    border-image-width	图像边界的宽度
+    border-image-outset	用于指定在边框外部绘制 border-image-area 的量
+    border-image-repeat	用于设置图像边界是否应重复（repeat）、拉伸（stretch）或铺满（round）。
+    
+    -->
+
+    <div class="box"></div>
+    <!-- <style>
+      .box {
+        width: 300px;
+        height: 200px;
+        margin: 50px;
+        background-color: lightblue;
+
+        /* border: 20px dashed red; */
+        border: 50px dashed transparent;
+        /* 边框大小 */
+
+        /* border-image: url("./border.png") 30 round; */
+        border-image-source: url("./border123.png");
+        border-image-slice: 27;
+
+        /* border-image-width: 0.5; */
+        /* 边框图片占据边框总大小的倍数 */
+        /* border-image-width: 10px; */
+
+        /* border-image-outset: 50px; */
+        /* 边框图片往外偏移的距离 */
+
+        /* border-image-repeat: repeat; */
+        /* border-image-repeat: stretch; */
+        /* border-image-repeat: round; */
+      }
+    </style> -->
+
+    <style>
+      .box {
+        width: 300px;
+        height: 200px;
+        margin: 50px;
+        /* background-color: lightblue; */
+
+        border: 80px dashed transparent;
+
+        border-image-source: url("./123.jpg");
+        border-image-slice: 110;
+      }
+    </style>
+  </body>
+</html>

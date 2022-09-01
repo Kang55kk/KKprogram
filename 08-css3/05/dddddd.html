@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .active {
+            color: red;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        /* li{
+            width: 220px;
+            height: 220px;
+        } */
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="styleId">
+        <!-- <img src=""> -->
+    </ul>
+    <ul class="areaId"></ul>
+
+    <ul class="comics">
+        <li>comic.title</li>
+    </ul>
+    <script>
+        var query = {
+            styleId: -1,
+            areaId: -1,
+            isFinish: -1,
+            isFree: -1,
+            order: 0,
+        };
+
+        function getAndRender() {
+            $.get("https://apis.netstart.cn/bcomic/ClassPage", query, function (res) {
+                
+                // console.log(res.data);
+                $(".comics").html("");
+                res.data.forEach(function (comic, i) {
+                    $(".comics").append('<img src="' + comic.horizontal_cover + '"</img>');
+                    $(".comics").append("<li>" + comic.title + "</li>");
+                    // $("li").eq(i).append('<img src="' + comic.horizontal_cover + '"</img>')
+                });
+            });
+        }
+        getAndRender();
+
+        var styleIds = [{
+                text: "全部",
+                id: -1
+            },
+            {
+                text: "热血",
+                id: 999
+            },
+            {
+                text: "古风",
+                id: 997
+            },
+            {
+                text: "玄幻",
+                id: 1016
+            },
+            {
+                text: "奇幻",
+                id: 998
+            },
+        ];
+
+        var areaId = [{
+                text: "全部",
+                id: -1
+            },
+            {
+                text: "大陆",
+                id: 1
+            },
+            {
+                text: "日本",
+                id: 2
+            },
+            {
+                text: "韩国",
+                id: 6
+            },
+            {
+                text: "其他",
+                id: 5
+            },
+        ];
+        styleIds.forEach(function (obj) {
+            $(".styleId").append(
+                "<li class=" + (obj.id == query.styleId ? "active" : "x") + " data-id=" + obj.id + ">" + obj
+                .text + "</li>"
+                // <li class="active data-id=-1">全部</li>
+            );
+        });
+        // 全部 热血 
+
+        areaId.forEach(function (obj) {
+            $(".areaId").append(
+                "<li class=" + (obj.id == query.areaId ? "active" : "x") + " data-id=" + obj.id + ">" + obj
+                .text + "</li>"
+            );
+        });
+
+        $(".styleId li").click(function () {
+            console.log($(this).data("id")); 
+            $(this).addClass("active").siblings().removeClass("active");
+            // console.log(this, $(this).data());
+            query.styleId = $(this).data("id");
+            getAndRender();
+        });
+
+        $(".areaId li").click(function () {
+            // console.log($(this).data("id"));
+            $(this).addClass("active").siblings().removeClass("active");
+            query.areaId = $(this).data("id");
+            getAndRender();
+        });
+    </script>
+
+    <!-- 数据结构示例 -->
+
+</body>
+
+</html>
+<!-- 
+styleId 题材分类id number -1全部  999热血   997古风  1016玄幻 998奇幻 1023悬疑 1002都市 1096历史 1092武侠仙侠  1088游戏竞技  1081悬疑灵异 1063架空 1060青春 1054西幻 1048现代 1028正能量 1015科幻
+areaId 地区分类id  number -1全部  1大陆  2日本  6韩国  5其他
+isFinish 进度分类  number -1全部  0连载  1完结
+isFree 收费id      number -1全部  1免费  2付费   3等就免费
+order  排序       number 0人气推荐 1更新时间 2追漫人数  3上架时间
+pageNum  页码          number 1 
+
+-->

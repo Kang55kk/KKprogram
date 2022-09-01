@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="./test.js">
+
+    </script>
+  </head>
+  <body>
+    <!-- 
+        js=JavaScript  ECMA基础语法（es5 => es6）  DOM（document object model） BOM
+        网景=> liveScript(10天) => javascript => firefox
+        微软 ie => JScript => IE6(xp) ie78,9,10,11
+        google  chromium(开源) =》chrome
+
+        360 百度 腾讯 猎豹 搜狗。。。（ie和chromium整合 => 双核）
+        黄页 浏览器  搜索引擎
+
+        chrome ie firefox opera safari
+
+        Trident ie × 
+        Gecko firefox
+        Webkit safari => Blink  opera chrome edge
+      -->
+
+    <div id="box" style="color: red">box</div>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+      }
+    </style>
+
+    <!-- <script>
+      // js语法  变量声明 把一个值使用一个好认的名字代替
+
+      var x = 10;
+      // 声明一个变量x  把10赋值给变量x
+      var pi = 3.14159265358979;
+      var preson = "nick";
+      // var preson = nick;
+      //  nick is not defined nick没有定义声明
+
+      // 变量声明规范
+      // 必须使用英文开头 不能出现空格 不能使用 xx-yy  可以使用 xx_yy
+      // a123 b1 b_123   特殊符号 _（lodash）  $（jquery）
+      // js保留关键词（都是单个单词）
+      // var var = 10 Unexpected token 'var'
+
+      // 最好使用小驼峰写法 score  游戏得分 总得分 Game scores => game_scores   gameScores
+      // youxidefen  xian 不要用拼音 不要使用中文
+      // var 游戏得分 = 10;
+
+      console.log("x:", x);
+      // 调试代码
+      console.log(x + 5);
+      // 不加引号 就是运算（表达式）
+      console.log("x + 5");
+      // 加上引号 代表字符串
+    </script> -->
+
+    <script>
+      var x;
+      console.log(x);
+      // undefined  声明了但是没复制
+      x = 100;
+      console.log(x);
+
+      // document 整个文档
+      // getElementById 根据id获取元素
+
+      var boxEL = document.getElementById("box");
+      // 从文档里面获取 #box 这个元素
+
+      // console.log(boxEL);
+
+      // 元素.onclick  元素点击的时候干什么
+      // function 函数（需要做的事，一行或者多行代码）
+      boxEL.onclick = function () {
+        // 需要执行的代码块
+        // console.log("点击了box", boxEL);
+
+        // boxEL.style.color 元素.style.xxx 访问某个元素的[行间样式]的xxx属性
+        // console.log(boxEL.style.color);
+        // console.log(boxEL.style.background);
+        boxEL.style.color = "orange";
+      };
+    </script>
+  </body>
+</html>

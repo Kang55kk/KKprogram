@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- <style>
+      .box {
+        background-color: lightblue;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" /> -->
+</head>
+
+<body>
+  <!-- <div class="box" style="color: red; background-color: blue">box</div> -->
+
+  <div id="first" class="box" style="color: black">box</div>
+
+  <style>
+    /* id在页面不能重复  */
+    #first {
+      color: red;
+    }
+
+    .box {
+      background-color: lightblue;
+      color: blue;
+    }
+
+    div {
+      width: 300px;
+      color: orange;
+    }
+  </style>
+
+  <!-- css 选择器权重  
+        行间 > id > class > tag
+        1000  100  10   1
+     -->
+
+  <div id="second" class="card">
+    <h3>标题</h3>
+    <p>段落<span class="bold">段落</span></p>
+  </div>
+
+  <style>
+    .card {
+      background-color: lightblue;
+    }
+
+    /* 选择器权重计算  100 + 1 + 10 = 111  */
+    #second p .bold {
+      color: black;
+    }
+
+    /* 10 + 1 + 10 = 21 */
+    .card p .bold {
+      color: red;
+    }
+
+    /* .card:hover p .bold {
+        color: red;
+      } */
+  </style>
+</body>
+
+</html>
+<!-- style标签内部的 权重 和 link引入 平级（后面会覆盖前面） -->
+<!-- 行间是权重最大 -->

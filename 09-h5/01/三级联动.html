@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <style>
+      li.active {
+        color: red;
+      }
+      section {
+        display: flex;
+      }
+    </style>
+    <section>
+      <ul class="prov"></ul>
+      <ul class="city"></ul>
+      <ul class="county"></ul>
+    </section>
+    <script>
+      var provs = [];
+      var cities = [];
+      var couonties = [];
+
+      $.get("./prov-county.json", function (res) {
+        var arr = res.map(function (o) {
+          return o.split(":");
+        });
+
+        arr.forEach(function (item) {
+          switch (item[0].length) {
+            case 2:
+              provs.push({ text: item[1], code: item[0] });
+              break;
+            case 4:
+              cities.push({ text: item[1], code: item[0] });
+              break;
+            case 6:
+              couonties.push({ text: item[1], code: item[0] });
+              break;
+            default:
+              break;
+          }
+        });
+
+        provs.sort(function (a, b) {
+          return a.code - b.code;
+        });
+        cities.sort(function (a, b) {
+          return a.code - b.code;
+        });
+        couonties.sort(function (a, b) {
+          return a.code - b.code;
+        });
+
+        provs.forEach(function (prov) {
+          $(".prov").append('<li data-id="' + prov.code + '">' + prov.text + "</li>");
+        });
+
+        $(".prov").on("click", "li", function () {
+          //   console.log(typeof $(this).data("id"));
+
+          $(this).addClass("active").siblings().removeClass("active");
+
+          var provCode = $(this).data("id");
+          var currentCities = cities.filter(function (city) {
+            return city.code.slice(0, 2) == provCode;
+          });
+
+          //   console.log(currentCities);
+          $(".city").html("");
+          $(".county").html("");
+          currentCities.forEach(function (city) {
+            $(".city").append('<li data-id="' + city.code + '">' + city.text + "</li>");
+          });
+        });
+
+        $(".city").on("click", "li", function () {
+          $(this).addClass("active").siblings().removeClass("active");
+
+          var cityCode = $(this).data("id");
+          var currentCounties = couonties.filter(function (couonty) {
+            return couonty.code.slice(0, 4) == cityCode;
+          });
+
+          //   console.log(currentCities);
+          $(".county").html("");
+          currentCounties.forEach(function (county) {
+            $(".county").append('<li data-id="' + county.code + '">' + county.text + "</li>");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

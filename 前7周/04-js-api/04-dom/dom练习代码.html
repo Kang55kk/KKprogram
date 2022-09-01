@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="111">ewqeqw </form>
+    <div>123
+        <i></i>
+    </div>
+    <i>12312313</i>
+    <script>
+        var div = document.getElementsByTagName("div")[0]
+        // // a.innerHTML= "<div>qwerty</div>";
+        // var h1 = document.createElement("h1");
+        // a.appendChild(h1)
+        // var c = document.createElement("h1");
+        // a.appendChild(c)
+        // var c = a.getElementsByTagName("i")[0]
+        // //创建文本节点
+        // var e = document.createTextNode("nihao")
+        // a.appendChild(e)
+        var h1 = document.createElement("h1")
+        var h2 = document.createElement("h2")
+
+        var text = document.createTextNode("Hello")
+        h1.appendChild(text)
+        h2.appendChild(text)
+        div.appendChild(h1)
+        document.body.appendChild(h1)
+        h1.setAttribute("class", 123)
+
+        var btn = document.querySelector("button");
+        var xxx = document.createDocumentFragment(); //让这个button消失
+        // xxx.appendChild(btn);
+
+        console.log(document.anchors); //返回文档的链接数  就是有多少个a标签
+        console.log(document.images); //返回对文档中所有 Image 对象引用。
+        console.log(document.documentURI); //显示该文档位置
+        // http://127.0.0.1:5500/  协议 域名 端口
+        console.log(document.domain); //返回下载当前文档的服务器域名：
+    </script>
+</body>
+
+</html>

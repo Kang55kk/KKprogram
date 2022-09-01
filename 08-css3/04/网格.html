@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="grid-container">
+      <div class="item1">头部</div>
+      <div class="item2">菜单</div>
+      <div class="item3">主要内容区域</div>
+      <div class="item4">右侧</div>
+      <div class="item5">底部</div>
+    </div> -->
+
+    <div class="grid-container">
+      <div class="item1">头部</div>
+      <div class="item2">左边</div>
+      <div class="item3">右边</div>
+      <div class="item4">底部</div>
+    </div>
+    <style>
+      .grid-container {
+        display: grid;
+        grid:
+          "header header header"
+          "menu main main"
+          "footer footer footer";
+      }
+
+      .item1 {
+        grid-area: header;
+      }
+      .item2 {
+        grid-area: menu;
+      }
+      .item3 {
+        grid-area: main;
+      }
+
+      .item4 {
+        grid-area: footer;
+      }
+    </style>
+
+    <marquee>This text will scroll from right to left</marquee>
+
+    <p contenteditable>
+      德变者文终互井举丹老临，国你得互到败人此山了罚修评不永把能斯才，圣五上制，别必变派老弟先承量，把为留嗣关弟回，狱问召血一里的
+      反光却自这系，从了然是不商同由冷位要看毒揽十年，用气血国下们了血正
+      价太的偶，领宫沫登灰极终承如在德六偶也太判，得作预和落有乡人台，冇持国人
+      马但迷败之路帅求第，无用然我使活己绛谭的一仅沉的，木评于主，迷有县皇的杨他如
+      不应之气说国友风承燕以，卡以的后秦价秦重刑才韩其 小者活的订人，日同绛言是三谭回受衣法我丈到，非身不国得被普而胸
+      乡春说未，不不九要木锐同来而生头，拢木斯词 一朋看为于尚艳特，完非不了量下极明说读事足疾王无会主者变，关纯流
+      什是看娘十其就孔而终人服回洪就让，次回卑到他可，洪知后落之可一罪君即念君放介沫五土，回杨六死杀老，啦珍破，举足长位我上王圣，哥雷判的次得却娘，屯一即的吴同失君重，成躲互九定娟韩如句商没，目灰挟灰诗实司不舟未智人，皇壬陀入，又无重什韩入吾事下低韩李，是道一不德罪普我命如，秦与家反商娘失足的首高，是国久皇，尝甲木下，爻兼者卅国负韩如，此要别心罪爱，能兼才学搏极极挟严皇得之来厅逃恶谢，时得说乐原俭到动人负才到畴承，承是说文活衣念而弟主前怎别雷更与事死，后看害感妄，秦你一褒可揽，韩救自谭其而惊才认胜了之呼，者别三吾磊弟俭珍偶设云着圣同自，娘真得，到见承分拢量不，毒快虽瞠为原了足兼事高，法从太面若郭云德陛策次足，是杀是尝罪一来不快得斯将法或吾快娘夫却，龄无过了价血故韩后斯次仄法妙手，轻密可，诗的明卧明君，常章虑非学了解九人将倒公币人招憾愿，会定攻衣倒为之历苦气下为么到得我回之自，光故动怒，者喜联在，国不日徒说令衣太俭惜年洪措意由，外者望降服己才以下位冈先可别师他嗣人，解绝即单逃相谢会，招光承但上，火无名了李不因统守，五老生他一听者非的人李问准，备得衣未绝到我间兴秦我会是五是高藏决，到韦使力后他廿拿亲家而自以或资屯得司于，说策国法，攻只云，命行略到，人六并普惜愿张老，貂定不心俭洋善便子笔是皇家玉国谋，无了杨句要君牙事出烦和普，要在杨不尹话也人何次磊使，中身说者金磊主路朋次今狱能联天，皇促情元但罪迷不他的力严学不自，之他韩策而国与是商只收后文策可的为，就了薪的斗中文不创，韩无了予李一善韩落作文夫九以那，当入宋沫也上是说宫，洞云们回洪普游感恼无迷，开生三没间承书谓承一瞠骨，谓从法才人苦韩什，主其司不同是极可，秦订与长有预而不，了非恩千。
+    </p>
+    <style>
+      p {
+        width: 300px;
+        /* columns:  3; */
+        /* column-width: 300px;
+        column-count: 3; */
+
+        /* 宽度代表最小宽度  数量代表最大数量 */
+
+        /* column-gap: 100px;
+        column-rule: 5px dashed red; */
+
+        text-align: justify;
+        text-align-last: left;
+
+        resize: both;
+        border:2px solid;
+
+        overflow: auto;
+      }
+    </style>
+  </body>
+</html>

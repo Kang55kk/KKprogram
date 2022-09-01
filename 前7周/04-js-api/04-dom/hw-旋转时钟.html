@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="kedu">
+            <!-- <i class="b"></i>
+            <i class="s"></i> -->
+            <i class="seconds"></i>
+            <i class="min"></i>
+            <i class="hour"></i>
+        </div>
+        <div class="dot"></div>
+    </div>
+
+    <style>
+        .clock {
+            width: 500px;
+            height: 500px;
+            background-color: lightblue;
+            position: relative;
+            border-radius: 50%;
+        }
+        .clock .seconds{
+            height: 180px;
+            width: 4px;
+            background-color: red;
+            position: absolute;
+            top:70px;
+            left:246px;
+            transform-origin: center 100%;
+            /* transform: rotate(3deg); */
+        }
+        .clock .hour{
+            height: 100px;
+            width: 10px;
+            background-color: purple;
+            position: absolute;
+            top:150px;
+            left:245px;
+            transform-origin: center 100%;
+            /* transform: rotate(3deg); */
+        }
+
+        .clock .min{
+            height: 150px;
+            width: 8px;
+            background-color: rgb(0, 68, 255);
+            position: absolute;
+            top:100px;
+            left:245.5px;
+            transform-origin: center 100%;
+            /* transform: rotate(3deg); */
+        }
+
+
+        .kedu i {
+            width: 8px;
+            height: 40px;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 246px;
+
+
+        }
+
+        .kedu i.b {
+            width: 10px;
+            height: 50px;
+            background-color: lightcoral;
+            position: absolute;
+            top: 0;
+            left: 245px;
+            transform: rotate(45deg);
+            transform-origin: center 500%;
+        }
+
+        .kedu i.s {
+            width: 8px;
+            transform: rotate(45deg);
+            transform-origin: center 625%;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            position: absolute;
+            top: 245px;
+            left: 245px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    </style>
+
+
+
+
+    <script>
+        var clock = document.querySelector(".clock")
+        var kedu = document.querySelector(".kedu")
+        for (var i = 0; i < 60; i++) {
+            var node = document.createElement("i")
+            if (i % 5 === 0) {
+                node.className = "b"
+            } else {
+                node.className = "s"
+            }
+            node.style.transform = "rotate(" + i * 6 + "deg)";
+        document.querySelector(".kedu").appendChild(node);
+        }
+        
+        
+        
+
+        setInterval(function () {
+            var now = new Date()
+        var hh = now.getHours()
+        var mm = now.getMinutes()
+        var ss = now.getSeconds()
+        // console.log(hour);
+        var scd = document.querySelector(".clock .seconds")
+        var min = document.querySelector(".clock .min")
+        var hour = document.querySelector(".clock .hour")
+
+            scd.style.transform = "rotate(" + ss * 6 + "deg)";
+            min.style.transform = "rotate(" + mm * 6 + "deg)";
+            hour.style.transform = "rotate(" +  +(hh * 30  + mm * 0.5) + "deg)";
+        },1000);
+
+    </script>
+</body>
+
+</html>

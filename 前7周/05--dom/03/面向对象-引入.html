@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+    </div>
+    <style>
+      .stage {
+        width: 500px;
+        height: 500px;
+        background-color: lightblue;
+        position: relative;
+      }
+      .stage .red {
+        width: 50px;
+        height: 20px;
+        background-color: red;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .stage .green {
+        width: 30px;
+        height: 10px;
+        background-color: green;
+
+        position: absolute;
+        top: 40px;
+        left: 20px;
+      }
+      .stage .blue {
+        width: 30px;
+        height: 10px;
+        background-color: blue;
+
+        position: absolute;
+        top: 60px;
+        left: 20px;
+      }
+    </style>
+
+    <!-- <script>
+      var redEl = document.querySelector(".red");
+      var redElLeft = 0;
+      var redElSpeed = 1;
+
+      var greenEl = document.querySelector(".green");
+      var greenElLeft = 20;
+      var greenElSpeed = 2;
+
+      var blueEl = document.querySelector(".blue");
+      var blueElLeft = 20;
+      var blueElSpeed = 3;
+
+      setInterval(function () {
+        redElLeft += redElSpeed;
+        redEl.style.left = redElLeft + "px";
+
+        greenElLeft += greenElSpeed;
+        greenEl.style.left = greenElLeft + "px";
+
+
+        blueElLeft += blueElSpeed;
+        blueEl.style.left = blueElLeft + "px";
+      }, 100);
+    </script> -->
+
+    <script>
+      var red = {
+        node: document.querySelector(".red"),
+        left: 0,
+        speed: 1,
+      };
+
+      var green = {
+        node: document.querySelector(".green"),
+        left: 20,
+        speed: 2,
+      };
+
+      var blue = {
+        node: document.querySelector(".blue"),
+        left: 20,
+        speed: 3,
+      };
+
+      setInterval(function () {
+        red.left += red.speed;
+        red.node.style.left = red.left + "px";
+      }, 100);
+    </script>
+  </body>
+</html>

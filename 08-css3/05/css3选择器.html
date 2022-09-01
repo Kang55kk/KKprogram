@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <label>
+        <input type="checkbox" name="" id="" />
+        <div class="box"></div>
+      </label>
+      <!-- <input type="text" name="yy" required id="" />  -->
+
+      <!-- <input type="submit" name="xx" value="提交" /> -->
+    </form>
+    <style>
+      
+      input:checked {
+        width: 50px;
+        height: 50px;
+        background-color: red
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+      }
+      input:checked + .box {
+        background-color: green;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [11, 22, 33, 44, 55, 66, 77];
+
+        function zhuan12(arr, count) {
+          if (Math.ceil(Math.abs(count)) > 1) {  //abs表示绝对值
+            var newArr = [];
+            var tmp = [];
+            arr.forEach(function (item, index) {
+              tmp.push(item);
+              if ((index + 1) % count === 0) {
+                newArr.push(tmp);
+                tmp = [];
+              }
+
+              
+            });
+            if (tmp.length) {
+              newArr.push(tmp);
+            }
+
+            return newArr;
+          } else {
+            return arr;
+          }
+        }
+
+        zhuan12(arr, 2);
+
+      // var count = 4;
+
+      // function zhuan12(arr, count) {
+      //   var newArr = [];
+      //   for (let i = 0; i < Math.ceil(arr.length / count); i++) {//看看分成几组
+      //     //   console.log(i, arr.slice(i * count, i * count + count));
+      //     newArr.push(arr.slice(i * count, i * count + count));
+      //   }
+      //   return newArr;
+      // }
+
+      // zhuan12(arr, count);
+
+
+
+    </script>
+  </body>
+</html>

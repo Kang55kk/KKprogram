@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .thumb {
+      width: 200px;
+      height: 200px;
+      /* background-color: blue; */
+      position: relative;
+    }
+
+    .thumb img {
+      width: 100%;
+      display: block;
+    }
+
+    .thumb .mask {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(0, 0, 255, 0.3);
+
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      z-index: 999;
+
+      pointer-events: none;
+      /* 鼠标穿透 */
+    }
+
+    .zoom {
+      width: 400px;
+      height: 400px;
+      background-color: lightblue;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .zoom img {
+      width: 200%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="thumb">
+    <img src="./1.jpg" alt="" />
+    <div class="mask"></div>
+  </div>
+  <hr />
+  <div class="zoom">
+    <img src="./1.jpg" alt="" />
+  </div>
+
+  <script>
+    var thumbEl = document.getElementsByClassName("thumb")[0];
+    var maskEl = thumbEl.getElementsByClassName("mask")[0];
+
+    var zoomImgEl = document.getElementsByClassName("zoom")[0].getElementsByTagName("img")[0];
+    console.log(event);
+    thumbEl.onmousemove = function () {
+      console.log(event);
+      // console.log(event.offsetX, event.offsetY);
+      // 鼠标移动的坐标点（基于 事件触发 元素 的左上角）
+      // console.log(event);
+      var x = event.offsetX - 100 / 2;
+      var y = event.offsetY - 100 / 2;
+      //鼠标相对于盒子移动的距离
+      if (x > 100) {
+        x = 100;
+      }
+      if (x < 0) {
+        x = 0;
+      }
+      if (y > 100) {
+        y = 100;
+      }
+      if (y < 0) {
+        y = 0;
+      }
+
+      console.log(x, y);
+
+      // 遮罩层跟着鼠标走
+      maskEl.style.left = x + "px";
+      maskEl.style.top = y + "px";
+
+      // 放大区域的图片跟着鼠标走
+      zoomImgEl.style.left = -4 * x + "px";
+      zoomImgEl.style.top = -4 * y + "px";
+    };
+  </script>
+</body>
+
+</html>

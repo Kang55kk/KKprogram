@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>哈哈 hello 是</h1>
+    <script>
+      var str = "哈Hello Worldd";
+      //   var str = new String(010);
+      //   var str = new String(0xff);
+      //   String(xxx) 可以是一个进制数
+      //   var str = new String("hello");
+
+      console.log(str.constructor);
+      console.log(str.length);
+
+      console.log(str + "555");
+      console.log(str.concat("555"));
+
+      console.log(str.indexOf("o"));
+      console.log(str.lastIndexOf("o"));
+      console.log(str.indexOf("p"));
+      console.log(str.includes("p"));
+      console.log(str.repeat(3));
+
+      //   string.slice(start,end) 可以是负??
+      console.log(str.slice(3));
+      console.log(str.slice(3, 7));
+      console.log(str.slice(-3));
+      console.log(str.slice(-5, -1));
+
+      //   string.substr(start,length) 个数
+      console.log(str.substr(2, 2));
+
+      //   string.substring(from, to) 非负
+      console.log(str.substring(3, 7));
+      console.log(str.toLowerCase());
+      console.log(str.toUpperCase());
+      console.log(str.trim());
+
+      //   string.startsWith(searchvalue, start)
+      console.log(str.startsWith("Hel"));
+      console.log(str.split(""));
+      console.log(str.split(" "));
+
+      console.log([1, 2, 3].join("|"));
+      console.log("1|2|3".split("|"));
+
+      //   与正则相??
+      // match()
+      // replace()
+      // search()
+
+      console.log(str.replace("World", "Nick"));
+      console.log(str.indexOf("orld"));
+      console.log(str.search("orld"));
+
+      //
+      console.log(str.charAt(2));
+      console.log(str[2]);
+
+      console.log(str.charCodeAt(0)); // Unicode 编码
+      console.log(str.charCodeAt(1)); // Unicode 编码
+
+      console.log(String.fromCharCode(71, 72));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 设置localStorage
+      window.localStorage.setItem("name", "nick");
+      window.localStorage.setItem("age", "17");
+
+      //   读取
+      console.log(localStorage.getItem("name"));
+
+      //   删除
+      localStorage.removeItem("name");
+
+      //   清空
+      localStorage.clear();
+
+      localStorage.setItem(
+        "person",
+        JSON.stringify({
+          name: "nick",
+          age: 17,
+        })
+      );
+      console.log(JSON.parse(localStorage.getItem("person")));
+
+      //   sessionStorage.setItem("name", "nick");
+      //   console.log(sessionStorage.getItem("name"));
+
+      // cookie 域名端口  path  过期时间   4KB （每次访问页面会自动携带发送给服务器）
+
+      //   localStorage  域名端口 永久有效 4-5MB （浏览器访问不会自动携带）
+      //   sessionStorage  域名端口 标签页 关闭销毁 4-5MB （浏览器访问不会自动携带）
+    </script>
+  </body>
+</html>

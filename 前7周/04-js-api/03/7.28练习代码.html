@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 作业 -->
+    <script>
+        //作业
+        var person = {
+            name: "nick",
+            age: 17,
+            job: "无业游民",
+        };
+        //   console.log(person);
+
+        for (key in person) {
+            console.log(key, person[key]);
+        }
+
+        var dog = {
+            height: "one meter",
+            age: "six months",
+            color: 'brown'
+        }
+
+        for (key in dog) {
+            console.log(key, dog[key]);
+        }
+    </script>
+    <!-- Number -->
+    <script>
+        var PI = 3.14159265358979
+        console.log(Number.MAX_VALUE)
+        console.log(Number.MIN_VALUE)
+        console.log(Number.NEGATIVE_INFINITY); // Infinity
+        console.log(Number.POSITIVE_INFINITY); // Infinity
+        console.log(Infinity);
+        console.log(PI.toExponential());
+        console.log(PI.toFixed(3)); // 保留小数后33位
+        console.log(PI.toPrecision(4));
+
+        console.log(parseInt(3.14));
+        console.log(parseInt("10px"));
+        console.log(parseFloat("3.14"));
+        console.log(parseFloat("3a.14.11a")); //3 尽量转化为浮点
+
+        console.log(encodeURI("http://e=王大锤")); //编码 中文转化%E7%8E%8B%E5%A4%A7%E9%94%A4
+        console.log(encodeURIComponent("http://127.0.0.1:5500/04-js-api/03/Number.html,?name=王大锤"));
+        // ↑ 符号+中文都编码
+        console.log(decodeURI("=%E7%8E%8B%E5%A4%A7%E9%94%A4")); //逆编码
+        // decodeURIComponent  解码
+    </script>
+
+    <!-- Date -->
+    <script>
+        var now = new Date() //当前日期
+        var d = new Date(0); //时间戳?
+        console.log(d < now); //true 时间在前小于时间在后
+        console.log(now.getFullYear()); //返回当前年份
+        console.log(now.getMonth()); //返回当前月份,0表示第一月
+        console.log(now.getDate()); //当前几号
+        console.log(now.getHours()); //当前小时
+        console.log(now.getMinutes());
+        console.log(now.getSeconds());
+        console.log(now.getMilliseconds()); //当前毫秒
+        console.log(now.getTime()); //距 1970 年 1 月 1 日之间的毫秒数：
+        console.log(now.getTimezoneOffset()); //-480 本地和伦敦的时间差
+        console.log(d.toLocaleTimeString()); //时间转化为字符串
+        console.log(d.toString()); //把 Date 对象转换为字符串。
+        // var now = Date.now()
+        // var sjc = new Date(now)
+        // console.log(sjc);
+
+        var time = "2022-10-22 00:00:00"
+        var moutian = new Date(time)
+        console.log(moutian)
+
+    </script>
+
+
+
+
+</body>
+
+</html>

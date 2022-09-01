@@ -1,0 +1,194 @@
+.packages {
+  background-color: #17a2b8;
+}
+.packages .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.packages .wrap .card1,
+.packages .wrap .card2,
+.packages .wrap .card3 {
+  float: left !important;
+  background-color: white;
+}
+.packages .wrap h3 {
+  color: red;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -15px;
+  font-family: "Indie Flower", cursive !important;
+}
+.packages .wrap h1 {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 45px;
+  font-size: 2rem;
+}
+.packages .wrap .card {
+  width: 1100px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.packages .wrap .card .card1 {
+  float: left;
+  border-radius: 8px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.packages .wrap .card .card1 .photo {
+  height: 110px;
+  width: 110px;
+  background-image: url("../img/pack1.png");
+  margin: 0 auto;
+}
+.packages .wrap .card .card1 h5 {
+  text-align: center;
+  color: #16c3b0;
+  font-size: 18px;
+  margin-bottom: 23px;
+  font-weight: 300;
+}
+.packages .wrap .card .card1 p {
+  text-align: center;
+  line-height: 1.7;
+  color: #364d59 !important;
+  font-weight: 300;
+  font-size: 1rem;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.packages .wrap .card .card1 button {
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 10px 20px;
+  display: inline-block;
+  font-weight: 400;
+  vertical-align: middle;
+  line-height: 1.5;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #fff;
+  background-color: #c82333;
+  border-color: transparent;
+  margin: 0px 69.68px;
+}
+.packages .wrap .card .card1 button:hover {
+  background-color: #b40d0d;
+  cursor: pointer;
+}
+.packages .wrap .card .card2 {
+  float: left;
+  margin: 0 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-radius: 8px;
+}
+.packages .wrap .card .card2 .photo {
+  height: 110px;
+  width: 110px;
+  background-image: url("../img/pack2.png");
+  margin: 0 auto;
+}
+.packages .wrap .card .card2 h5 {
+  text-align: center;
+  color: #16c3b0;
+  font-size: 18px;
+  margin-bottom: 23px;
+  font-weight: 300;
+}
+.packages .wrap .card .card2 p {
+  text-align: center;
+  line-height: 1.7;
+  color: #364d59 !important;
+  font-weight: 300;
+  font-size: 1rem;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.packages .wrap .card .card2 button {
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 10px 20px;
+  display: inline-block;
+  font-weight: 400;
+  vertical-align: middle;
+  line-height: 1.5;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #000;
+  background-color: #ffc107;
+  border-color: transparent;
+  margin: 0px 69.68px;
+}
+.packages .wrap .card .card2 button:hover {
+  background-color: #b38d19;
+  color: white;
+  cursor: pointer;
+}
+.packages .wrap .card .card3 {
+  float: left;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-radius: 8px;
+}
+.packages .wrap .card .card3 .photo {
+  height: 110px;
+  width: 110px;
+  background-image: url("../img/pack3.png");
+  margin: 0 auto;
+}
+.packages .wrap .card .card3 h5 {
+  text-align: center;
+  color: #16c3b0;
+  font-size: 18px;
+  margin-bottom: 23px;
+  font-weight: 300;
+}
+.packages .wrap .card .card3 p {
+  text-align: center;
+  line-height: 1.7;
+  color: #364d59 !important;
+  font-weight: 300;
+  font-size: 1rem;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.packages .wrap .card .card3 button {
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 10px 20px;
+  display: inline-block;
+  font-weight: 400;
+  vertical-align: middle;
+  line-height: 1.5;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #000;
+  background-color: #71bc42;
+  border-color: transparent;
+  margin: 0px 69.68px;
+}
+.packages .wrap .card .card3 button:hover {
+  background-color: #4d8e24;
+  color: white;
+  cursor: pointer;
+}
+/*# sourceMappingURL=./packages.css.map */

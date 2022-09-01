@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <section class="hh">
+      <!-- 小时盒子 -->
+      <div class="s1">
+        <!-- 小时盒子第一位数 -->
+        <span>0</span>
+      </div>
+      <div class="s2">
+        <!-- 小时盒子第二位数 -->
+        <span>0</span>
+      </div>
+    </section>
+    :
+    <section class="mm">
+      <!-- 分钟盒子 -->
+      <div class="s1">
+        <span>0</span>
+
+      </div>
+      <div class="s2">
+        <span>0</span>
+      </div>
+    </section>
+    :
+    <section class="ss">
+      <!-- 秒盒子 -->
+      <div class="s1">
+        <span>1</span>
+      </div>
+      <div class="s2">
+        <span>2</span>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    main {
+      display: flex;
+    }
+
+    section {
+      display: flex;
+    }
+
+    section div {
+      width: 50px;
+      height: 100px;
+      /* border: 1px solid green; */
+      background-color: lightblue;
+      /* overflow: hidden; */
+      display: flex;
+      flex-direction: column;
+      /* box-shadow: 0 0 5px 0 black; */
+    }
+
+    section div span {
+      width: 100%;
+      height: 100px;
+      background-color: lightcoral;
+      box-sizing: border-box;
+      border: 5px solid lightblue;
+      flex-shrink: 0;
+      transition: all 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+      color: white;
+    }
+  </style>
+
+
+
+  <script>
+    function showNewNum(element, n) {
+
+      // element 是显示一个数字的盒子  .s1 或者 .s2   n是新的值
+      var firstSpanDom = element.getElementsByTagName("span")[0]; //拿到第一个span
+      if (firstSpanDom.innerText !== n) {
+        var newSpanDom = document.createElement("span");
+        //   创建新元素span
+        newSpanDom.innerText = n;
+        element.appendChild(newSpanDom);
+        //   追加新span到 .s1 / .s2 的末尾
+        firstSpanDom.style.marginTop = "-100px";
+        //   第一个span 往上移动-100
+        setTimeout(function () {
+          element.removeChild(firstSpanDom);
+        }, 300);
+        //   过渡完成之后 删除第一个span元素
+      }
+    }
+
+    //   定时器 每秒钟取一下时间
+    setInterval(function () {
+      var now = new Date();
+      // 取出当前的秒数 并且补全两位
+      var hh = String(now.getHours()).padStart(2, "0");
+      var mm = String(now.getMinutes()).padStart(2, "0");
+      var ss = String(now.getSeconds()).padStart(2, "0");
+
+      // console.log(ss);
+      // console.log(ss);
+
+      var hhDom = document.querySelector(".hh");
+      var mmDom = document.querySelector(".mm");
+      var ssDom = document.querySelector(".ss");
+
+      hhDom.querySelectorAll("div").forEach(function (ele, i) {
+        // 每个盒子都显示一下新的值
+        showNewNum(ele, hh[i]);
+        // console.log(hh[i]);
+      });
+      mmDom.querySelectorAll("div").forEach(function (ele, i) {
+        // 每个盒子都显示一下新的值
+        showNewNum(ele, mm[i]);
+      });
+      // 遍历ss（显示秒数的两个盒子）
+      ssDom.querySelectorAll("div").forEach(function (ele, i) {
+        // 每个盒子都显示一下新的值
+        showNewNum(ele, ss[i]);
+      });
+    }, 1000);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.choise .wrap {
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+.choise .wrap .tag {
+  width: 800px;
+  padding: 30px;
+  margin: 0 auto;
+  border-bottom: 2px solid #000;
+}
+.choise .wrap .tag span {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  margin: 0  100px;
+  cursor: pointer;
+}
+.choise .wrap .text {
+  height: 298px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choise .wrap .text p {
+  font-size: 50px;
+}
+/*# sourceMappingURL=./choise.css.map */

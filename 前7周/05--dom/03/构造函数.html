@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 帮助我们生成对象
+
+      //   工厂模式
+      //   function generateObj(x, speed) {
+      //     return {
+      //       x: x,
+      //       speed: speed,
+      //       move: function () {
+
+      //       }
+      //     };
+      //   }
+
+      //   构造函数
+      //   函数名字变成 大驼峰
+      function Car(x, speed) {
+        this.x = x;
+        // this.x 这里的x 代表 对象的键名   = x这个x是形参
+        this.speed = speed;
+      }
+
+      //   构造函数 里面的this是 这个构造函数调用之后生成的对象（实例对象）
+
+      //  给所有的实例对象都加上某个方法
+      Car.prototype.move = function () {
+        // console.log(this);
+        this.x += this.speed;
+        return this;
+      };
+      //   Car 是构造函数  prototype是Car的原型对象
+      //   一切都是对象 Car有一个属性prototype 这个属性值是一个对象
+
+      //   构造函数原型对象上挂载的方法 每个实例对象都可以访问
+
+      //   构造函数调用 用 new关键词
+      var a = new Car(0, 5);
+      var b = new Car(20, 1);
+    </script>
+
+    <script>
+      function Mouse(name, age) {
+        this.name = name;
+        this.age = age;
+        this.hole = 10;
+      }
+
+      //   实例方法
+      Mouse.prototype.dadong = function () {
+        this.hole += this.age;
+        return this.hole;
+      };
+
+      Mouse.prototype.tiansui = function () {
+        this.age++;
+      };
+
+      var x = new Mouse("Jerry", 3);
+      var y = new Mouse("Biaoge", 5);
+    </script>
+  </body>
+</html>

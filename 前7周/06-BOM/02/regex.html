@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE）
+    // 使用单个字符串来描述、匹配一系列符合某个句法规则的字符串搜索模式。
+
+    // https://www.runoob.com/js/js-regexp.html
+    // https://www.baidu.com/s?ie=UTF-8&wd=dd
+
+    //   /正则表达式主体/修饰符(可选)
+
+    var str = "The rain in SPAIN stays mainly in the plain";
+
+    //   反引号 es6  可以换行
+    //       var str = `The rain
+    // in SPAIN stays
+    // mainly in the
+    // plain`;
+
+    //   var reg = /ain/;
+    //   var reg = /ain/g;
+    var reg = /ain/gi;
+    //   i不区分大小写
+    //   g全局查找 查找多个
+    //   m 多行
+    var n = str.match(reg);
+    //   查找一个或者多个匹配
+
+    console.log(n);
+
+    // search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。
+    console.log(str.search(reg));
+
+    // replace() 方法用于在字符串中用一些字符串替换另一些字符串，或替换一个与正则表达式匹配的子串。
+    console.log(str.replace(reg, "xxx"));
+  </script>
+
+  <!-- <script>
+      var reg = /[abcdef]/g; //   a,b,c,d,e,f
+      var reg = /[a-f]/g; // a-f
+
+      var reg = /[0-9]/g;
+      var reg = /[^0-9]/g; // 取非
+
+      var reg = /(ell|01)/g;
+
+      var str = "hello01 world0123";
+
+      console.log(str.match(reg));
+
+      //   Regexp Explain  分析生成图例
+      //  Regex Previewer  预览匹配
+    </script> -->
+
+  <script>
+    var reg = /h.t/g; // 除了换行和行结束符
+
+    var str = "hit hot h8t h99f h99t h t";
+
+    console.log(str.match(reg));
+  </script>
+</body>
+
+</html>

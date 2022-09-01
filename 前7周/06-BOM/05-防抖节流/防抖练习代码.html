@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: antiquewhite;
+        }
+    </style>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <!-- <script>
+        var box = document.querySelector(".box");
+        // 防抖
+        // var id;
+        // box.onclick = function () {
+        //     clearTimeout(id)
+        //     id = setTimeout(() => {
+        //             console.log(123);
+        //     }, 2000);
+        // }
+
+        //节流
+        // var id;
+        // var x = true;
+        // box.onclick = function () {
+        //     if (x) {
+        //         console.log(123);
+        //         x = false;
+        //         id = setTimeout(function () {
+        //             x = true;
+        //         }, 2000);
+        //     }
+
+        // }
+    </> -->
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <!-- <script>
+        //lodash
+        function xxx(e) {
+            console.log(new Date().getSeconds(), this, arguments, e);
+        }
+        xxx(1)
+
+        function debounce(func,wait) {
+            var id;
+            return function () {
+                clearTimeout(id);
+                var _this= this;
+                var parmas = arguments;
+                id = setTimeout(function() {
+                    
+                }, wait);
+            }
+        }
+
+    </script> -->
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function f(a, b) {
+            console.log(this, a, b);
+        }
+        var obj1 = {
+            name: "obj1",
+            age: 17,
+        };
+
+        var obj2 = {
+            name: "obj2"
+        };
+        var xfunc = f.bind(obj2);
+
+        f(1, 2)
+
+        xfunc(123, 555)
+
+        f.apply(obj1, [666, 555])
+        var arr = [11];
+
+        console.log(Math.min.apply(obj2, arr))
+
+        obj1.xxx = function () {
+            console.log("wai", this);
+            var _this = this;
+            arr.forEach(function () {
+                console.log("foreach nei", this, _this);
+            });
+            arr.forEach(function () {
+                console.log("foreach nei", this);
+            }, this);
+        };
+
+        console.log(obj1.xxx());
+
+        var name = "小王",
+            age = 17;
+        var obj3 = {
+            name: '小张',
+            objAge: this.age,
+            myFun: function (fm, t) {
+                console.log(this.name + "年龄" + this.age, "来自" + fm + "去往" + t)
+            }
+        }
+        var db = {
+            name: '德玛',
+            age: 99
+        }
+
+        obj3.myFun.call(db, '成都', '上海'); //德玛 年龄 99  来自 成都去往上海
+
+        obj3.myFun.apply(db, ['成都', '上海']); //德玛 年龄 99  来自 成都去往上海  
+
+        obj3.myFun.bind(db, '成都', '上海')(); //德玛 年龄 99  来自 成都去往上海
+
+        $(".box").css({
+            color:"red",
+            width:'100',
+            height:100,
+            background:'lightblue',
+        })
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="stage">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <style>
+      .stage {
+        width: 390px;
+        height: 200px;
+        background-color: lightblue;
+        display: flex;
+      }
+      .stage div {
+        width: 30px;
+        height: 100%;
+        background-size: auto 100%;
+        /* background-position: top center; */
+        background-position: cover;
+
+        
+
+        transition: all 0.3s;
+      }
+      .stage div:nth-child(1) {
+        background-image: url("./1.jpg");
+      }
+      .stage div:nth-child(2) {
+        width: 300px;
+        background-image: url("./2.jpg");
+      }
+      .stage div:nth-child(3) {
+        background-image: url("./3.jpg");
+      }
+      .stage div:nth-child(4) {
+        background-image: url("./4.jpg");
+      }
+    </style>
+
+    <script>
+      var imgs = document.querySelectorAll(".stage div");
+
+      imgs.forEach(function (img, i) {
+        // console.log(img, i);
+        img.onclick = function () {
+          //   console.log(i);
+          //   imgs[i].style.width = "300px";
+          imgs.forEach(function (el, index) {
+            if (index === i) {
+              el.style.width = "300px";
+            } else {
+              el.style.width = "30px";
+            }
+          });
+        };
+      });
+    </script>
+  </body>
+</html>

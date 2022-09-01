@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="big">
+      <div class="jiangyou">
+        <div class="small">small</div>
+      </div>
+    </div>
+    <div class="box">box</div>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        padding: 20px;
+
+        border-top: 10px dashed red;
+        border-right: 20px dashed red;
+        border-bottom: 10px dashed red;
+        border-left: 15px dashed red;
+        margin: 50px auto;
+      }
+
+      .big {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        position: relative;
+      }
+      .small {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+    <script>
+      var boxEl = document.getElementsByClassName("box")[0];
+
+      console.log(boxEl.clientTop);
+      console.log(boxEl.clientLeft); //15 左边框
+
+      console.log(boxEl.clientWidth); // 140 +padding
+      console.log(boxEl.offsetWidth); // 175 +padding +border
+
+      console.log(boxEl.offsetLeft); // 动态 这个元素距离浏览器的最左边的水平距离
+      console.log(boxEl.offsetParent); //
+    </script>
+
+    <script>
+      console.log("===================");
+      var smallEl = document.getElementsByClassName("small")[0];
+
+      //   console.log(smallEl.clientTop);
+      console.log(smallEl.clientLeft); //15 左边框
+
+      console.log(smallEl.clientWidth); // 140 +padding
+      console.log(smallEl.offsetWidth); // 175 +padding +border
+
+      console.log(smallEl.offsetLeft); // 动态 这个元素距离 最近定位父级元素 最左边的水平距离
+      console.log(smallEl.offsetParent); // 最近定位父级元素
+    </script>
+
+    <script>
+      //   element.scrollHeight	返回整个元素的高度（包括带滚动条的隐蔽的地方）
+      //   element.scrollLeft	返回当前视图中的实际元素的左边缘和左边缘之间的距离
+      //   element.scrollTop	返回当前视图中的实际元素的顶部边缘和顶部边缘之间的距离
+      //   element.scrollWidth	返回元素的整个宽度（包括带滚动条的隐蔽的地方）
+    </script>
+  </body>
+</html>

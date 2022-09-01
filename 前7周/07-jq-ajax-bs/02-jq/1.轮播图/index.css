@@ -1,0 +1,25 @@
+#small #mark{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+    /* float: left; */
+    left: 0;
+    top: 0;
+    /* z-index: 99; */
+}
+#big{
+    width: 400px;
+    height: 365px;
+    border: 1px solid #000;
+    position: absolute;
+    left: 400px;
+    top: 100px;
+    overflow: hidden;
+}
+#big img{
+    width: 750px;
+    height: 1095px;
+    position: absolute;
+}

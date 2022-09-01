@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./my-minireset.css">
+    <style>
+        #prize {
+            width: 300px;
+            height: 40px;
+            background-color: rgb(red, green, blue);
+            /* 圆角边框 */
+            border-radius: 2px;
+            box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 40px;
+            margin: 40px auto;
+        }
+
+        ul {
+            width: 360px;
+            height: 360px;
+            position: relative;
+            top: 50%;
+            left: calc(50% - 180px);
+            padding-inline-start: 0px;
+            /* padding: 0px; */
+        }
+
+        ul li {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+            background-color: rgb(11, 143, 62);
+            float: left;
+        }
+
+        ul li:nth-child(4) {
+            position: relative;
+            left: 240px;
+        }
+
+        ul li:nth-child(5) {
+            position: relative;
+            top: 120px;
+            left: 120px;
+        }
+
+        ul li:nth-child(6) {
+            position: relative;
+            top: 120px;
+            left: -120px;
+        }
+
+        ul button {
+            position: relative;
+            top: -110px;
+            left: -110px;
+            width: 100px;
+            height: 100px;
+            border: 0;
+            color: white;
+            background-color: rgba(244, 85, 6, 0.818)
+        }
+
+        ul button:hover {
+            background-color: rgba(16, 15, 15, 0.896);
+        }
+
+        ul li:nth-child(8) {
+            position: relative;
+            left: -120px;
+            top: -120px;
+
+        }
+
+        .aa {
+            background: rgba(126, 126, 223, 0.849);
+        }
+    </style>
+</head>
+
+<body>
+    <p id="prize">请开始抽奖！！！</p>
+    <ul>
+        <li>手机</li>
+        <li>平板</li>
+        <li>电磁炉</li>
+        <li>洗衣机</li>
+        <li>衣柜</li>
+        <li>冰箱</li>
+        <li>电脑</li>
+        <li>电视</li>
+        <button>开始</button>
+    </ul>
+
+
+    <script>
+        var prize = document.getElementById('prize');
+        var list = document.querySelectorAll('li');
+        var btn = document.querySelector('button')
+
+
+        function showStr(ele) {
+
+            //初始化
+            ele.forEach(function (el, index) {
+                el.className = 'aa';
+                if (index != 0) {
+                    el.classList.remove('aa');
+                }
+            })
+            var n = -1;
+            var num = 0;
+            var tmp = parseInt(Math.random() * ele.length + 8);
+            // console.log(tmp);
+
+            var t = setInterval(function () {
+                n++;
+                num++;
+                if (num > tmp) {
+                    if (n > 7) {
+                        n = 0
+                        prize.textContent = "恭喜您抽中了" + ele[n].textContent;
+                    }
+                    prize.textContent = "恭喜您抽中了" + ele[n].textContent;
+                    clearInterval(t);
+                    btn.disabled = false;
+                }
+                // console.log(num);
+                if (n > 7) {
+                    n = 0;
+                    ele[0].classList.add('aa');
+                    ele[7].classList.remove('aa');
+                } else
+                    if (n == 0) {
+                        ele[n].classList.add('aa');
+                        ele[7].classList.remove('aa');
+                    } else {
+                        ele[n].classList.add('aa');
+                        ele[n - 1].classList.remove('aa');
+                    }
+            }, 100);
+
+        }
+        btn.onclick = function () {
+            this.disabled = true;
+            showStr(list);
+
+        };
+    </script>
+</body>
+
+</html>

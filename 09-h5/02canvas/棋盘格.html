@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      canvas {
+        border: 1px solid red;
+      }
+    </style>
+    <canvas id="canvas" width="300" height="300"></canvas>
+
+    <!-- <script>
+      var canvas = document.getElementById("canvas");
+
+      //   获取绘制环境上下文
+      var context = canvas.getContext("2d");
+
+      // for (var i = 0; i < 30; i++) {
+      //   context.fillRect(10 * i, 10 * i, 10, 10);
+      // }
+      for (var i = 0; i < 5; i++) {
+        context.beginPath();
+        context.arc(150, 150, 20 * (i + 1), 0, Math.PI * 2);
+        context.strokeStyle = "#" + String(Math.random()).slice(-6);
+
+        context.stroke();
+      }
+    </script> -->
+
+    <script>
+      var canvas = document.getElementById("canvas");
+
+      //   获取绘制环境上下文
+      var context = canvas.getContext("2d");
+
+      for (var j = 0; j < 30; j++) {
+        for (var i = 0; i < 30; i++) {
+          if (j % 2) {
+            if (!(i % 2)) {
+              context.fillRect(10 * i, j * 10, 10, 10);
+            }
+          } else {
+            if (i % 2) {
+              context.fillRect(10 * i, j * 10, 10, 10);
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .stage {
+        display: flex;
+        flex-wrap: wrap;
+        width: 320px;
+        height: 320px;
+        justify-content: space-between;
+        align-content: space-between;
+      }
+      .stage span,
+      .stage i {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .stage i {
+        background-color: orange;
+      }
+
+      .stage span:nth-child(1) {
+        order: 1;
+      }
+      .stage span:nth-child(2) {
+        order: 2;
+      }
+      .stage span:nth-child(3) {
+        order: 3;
+      }
+      .stage span:nth-child(8) {
+        order: 4;
+      }
+      .stage i {
+        order: 5;
+      }
+      .stage span:nth-child(4) {
+        order: 6;
+      }
+      .stage span:nth-child(7) {
+        order: 7;
+      }
+      .stage span:nth-child(6) {
+        order: 8;
+      }
+      .stage span:nth-child(5) {
+        order: 9;
+      }
+
+      .stage span.active {
+        background-color: rgb(96, 96, 96);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <span class="">手机</span>
+      <span class="">平板</span>
+      <span class="">电磁炉</span>
+      <span class="">洗衣机</span>
+      <span class="">衣柜</span>
+      <span class="">冰箱</span>
+      <span class="">电脑</span>
+      <span class="">电视</span>
+      <i style="cursor: pointer">开始</i>
+    </div>
+
+    <script>
+      var spans = document.querySelectorAll(".stage span");
+      var start = document.querySelector(".stage i");
+
+      function showIndex(n) {
+        spans.forEach(function (spanEl, index) {
+          if (n === index) {
+            spanEl.classList.add("active");
+          } else {
+            spanEl.classList.remove("active");
+          }
+        });
+      }
+
+      var canClick = true;
+      start.onclick = function () {
+        if (canClick) {
+          var num = Math.floor(Math.random() * 8);
+
+          var current = -1;
+          var id = setInterval(function () {
+            current++;
+            // if (current > spans.length - 1) {
+            //   current = 0;
+            // }
+            // showIndex(current);
+
+            showIndex(current % 8);
+            if (current > 7 + 8 + 8 + num) {
+              clearInterval(id);
+              console.log(num, spans[num].innerText);
+
+              canClick = true;
+            }
+          }, 300);
+        }
+
+        canClick = false;
+      };
+    </script>
+  </body>
+</html>

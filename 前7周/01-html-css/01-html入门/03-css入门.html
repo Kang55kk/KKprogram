@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 正常情况 style应该写在head头部 -->
+    <style></style>
+  </head>
+  <body>
+    <div>第一个div元素</div>
+    <p>段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落</p>
+    <hr />
+
+    <span>
+      第一个span元素dfdfd第一个span元素dfdfd第一个span元素dfdfd第一个span元素dfdfd第一个span元素dfdfd第一个span元素dfdfd第一个span元素dfdfd第一个span元素dfdfd
+    </span>
+
+    <br />
+    <!-- br 换行 -->
+    <span>第二个span元素</span>
+
+    <hr />
+    <span class="disan">第三个span元素</span>
+
+    <hr />
+    <div class="box">
+      <span>1111</span>
+      <span>222</span>
+      <span class="disan">3333</span>
+    </div>
+
+    <div class="box1">
+      <span>1111</span>
+      <span>222</span>
+      <span class="disan">3333</span>
+    </div>
+
+    <div class="header-small"></div>
+    <!-- class名字规范 英文 英文-英文 英文1  **************作业****************** -->
+    <!-- https://www.jianshu.com/p/983cd8d79431 -->
+
+    <!-- 写在body里面 ie6会出现闪屏 -->
+    <style>
+      /* css 层叠样式表 */
+      /* 这里的代码就是 css代码 */
+      p {
+        color: red;
+        background-color: lightblue;
+        
+      }
+      /* 块级元素 默认换行 默认的宽度是浏览器的100% */
+
+      /* 标签选择器 */
+      /* span {
+        color: red;
+        background-color: lightblue;
+      } */
+      /* 行内元素 默认不换行 默认宽度是实际占用的宽度 */
+
+      /* css选择器 {属性1:属性值1 ; 属性2:属性值2;... } */
+
+      /* class 类选择器 */
+      /* .disan {
+        color: orange;
+      } */
+      /* 后面的会覆盖前面的 ？ */
+
+      /* 组合选择器  空格后代元素 */
+      .box .disan {
+        color: blue;
+        background-color: red;
+      }
+    </style>
+  </body>
+</html>

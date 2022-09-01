@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  
+</head>
+
+<body>
+  <button title="123">xxx</button>
+  <div class="box active xxx yyy" id="test" title="xxx">
+    <i>box</i>
+    <!-- <em>xxx</em> -->
+  </div>
+
+  <input type="text" />
+  <button onclick="document.querySelector('input').focus()">focus</button>
+  <button onclick="document.querySelector('input').blur()">blur</button>
+  <script>
+    var boxDom = document.querySelector("#test");
+    console.log(boxDom.attributes); //查看元素有多少个属性
+    console.log(boxDom.attributes.length, boxDom.attributes.title.value);
+    boxDom.attributes.title.value = "yyy";
+
+    console.log(boxDom.childNodes); // 节点
+    //    包括换行符（text）
+    console.log(boxDom.firstChild); // 节点
+    console.log(boxDom.lastChild); // 节点
+
+    console.log(boxDom.children); // 元素
+    console.log(boxDom.firstElementChild); // 元素
+    console.log(boxDom.lastElementChild); // 元素
+
+    console.log(boxDom.className);
+
+    //   boxDom.className = "box active";
+    //  现在  class="box active xxx yyy active123"  要删除active 不知道其他名字
+    //  作业 实现一个方法 addClass(element, string) removeClass(element, string)
+    // 作业 实现一个按钮点击 切换toggle 一个盒子的显隐 不能用 classList.toggle
+    console.log(boxDom.classList);
+    boxDom.classList.add("hahaha");
+    boxDom.classList.add("hahaha");
+    boxDom.classList.remove("active");
+    // boxDom.classList.toggle("active")
+    console.log(boxDom.classList.contains("active"));
+
+    var btn = document.querySelector("button");
+
+    var btn1 = btn.cloneNode(true);
+    document.getElementById("test").appendChild(btn1);
+
+    console.log(document.getElementById("test").compareDocumentPosition(btn1));
+
+    console.log(btn.contentEditable); // 是否是可编辑区域 div p
+
+    window.onload = function () {
+      document.querySelector("input").focus();
+    };
+
+    console.log(boxDom.getAttribute("title"));
+    console.log(boxDom.getAttributeNode("title"));
+  </script>
+</body>
+
+</html>

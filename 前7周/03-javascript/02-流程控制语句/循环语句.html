@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // for (let i = 0; i < array.length; i++) {
+      //     const element = array[i];
+      // }
+
+      //   for (var i = 0; i < array.length; i++) {
+      //     // 要执行的代码块 {}
+      //   }
+      //   （1初始化变量，2判断条件，3自增改变变量）
+      //    1 => 2（真） => 代码块 => 3改变变量 => 2（真） => 代码块 => 3改变变量=> 2(假)
+
+      var nums = [11, 22, 33, 44];
+
+      //   console.log(nums[0]);
+      //   console.log(nums[1]);
+
+      //   循环 遍历 迭代
+      //   debugger;
+      //   for (var i = 0; i < nums.length; i++) {
+      //     console.log(nums[i]);
+      //   }
+
+      //   console.log(i);
+
+      //   注意不要出现死循环 1 2判断（必须某个时候为假） 3更改变量
+
+      //   var i = 0;
+      //   for (; i < nums.length; i++) {
+      //     console.log(nums[i]);
+      //   }
+      //   console.log(i);
+
+      /* 
+      while
+      */
+      //   while (条件) {
+      //     代码块
+      //   }
+
+      // 条件为真 会 一直走 代码块
+
+      //   死循环
+      //   while (true) {
+      //     console.log(123);
+      //   }
+
+      //   var i = 0;
+      //   while (i < 5) {
+      //     console.log(i, nums[i]);
+      //     i++;
+      //   }
+
+      /* 
+    do while
+    */
+
+      // do {
+      //     代码块
+      // } while (条件);
+
+      // 先走代码块 然后再判断 如果为真 再执行一次代码块
+
+      //   do {
+      //     console.log("first");
+      //   } while (false);
+
+      while (false) {
+        console.log("first");
+      }
+    </script>
+  </body>
+</html>

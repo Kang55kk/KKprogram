@@ -1,0 +1,127 @@
+.Testimonial {
+  background-color: #f6f5f5;
+  padding: 50px 0;
+}
+.Testimonial ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.Testimonial .wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+.Testimonial .wrap .sub h5 {
+  color: #fd4d40;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: "Indie Flower", cursive !important;
+}
+.Testimonial .wrap .title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 0;
+}
+.Testimonial .wrap .card {
+  background-color: #fd4d40;
+  width: 700px;
+  margin: 0px auto;
+  padding: 30px 0;
+  height: 150px;
+}
+.Testimonial .wrap .card .left .photo {
+  float: left;
+  height: 220px;
+  margin: 30px;
+  margin-top: 0px;
+}
+.Testimonial .wrap .card .left .photo img {
+  width: 100px;
+  height: 100px;
+}
+.Testimonial .wrap .card .right {
+  margin-top: -20px;
+}
+.Testimonial .wrap .card .right h3 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  padding-top: 30px;
+}
+.Testimonial .wrap .card .right h5 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+}
+.Testimonial .wrap .card .right p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #fff;
+  line-height: 1.7;
+}
+.Testimonial .wrap .datas {
+  width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.Testimonial .wrap .datas .data1,
+.Testimonial .wrap .datas .data2,
+.Testimonial .wrap .datas .data3,
+.Testimonial .wrap .datas .data4 {
+  float: left;
+  text-align: center;
+  margin: 0px 45px;
+  margin-top: 0px;
+}
+.Testimonial .wrap .datas .data1 p {
+  color: #16c3b0;
+  text-align: center !important;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.Testimonial .wrap .datas .data1 span {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.Testimonial .wrap .datas .data2 p {
+  color: #fdb62f;
+  text-align: center !important;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.Testimonial .wrap .datas .data2 span {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.Testimonial .wrap .datas .data3 p {
+  color: #71bc42;
+  text-align: center !important;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.Testimonial .wrap .datas .data3 span {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.Testimonial .wrap .datas .data4 p {
+  color: #dc3545;
+  text-align: center !important;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.Testimonial .wrap .datas .data4 span {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+/*# sourceMappingURL=./Testimonial.css.map */

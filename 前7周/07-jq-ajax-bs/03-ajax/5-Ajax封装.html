@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+  </head>
+  <body>
+    <!-- <script>
+      var xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          console.log(xhr.response);
+        }
+      };
+
+      xhr.open("GET", "./test.json", true);
+
+      xhr.send();
+    </script> -->
+
+    <input type="text" />
+    <ul></ul>
+    <script>
+      function getJSON(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            callback(JSON.parse(xhr.response));
+          }
+        };
+        xhr.open("GET", url, true);
+        xhr.send();
+      }
+      document.querySelector("input").oninput = function () {
+        console.log(this.value);
+        getJSON("https://www.baidu.com/sugrec?ie=utf-8&json=1&prod=pc&wd=" + this.value, function (res) {
+          console.log(res.g);
+          document.querySelector("ul").innerHTML = "";
+          if (res.g) {
+            res.g.forEach(function (o) {
+              var liNode = document.createElement("li");
+              liNode.innerText = o.q;
+              document.querySelector("ul").appendChild(liNode);
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

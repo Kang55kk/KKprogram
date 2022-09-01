@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="name" id="" />
+    <input type="text" name="url" id="" />
+    <input type="button" value="新增" />
+
+    <table>
+      <thead>
+        <tr>
+          <th>网站名</th>
+          <th>网址</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      document.querySelector("input[type=button]").onclick = function () {
+        var key = document.querySelector("input[name=name]").value;
+        var value = document.querySelector("input[name=url]").value;
+        if (key && value) {
+          window.localStorage.setItem(key, value);
+          showSites();
+        } else {
+          alert("不能为空");
+        }
+      };
+
+      function showSites() {
+        document.querySelector("table tbody").innerHTML = "";
+        for (var i = 0; i < localStorage.length; i++) {
+          //   console.log(localStorage.key(i));
+
+          var tr = document.createElement("tr");
+          var td1 = document.createElement("td");
+          td1.innerText = localStorage.key(i);
+          var td2 = document.createElement("td");
+          td2.innerText = localStorage.getItem(localStorage.key(i));
+
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          console.log(td1);
+
+          document.querySelector("table tbody").appendChild(tr);
+        }
+      }
+
+      showSites();
+    </script>
+  </body>
+</html>

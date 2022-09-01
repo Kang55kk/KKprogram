@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+style=""  1000
+#id 100
+.class 10
+element 1
+*
+
+h1,h2  并集
+div h1 后代元素
+div > p 直接子元素
+button + div 之后紧邻（兄弟）
+button ~ div 之后所有（兄弟）
+
+[xxx]  有属性就行
+[xxx=yyy] 属性值相等
+[xxx~=yyy] 单词 空格分隔
+[xxx|=yyy] -分隔
+
+
+p:first-child
+
+     -->
+
+    <h1>h1</h1>
+    <h3>h3</h3>
+
+    <div>
+      <p>div>p</p>
+      <h1>
+        <p>div>h1>p</p>
+      </h1>
+    </div>
+
+    <section>
+      <button>btn</button>
+      <div>div</div>
+      <div>div</div>
+      <div>div</div>
+    </section>
+    <div>外div</div>
+
+    <a href="456">baidu</a>
+    <a href="123">google</a>
+    <a>360</a>
+
+    <h5 title="hello world">hello world</h5>
+    <h5 title="hello-world">hello-world</h5>
+    <h5 title="helloworld">helloworld</h5>
+    <h5 title="hello">hello</h5>
+
+    <style>
+      h1,
+      h3 {
+        /* color: red; */
+      }
+
+      div > p {
+        /* color: red; */
+      }
+      button {
+        /* color: red; */
+      }
+      button + div {
+        /* background-color: red; */
+      }
+      button ~ div {
+        /* background-color: red; */
+      }
+
+      [href] {
+        /* color: red; */
+      }
+      [href="123"] {
+        /* background-color: lightblue; */
+      }
+
+      h5[title~="hello"] {
+        /* background-color: lightblue; */
+      }
+      h5[title|="hello"] {
+        /* background-color: lightblue; */
+      }
+    </style>
+
+    <hr />
+    <a href="http://www.baidu.com">baidu</a>
+    <a href="http://www.360.cn">360</a>
+
+    <input type="text" />
+
+    <div>
+      得自俭如锐修，得了非失友重了丰氏者在见命蒲洋，不知心败天五有壬不音丰，那判遗松得思沉在，已梵国者么月磊同老楚次，找色苟的下，养则娇出是生系未得小说张此应德帝所自，朋光姑量自学时，韦罪掉春毒者收韩而如战不，竟在动二土兼徨救君的者年无薪，却光一常，说小高，高。
+    </div>
+
+    <style>
+      a:link {
+        color: red;
+      }
+      a:visited {
+        color: gray;
+      }
+      a:active {
+        color: hotpink;
+      }
+      a:hover {
+        background-color: lightblue;
+      }
+
+      input {
+        background-color: lightblue;
+      }
+      input:focus {
+        background-color: rgb(228, 67, 38);
+      }
+
+      div::first-letter {
+        font-size: 2em;
+      }
+      div::first-line {
+        color: red;
+      }
+    </style>
+  </body>
+</html>

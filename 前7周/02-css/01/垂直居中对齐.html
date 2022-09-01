@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 已知父级和子元素高度  用padding margin -->
+    <!-- <div class="big">
+      <div class="small">small</div>
+    </div>
+
+    
+    <style>
+        body {
+            margin: 0;
+        }
+      .big {
+        width: 500px;
+        height: 500px;
+        background-color: lightblue;
+        /* padding-top: 200px;
+        box-sizing: border-box; */
+      }
+      .small {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        
+      }
+    </style> -->
+
+    <!-- 已知子元素高度 未知父元素高度 用 top 50% - 子元素高度一半 -->
+    <!-- <div class="big">
+      <div class="small">small</div>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      .big {
+        width: 400px;
+        height: 50vh;
+        background-color: lightblue;
+        position: relative;
+      }
+      .small {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 0;
+      }
+    </style> -->
+
+    <!-- 父元素与子元素高度 都未知  -->
+    <!-- <div class="big">
+      <div class="small">small</div>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      .big {
+        width: 80vw;
+        height: 50vh;
+        background-color: lightblue;
+        position: relative;
+      }
+      .small {
+        width: 10vw;
+        height: 10vh;
+        background-color: blueviolet;
+        position: absolute;
+        top: 0;
+        /* left: 0; */
+        bottom: 0;
+        /* right: 0; */
+        margin: auto;
+      }
+    </style> -->
+
+    <div class="big">
+      <div class="small">
+        <h3>small</h3>
+        <p>small</p>
+      </div>
+    </div>
+
+    <style>
+      body {
+        margin: 0;
+      }
+      .big {
+        width: 500px;
+        height: 50vh;
+        background-color: lightblue;
+        display: table-cell;
+        /* text-align: center; */
+        vertical-align: middle;
+      }
+      .small {
+        display: inline-block;
+        /* width: 100px; */
+        /* height: 100px; */
+        background-color: blueviolet;
+      }
+    </style>
+  </body>
+</html>
